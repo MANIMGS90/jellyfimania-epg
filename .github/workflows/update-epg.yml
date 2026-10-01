@@ -1,0 +1,132 @@
+name: Actualizar guía EPG combinada
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-epg
+  cancel-in-progress: false
+
+jobs:
+  update-epg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Clonar iptv-org/epg (el grabber)
+        run: git clone --depth 1 -b master https://github.com/iptv-org/epg.git epg-tool
+
+      - name: Instalar dependencias del grabber
+        working-directory: epg-tool
+        run: npm install
+
+      - name: Descargar guía de gatotv.com para mis canales
+        working-directory: epg-tool
+        run: |
+          npm run grab -- \
+            --channels=../channels/mis_canales_channels.xml \
+            --output=../gatotv_guide.xml \
+            --days=3
+
+      - name: Descargar guía en vivo de m3u4u
+        env:
+          M3U4U_EPG_URL: ${{ secrets.M3U4U_EPG_URL }}
+        run: |
+          if [ -z "$M3U4U_EPG_URL" ]; then
+            echo "Falta el secret M3U4U_EPG_URL en este repositorio (Settings → Secrets and variables → Actions)." >&2
+            exit 1
+          fi
+          curl -fsSL "$M3U4U_EPG_URL" -o m3u4u_guide.xml
+
+      - name: Descargar guías de epgshare01.online (México + Latinoamérica)
+        run: |
+          declare -A paises=(
+            [MX1]=mexico
+            [AR1]=argentina
+            [BR1]=brasil1
+            [BR2]=brasil2
+            [CL1]=chile
+            [CO1]=colombia
+            [CR1]=costa_rica
+            [DO1]=republica_dominicana
+            [EC1]=ecuador
+            [PA1]=panama
+            [PE1]=peru
+            [SV1]=el_salvador
+            [UY1]=uruguay
+          )
+          for codigo in "${!paises[@]}"; do
+            nombre="${paises[$codigo]}"
+            echo "=== Descargando $nombre ($codigo) ==="
+            curl -fsSL "https://epgshare01.online/epgshare01/epg_ripper_${codigo}.xml.gz" -o "epgshare_${nombre}.xml.gz"
+            gunzip -f "epgshare_${nombre}.xml.gz"
+          done
+
+      - name: Descargar guías de iptv-epg.org (países de Latinoamérica que faltaban)
+        run: |
+          declare -A paises=(
+            [bo]=bolivia
+            [gt]=guatemala
+            [hn]=honduras
+            [ni]=nicaragua
+            [py]=paraguay
+            [ve]=venezuela
+          )
+          for codigo in "${!paises[@]}"; do
+            nombre="${paises[$codigo]}"
+            echo "=== Descargando $nombre ($codigo) ==="
+            curl -fsSL "https://iptv-epg.org/files/epg-${codigo}.xml" -o "iptvepg_${nombre}.xml"
+          done
+
+      - name: Descargar guía de EPGTalk (Latino/México, 607 canales extra)
+        run: |
+          curl -fsSL "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/Latino_guide.xml.gz" -o epgtalk_latino.xml.gz
+          gunzip -f epgtalk_latino.xml.gz
+
+      - name: Generar guía genérica para canales sin fuente externa (65 temáticos/FAST)
+        run: python3 scripts/generate_extra_epg.py --output extra_epg.xml --days 3
+
+      - name: Combinar todas las guías en una sola
+        run: |
+          python3 scripts/merge_epg.py \
+            --output guide.xml \
+            --gzip \
+            gatotv_guide.xml \
+            m3u4u_guide.xml \
+            epgshare_*.xml \
+            iptvepg_*.xml \
+            epgtalk_*.xml \
+            extra_epg.xml
+
+      - name: Limpiar archivos intermedios
+        run: rm -f gatotv_guide.xml m3u4u_guide.xml epgshare_*.xml iptvepg_*.xml epgtalk_*.xml extra_epg.xml
+
+      - name: Commitear y subir la guía combinada
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          rm -f guide.xml
+          git rm --cached --ignore-unmatch guide.xml
+          git add guide.xml.gz
+          if git diff --staged --quiet; then
+            echo "Sin cambios en la guía hoy, no hay nada que commitear."
+          else
+            git commit -m "Actualiza guía EPG combinada [automático]"
+            git push
+          fi
