@@ -42,3 +42,33 @@ URL).
    combinada" → **Run workflow**.
 6. Cuando termine (puede tardar varios minutos, son 6 fuentes), tu URL
    final es:
+https://raw.githubusercontent.com/TU_USUARIO/TU_REPO/main/guide.xml.gz
+
+## Estructura de archivos
+
+.github/workflows/update-epg.yml   → el workflow con las 6 fuentes
+channels/mis_canales_channels.xml  → tus 139 canales de gatotv.com
+scripts/merge_epg.py               → combina cualquier cantidad de guías XMLTV
+scripts/generate_extra_epg.py      → genera la guía genérica de los 65 canales FAST
+.gitignore
+
+## Ajustes opcionales
+
+- **Días de programación de gatotv.com**: flag `--days=3` en el paso
+  "Descargar guía de gatotv.com para mis canales".
+- **Horario de actualización**: línea `cron: "0 8 * * *"` (UTC).
+- **Agregar más canales de gatotv.com**: sumá líneas al mismo formato en
+  `channels/mis_canales_channels.xml`.
+- **Agregar más países de epgshare01 o iptv-epg.org**: sumá una línea al
+  `declare -A paises=(...)` del paso correspondiente — no hace falta
+  tocar el resto del workflow (la combinación usa comodines `*.xml`).
+- **Agregar más canales genéricos/FAST**: sumá tuplas `(id, nombre)` a la
+  lista `CANALES` en `scripts/generate_extra_epg.py`.
+
+## Si algo falla
+
+- La pestaña **Actions** muestra el log completo de cada corrida.
+- Si una fuente puntual falla (un país, un canal), no frena a las demás
+  — seguís teniendo guía para el resto.
+- Si el secret `M3U4U_EPG_URL` no está configurado, el paso de m3u4u
+  corta con un mensaje explícito en vez de fallar oscuro.
