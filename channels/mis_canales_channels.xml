@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channels>
+  <channel site="gatotv.com" site_id="a_y_e_mexico" lang="es" xmltv_id="316817">A&amp;E</channel>
+  <channel site="gatotv.com" site_id="a_mas" lang="es" xmltv_id="333527">A, MÁS+</channel>
+  <channel site="gatotv.com" site_id="adn_40" lang="es" xmltv_id="316769">ADN40</channel>
+  <channel site="gatotv.com" site_id="amc_mexico" lang="es" xmltv_id="316814">AMC</channel>
+  <channel site="gatotv.com" site_id="animal_planet_mexico" lang="es" xmltv_id="317041">ANIMALPLANET</channel>
+  <channel site="gatotv.com" site_id="axn_mexico" lang="es" xmltv_id="316819">AXN</channel>
+  <channel site="gatotv.com" site_id="az_cinema_hd" lang="es" xmltv_id="322406">AZ CINEMA</channel>
+  <channel site="gatotv.com" site_id="tv_azteca_corazon" lang="es" xmltv_id="332580">AZ CORAZÓN</channel>
+  <channel site="gatotv.com" site_id="azmundo" lang="es" xmltv_id="333523">AZ MUNDO</channel>
+  <channel site="gatotv.com" site_id="azteca_7" lang="es" xmltv_id="316755">AZTECA 7</channel>
+  <channel site="gatotv.com" site_id="tv_azteca_deportes" lang="es" xmltv_id="327182">AZTECA DEPORTES</channel>
+  <channel site="gatotv.com" site_id="azteca_uno" lang="es" xmltv_id="316756">AZTECA UNO</channel>
+  <channel site="gatotv.com" site_id="babyfirst_tv" lang="es" xmltv_id="327150">BABYFIRST</channel>
+  <channel site="gatotv.com" site_id="baby_tv" lang="es" xmltv_id="316877">BABYTV</channel>
+  <channel site="gatotv.com" site_id="bandamax" lang="es" xmltv_id="316776">BANDAMAX</channel>
+  <channel site="gatotv.com" site_id="boing_espana" lang="es" xmltv_id="334026">BOING HD</channel>
+  <channel site="gatotv.com" site_id="boomerang" lang="es" xmltv_id="332557">BOOMERANG</channel>
+  <channel site="gatotv.com" site_id="5_mexico" lang="es" xmltv_id="316762">CANAL 5</channel>
+  <channel site="gatotv.com" site_id="once_tv_mexico_xeipn-tv" lang="es" xmltv_id="317099">CANAL ONCE</channel>
+  <channel site="gatotv.com" site_id="cartoon_network_mexico" lang="es" xmltv_id="316888">CARTOON NETWORK</channel>
+  <channel site="gatotv.com" site_id="cartoonito_mexico" lang="es" xmltv_id="316878">CARTOONITO</channel>
+  <channel site="gatotv.com" site_id="cinecanal_mexico" lang="es" xmltv_id="316813">CINECANAL</channel>
+  <channel site="gatotv.com" site_id="cinelatino_u_s_a" lang="es" xmltv_id="329864">CINELATINO</channel>
+  <channel site="gatotv.com" site_id="cinemax_mexico" lang="es" xmltv_id="316811">CINEMAX</channel>
+  <channel site="gatotv.com" site_id="claro_tv" lang="es" xmltv_id="333608">CLARO CINEMA</channel>
+  <channel site="gatotv.com" site_id="claro_sports" lang="es" xmltv_id="333609">CLARO SPORTS</channel>
+  <channel site="gatotv.com" site_id="claro_sports_hd" lang="es" xmltv_id="333539">CLARO SPORTS 2 HD</channel>
+  <channel site="gatotv.com" site_id="comedy_central_mexico" lang="es" xmltv_id="317097">COMEDY CENTRAL</channel>
+  <channel site="gatotv.com" site_id="de_pelicula" lang="es" xmltv_id="316834">DEPELICULA</channel>
+  <channel site="gatotv.com" site_id="de_pelicula_clasico" lang="es" xmltv_id="316833">DEPELÍCULA PLUS</channel>
+  <channel site="gatotv.com" site_id="discovery_kids_mexico" lang="es" xmltv_id="316879">DISCOVERY KIDS</channel>
+  <channel site="gatotv.com" site_id="discovery_channel_mexico" lang="es" xmltv_id="316967">DISCOVERYCHANNEL</channel>
+  <channel site="gatotv.com" site_id="discovery_science_latinoamerica" lang="es" xmltv_id="316968">DISCOVERYSCI</channel>
+  <channel site="gatotv.com" site_id="disney_channel_mexico" lang="es" xmltv_id="316885">DISNEY CHANNEL</channel>
+  <channel site="gatotv.com" site_id="disney_junior_mexico" lang="es" xmltv_id="316884">DISNEYJR</channel>
+  <channel site="gatotv.com" site_id="distrito_comedia" lang="es" xmltv_id="317051">DISTRITOCOMEDIA</channel>
+  <channel site="gatotv.com" site_id="dreamworks_channel_mexico" lang="es" xmltv_id="329866">DREAMWORKS</channel>
+  <channel site="gatotv.com" site_id="discovery_theater_latinoamerica" lang="es" xmltv_id="316969">DTHEATER</channel>
+  <channel site="gatotv.com" site_id="discovery_turbo_latinoamerica" lang="es" xmltv_id="316970">DTURBO</channel>
+  <channel site="gatotv.com" site_id="discovery_world_latinoamerica" lang="es" xmltv_id="316973">DWORLD</channel>
+  <channel site="gatotv.com" site_id="e_entertainment_television_mexico" lang="es" xmltv_id="322349">E! ENTERTAINMENT</channel>
+  <channel site="gatotv.com" site_id="elgourmet" lang="es" xmltv_id="332569">EL GOURMET</channel>
+  <channel site="gatotv.com" site_id="espn_mexico" lang="es" xmltv_id="317574">ESPN</channel>
+  <channel site="gatotv.com" site_id="espn_2_mexico" lang="es" xmltv_id="317577">ESPN 2</channel>
+  <channel site="gatotv.com" site_id="espn_3_mexico" lang="es" xmltv_id="317579">ESPN 3</channel>
+  <channel site="gatotv.com" site_id="espn_4_mexico" lang="es" xmltv_id="317580">ESPN 4</channel>
+  <channel site="gatotv.com" site_id="espn_5_mexico" lang="es" xmltv_id="317581">ESPN 5</channel>
+  <channel site="gatotv.com" site_id="espn_6_mexico" lang="es" xmltv_id="317582">ESPN 6</channel>
+  <channel site="gatotv.com" site_id="espn_7_mexico" lang="es" xmltv_id="317583">ESPN 7</channel>
+  <channel site="gatotv.com" site_id="espn_deportes" lang="es" xmltv_id="317573">ESPN PREMIUM</channel>
+  <channel site="gatotv.com" site_id="estrella_news" lang="es" xmltv_id="322314">ESTRELLA NEWS</channel>
+  <channel site="gatotv.com" site_id="estrella_tv" lang="es" xmltv_id="322313">ESTRELLA TV</channel>
+  <channel site="gatotv.com" site_id="exa_tv" lang="es" xmltv_id="333526">EXATV</channel>
+  <channel site="gatotv.com" site_id="film_and_arts" lang="es" xmltv_id="316815">FILM&amp;ARTS</channel>
+  <channel site="gatotv.com" site_id="food_network_mexico" lang="es" xmltv_id="332570">FOOD NETWORK</channel>
+  <channel site="gatotv.com" site_id="fox_premium_movies" lang="es" xmltv_id="317595">FOX PREMIUM</channel>
+  <channel site="gatotv.com" site_id="fox_sports_mexico" lang="es" xmltv_id="317592">FOX SPORTS</channel>
+  <channel site="gatotv.com" site_id="fox_sports_2_mexico" lang="es" xmltv_id="317593">FOX SPORTS 2</channel>
+  <channel site="gatotv.com" site_id="fox_sports_3_mexico" lang="es" xmltv_id="317594">FOX SPORTS 3</channel>
+  <channel site="gatotv.com" site_id="fx_mexico" lang="es" xmltv_id="316820">FX</channel>
+  <channel site="gatotv.com" site_id="ginx" lang="es" xmltv_id="333605">GINX</channel>
+  <channel site="gatotv.com" site_id="golden_edge" lang="es" xmltv_id="322409">GOLDEN EDGE</channel>
+  <channel site="gatotv.com" site_id="golden_mexico" lang="es" xmltv_id="316823">GOLDEN HD</channel>
+  <channel site="gatotv.com" site_id="golden_plus" lang="es" xmltv_id="322408">GOLDEN PLUS</channel>
+  <channel site="gatotv.com" site_id="golden_premier" lang="es" xmltv_id="316824">GOLDEN PREMIER</channel>
+  <channel site="gatotv.com" site_id="golden_premier_2" lang="es" xmltv_id="332571">GOLDEN PREMIER 2</channel>
+  <channel site="gatotv.com" site_id="discovery_h_y_h_hd_latinoamerica" lang="es" xmltv_id="317042">H&amp;H</channel>
+  <channel site="gatotv.com" site_id="hbo_mexico" lang="es" xmltv_id="316784">HBO</channel>
+  <channel site="gatotv.com" site_id="hbo_family_latinoamerica" lang="es" xmltv_id="316796">HBO FAMILY</channel>
+  <channel site="gatotv.com" site_id="hbo_mundi" lang="es" xmltv_id="316798">HBO MUNDI</channel>
+  <channel site="gatotv.com" site_id="hbo_pop" lang="es" xmltv_id="316799">HBO POP</channel>
+  <channel site="gatotv.com" site_id="hbo_signature_latinoamerica" lang="es" xmltv_id="316800">HBO SIGNATURE</channel>
+  <channel site="gatotv.com" site_id="hbo_xtreme" lang="es" xmltv_id="316801">HBO XTREME</channel>
+  <channel site="gatotv.com" site_id="hbo_plus" lang="es" xmltv_id="316795">HBO+</channel>
+  <channel site="gatotv.com" site_id="hbo_2" lang="es" xmltv_id="316790">HBO2</channel>
+  <channel site="gatotv.com" site_id="history_2_mexico" lang="es" xmltv_id="317024">HISTORY2</channel>
+  <channel site="gatotv.com" site_id="history_mexico" lang="es" xmltv_id="317023">HISTORYHD</channel>
+  <channel site="gatotv.com" site_id="htv" lang="es" xmltv_id="332574">HTV</channel>
+  <channel site="gatotv.com" site_id="investigation_discovery_mexico" lang="es" xmltv_id="317022">IDISCOVERY</channel>
+  <channel site="gatotv.com" site_id="imagen" lang="es" xmltv_id="317104">IMAGEN</channel>
+  <channel site="gatotv.com" site_id="la_red_chile" lang="es" xmltv_id="327280">LA RED</channel>
+  <channel site="gatotv.com" site_id="lifetime_latinoamerica" lang="es" xmltv_id="329883">LAFETIME</channel>
+  <channel site="gatotv.com" site_id="de_las_estrellas_mexico" lang="es" xmltv_id="316766">LAS ESTRELLAS</channel>
+  <channel site="gatotv.com" site_id="love_nature" lang="es" xmltv_id="332577">LOVE NATURE</channel>
+  <channel site="gatotv.com" site_id="mtv_mexico" lang="es" xmltv_id="316872">MTV</channel>
+  <channel site="gatotv.com" site_id="national_geographic_mexico" lang="es" xmltv_id="316966">NATGEO</channel>
+  <channel site="gatotv.com" site_id="nat_geo_wild" lang="es" xmltv_id="322429">NATGEO WILD</channel>
+  <channel site="gatotv.com" site_id="nickelodeon_mexico" lang="es" xmltv_id="316881">NICKELODEON</channel>
+  <channel site="gatotv.com" site_id="nick_junior_mexico" lang="es" xmltv_id="316880">NICKJR</channel>
+  <channel site="gatotv.com" site_id="nat_geo_kids_mexico" lang="es" xmltv_id="333568">ONCE KIDS</channel>
+  <channel site="gatotv.com" site_id="panico" lang="es" xmltv_id="332572">PANICO</channel>
+  <channel site="gatotv.com" site_id="paramount_channel_mexico" lang="es" xmltv_id="316810">PARAMOUNT CHANNEL</channel>
+  <channel site="gatotv.com" site_id="paramount_plus" lang="es" xmltv_id="332560">PARAMOUNT+</channel>
+  <channel site="gatotv.com" site_id="pasiones_latinoamerica" lang="es" xmltv_id="332575">PASIONES</channel>
+  <channel site="gatotv.com" site_id="rcn_colombia" lang="es" xmltv_id="333567">RCN HD</channel>
+  <channel site="gatotv.com" site_id="rcn_novelas" lang="es" xmltv_id="333524">RCN NOVELAS</channel>
+  <channel site="gatotv.com" site_id="rts" lang="es" xmltv_id="322356">RTS</channel>
+  <channel site="gatotv.com" site_id="semillitas" lang="es" xmltv_id="333541">SEMILLITAS</channel>
+  <channel site="gatotv.com" site_id="showtime" lang="es" xmltv_id="327423">SHOWTIME HD</channel>
+  <channel site="gatotv.com" site_id="sony_mexico" lang="es" xmltv_id="316892">SONY CHANNEL</channel>
+  <channel site="gatotv.com" site_id="cine_sony" lang="es" xmltv_id="316808">SONY CINE</channel>
+  <channel site="gatotv.com" site_id="space_mexico" lang="es" xmltv_id="316806">SPACE</channel>
+  <channel site="gatotv.com" site_id="star_channel_mexico" lang="es" xmltv_id="316821">STAR CHANNEL</channel>
+  <channel site="gatotv.com" site_id="studio_universal_mexico" lang="es" xmltv_id="316809">STUDIO UNIVERSAL</channel>
+  <channel site="gatotv.com" site_id="syfy" lang="es" xmltv_id="322357">SYFY</channel>
+  <channel site="gatotv.com" site_id="tcm_mexico" lang="es" xmltv_id="316818">TCM</channel>
+  <channel site="gatotv.com" site_id="teennick" lang="es" xmltv_id="316873">TEEN-NICK</channel>
+  <channel site="gatotv.com" site_id="telefe_internacional" lang="es" xmltv_id="322361">TELEFE HD</channel>
+  <channel site="gatotv.com" site_id="telehit" lang="es" xmltv_id="316871">TELEHIT</channel>
+  <channel site="gatotv.com" site_id="telemundo_mexico" lang="es" xmltv_id="322362">TELEMUNDO</channel>
+  <channel site="gatotv.com" site_id="tigo_sports_el_salvador" lang="es" xmltv_id="333533">TIGO SPORTS HD</channel>
+  <channel site="gatotv.com" site_id="tlc_mexico" lang="es" xmltv_id="317021">TLC DISCOVERY</channel>
+  <channel site="gatotv.com" site_id="tnt_mexico" lang="es" xmltv_id="316807">TNT HD</channel>
+  <channel site="gatotv.com" site_id="tnt_novelas_mexico" lang="es" xmltv_id="322364">TNT NOVELAS HD</channel>
+  <channel site="gatotv.com" site_id="tnt_series_mexico" lang="es" xmltv_id="316816">TNT SERIES HD</channel>
+  <channel site="gatotv.com" site_id="tnt_sports" lang="es" xmltv_id="317571">TNT SPORTS</channel>
+  <channel site="gatotv.com" site_id="tnt_sports" lang="es" xmltv_id="333612">TNT SPORTS PREMIUM</channel>
+  <channel site="gatotv.com" site_id="toonscast" lang="es" xmltv_id="316837">TOONSCAST</channel>
+  <channel site="gatotv.com" site_id="tudn_mexico" lang="es" xmltv_id="317600">TUDN</channel>
+  <channel site="gatotv.com" site_id="tvc_deportes" lang="es" xmltv_id="333611">TVC DEPORTES</channel>
+  <channel site="gatotv.com" site_id="tyc_sports" lang="es" xmltv_id="317585">TYC SPORTS</channel>
+  <channel site="gatotv.com" site_id="unicable" lang="es" xmltv_id="329865">UNICABLE</channel>
+  <channel site="gatotv.com" site_id="universal_tv_mexico" lang="es" xmltv_id="316826">UNIVERSAL CHANNEL</channel>
+  <channel site="gatotv.com" site_id="universal_tv_mexico" lang="es" xmltv_id="327272">UNIVERSAL CINEMA</channel>
+  <channel site="gatotv.com" site_id="universal_comedy" lang="es" xmltv_id="332566">UNIVERSAL COMEDY</channel>
+  <channel site="gatotv.com" site_id="universal_crime" lang="es" xmltv_id="332567">UNIVERSAL CRIME</channel>
+  <channel site="gatotv.com" site_id="universal_premiere" lang="es" xmltv_id="327271">UNIVERSAL PREMIERE</channel>
+  <channel site="gatotv.com" site_id="universal_reality" lang="es" xmltv_id="332568">UNIVERSAL REALITY</channel>
+  <channel site="gatotv.com" site_id="univision_latinoamerica" lang="es" xmltv_id="332576">UNIVISIÓN</channel>
+  <channel site="gatotv.com" site_id="warner_tv_mexico" lang="es" xmltv_id="316822">WARNER</channel>
+  <channel site="gatotv.com" site_id="win_sports" lang="es" xmltv_id="329879">WIN SPORTS</channel>
+  <channel site="gatotv.com" site_id="amc_series_mexico" lang="es" xmltv_id="400001">AMC SERIES</channel>
+  <channel site="gatotv.com" site_id="disney_xd_mexico" lang="es" xmltv_id="400002">DISNEY XD</channel>
+  <channel site="gatotv.com" site_id="fox_mexico" lang="es" xmltv_id="400003">FOX</channel>
+  <channel site="gatotv.com" site_id="fox_life_mexico" lang="es" xmltv_id="400004">FOX LIFE</channel>
+  <channel site="gatotv.com" site_id="fxm_mexico" lang="es" xmltv_id="400005">FXM</channel>
+  <channel site="gatotv.com" site_id="green_tv_mexico" lang="es" xmltv_id="400006">GREEN TV</channel>
+  <channel site="gatotv.com" site_id="justicia_tv_mexico" lang="es" xmltv_id="400007">JUSTICIA TV</channel>
+  <channel site="gatotv.com" site_id="nicktoons_mexico" lang="es" xmltv_id="400008">NICKTOONS</channel>
+</channels>
