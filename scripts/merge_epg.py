@@ -182,12 +182,12 @@ def main():
     parser.add_argument("--output", "-o", default="guide.xml", help="Archivo XMLTV combinado de salida")
     parser.add_argument("--gzip", action="store_true", help="Además generar una copia .gz")
     parser.add_argument(
-        "--keep-past-hours", type=float, default=6,
-        help="Conservar programas que terminaron hace como máximo esta cantidad de horas (default: 6)",
+        "--keep-past-hours", type=float, default=3,
+        help="Conservar programas que terminaron hace como máximo esta cantidad de horas (default: 3)",
     )
     parser.add_argument(
-        "--forward-hours", type=float, default=54,
-        help="Conservar programas que empiezan hasta esta cantidad de horas hacia adelante (default: 54)",
+        "--forward-hours", type=float, default=36,
+        help="Conservar programas que empiezan hasta esta cantidad de horas hacia adelante (default: 36)",
     )
     args = parser.parse_args()
 
