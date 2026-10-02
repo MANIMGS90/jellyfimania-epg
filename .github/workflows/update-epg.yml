@@ -2,11 +2,13 @@ name: Actualizar guía EPG combinada
 
 on:
   schedule:
+    # 08:00 UTC = 02:00 hora de Ciudad de México (UTC-6) todo el año.
+    # Ajustá esta hora si te conviene otro horario.
     - cron: "0 8 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch: {}   # botón "Run workflow" para probarlo a mano
 
 permissions:
-  contents: write
+  contents: write   # necesario para poder commitear guide.xml de vuelta al repo
 
 concurrency:
   group: update-epg
@@ -116,14 +118,13 @@ jobs:
 
       - name: Limpiar archivos intermedios
         run: rm -f gatotv_guide.xml m3u4u_guide.xml epgshare_*.xml iptvepg_*.xml epgtalk_*.xml extra_epg.xml
+        # guide.xml y guide.xml.gz sí se conservan y se commitean abajo.
 
       - name: Commitear y subir la guía combinada
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          rm -f guide.xml
-          git rm --cached --ignore-unmatch guide.xml
-          git add guide.xml.gz
+          git add guide.xml guide.xml.gz
           if git diff --staged --quiet; then
             echo "Sin cambios en la guía hoy, no hay nada que commitear."
           else
