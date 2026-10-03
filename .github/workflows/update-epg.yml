@@ -107,6 +107,8 @@ jobs:
           python3 scripts/merge_epg.py \
             --output guide.xml \
             --gzip \
+            --forward-hours 72 \
+            --max-mb 95 \
             gatotv_guide.xml \
             m3u4u_guide.xml \
             epgshare_*.xml \
