@@ -1,198 +1,211 @@
 #!/usr/bin/env python3
 """
-merge_epg.py — combina varias guías XMLTV en una sola.
+merge_epg.py — combina varias guías XMLTV en una sola, SIN perder contenido.
 
 Uso:
-    python3 scripts/merge_epg.py --output guide.xml [--gzip] archivo1.xml archivo2.xml [...]
+    python3 scripts/merge_epg.py --output guide.xml [--gzip] a.xml b.xml [...]
 
-Se pueden pasar dos o más archivos XMLTV (raíz <tv>, con <channel> y
-<programme> adentro). El orden en que se pasan importa: si el mismo
-canal (mismo atributo id) aparece en más de un archivo, gana el
-PRIMERO que se haya pasado por línea de comandos, y se avisa por
-stderr — así, si el día de mañana se suma una tercera fuente y hay
-una colisión de verdad, se nota en el log de la Action en vez de
-perderse en silencio.
+El orden de los archivos es la prioridad: si el mismo canal (mismo id)
+viene en varias fuentes, gana el PRIMERO (se avisa por stderr).
 
-Reglas de combinado:
-- <channel>: se unen por su atributo id (unión simple, sin pisarse).
-- <programme>: se concatenan todos los de todos los archivos y se
-  ordenan por (channel, start) al final, solo para que el XML
-  combinado quede prolijo y fácil de inspeccionar a simple vista —
-  el orden no le importa al estándar XMLTV ni a los reproductores.
+QUÉ HACE (y qué NO toca):
+- <channel>: unión por id (el primero gana).
+- <programme>: se conservan TODOS los programas de todas las fuentes,
+  salvo los que son redundantes: un programa de una fuente de menor
+  prioridad que se SOLAPA en horario con uno de una fuente anterior
+  para el mismo canal (es el mismo programa repetido). Los huecos de
+  la fuente principal se siguen llenando con las demás.
+- Salida COMPACTA: se quitan los espacios/saltos de línea de relleno
+  que traen las fuentes (no cambia ningún dato; solo baja el peso).
 
-RECORTE POR VENTANA HORARIA (clave para el tamaño del archivo):
-Varias de las fuentes públicas que se combinan acá (epgshare01,
-iptv-epg.org, EPGTalk) traen 5-7+ DÍAS de programación por canal,
-aunque el reproductor (el canal de Roku de JELLYFIMANIA) solo usa un
-máximo de 48 horas hacia adelante. Guardar esos días de más en el
-archivo combinado no sirve para nada y es la razón por la que
-`guide.xml` sin comprimir llegó a pesar más de 246 MB (el límite de
-GitHub es 100 MB). Por eso, al combinar, se descartan los <programme>
-que terminaron hace más de `--keep-past-hours` o que empiezan más
-allá de `--forward-hours` desde el momento en que corre el workflow
-— alineado con lo que el Roku realmente consume, para que el archivo
-vuelva a pesar lo que tiene que pesar y se pueda commitear sin
-comprimir.
+VENTANA HORARIA (único recorte, y es automático y mínimo):
+- Se descarta lo que terminó hace más de --keep-past-hours.
+- Hacia adelante se intenta guardar --forward-hours (default 72 h).
+- GitHub rechaza archivos de más de 100 MB. Si la ventana pedida no
+  cabe en --max-mb (default 95), se baja de a 12 h hasta que quepa
+  (nunca menos de --min-forward-hours) y se deja un AVISO visible en
+  el log de la Action. Nada más se recorta.
 """
 import argparse
 import datetime
 import gzip
 import re
+import shutil
 import sys
 import xml.etree.ElementTree as ET
 
-# Formato típico: "20260930080000 +0000" o "20260930080000 -0600"
-# (con o sin espacio antes del offset). Si no hay offset, se asume UTC.
 _TS_RE = re.compile(r"^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})\s*([+-]\d{4})?$")
+_MIN = datetime.datetime.min.replace(tzinfo=datetime.timezone.utc)
 
 
 def parse_xmltv_time(ts):
-    """Devuelve un datetime aware en UTC, o None si no se pudo parsear."""
+    """datetime aware en UTC, o None si no se pudo parsear."""
     if not ts:
         return None
     m = _TS_RE.match(ts.strip())
     if not m:
         return None
-    year, month, day, hour, minute, second, offset = m.groups()
+    y, mo, d, h, mi, s, off = m.groups()
     try:
-        dt = datetime.datetime(
-            int(year), int(month), int(day), int(hour), int(minute), int(second),
-            tzinfo=datetime.timezone.utc,
-        )
+        dt = datetime.datetime(int(y), int(mo), int(d), int(h), int(mi), int(s),
+                               tzinfo=datetime.timezone.utc)
     except ValueError:
         return None
-    if offset:
-        sign = 1 if offset[0] == "+" else -1
-        oh, om = int(offset[1:3]), int(offset[3:5])
-        dt = dt - sign * datetime.timedelta(hours=oh, minutes=om)
+    if off:
+        sign = 1 if off[0] == "+" else -1
+        dt -= sign * datetime.timedelta(hours=int(off[1:3]), minutes=int(off[3:5]))
     return dt
 
 
 def load_tv_root(path):
     try:
-        tree = ET.parse(path)
-    except ET.ParseError as e:
-        print(f"AVISO: no se pudo parsear {path} como XML válido ({e}); se omite.", file=sys.stderr)
+        root = ET.parse(path).getroot()
+    except (ET.ParseError, OSError) as e:
+        print(f"AVISO: no se pudo leer {path} como XML válido ({e}); se omite.", file=sys.stderr)
         return None
-    root = tree.getroot()
     if root.tag != "tv":
         print(f"AVISO: {path} no tiene <tv> como raíz (tiene <{root.tag}>); se omite.", file=sys.stderr)
         return None
     return root
 
 
-def merge(paths, keep_past_hours, forward_hours):
-    combined = ET.Element("tv")
-    combined.set("generator-info-name", "jellyfimania-epg-merge")
+def compact(elem):
+    """Quita espacios de relleno (solo whitespace) sin tocar ningún dato."""
+    for e in elem.iter():
+        if e.text is not None and not e.text.strip():
+            e.text = None
+        e.tail = None
 
-    now = datetime.datetime.now(datetime.timezone.utc)
-    min_stop = now - datetime.timedelta(hours=keep_past_hours)
-    max_start = now + datetime.timedelta(hours=forward_hours)
 
-    seen_channel_ids = {}
-    channel_count = 0
-    programme_elems = []
-    dropped_out_of_window = 0
-    dropped_unparseable_kept = 0
+def collect(paths):
+    """Lee todas las fuentes. Devuelve (canales, programas, stats)."""
+    channels = []                # elementos <channel> (el primero por id)
+    owner = {}                   # id -> archivo que lo aportó
+    progs = []                   # (start_dt|None, stop_dt|None, elem)
+    prior = {}                   # canal -> [(start, stop)] de fuentes ANTERIORES
+    redundant = 0
 
     for path in paths:
         root = load_tv_root(path)
         if root is None:
             continue
-
-        local_channels = 0
-        local_programmes = 0
-        local_kept = 0
+        cur = {}
+        n_ch = n_pr = n_red = 0
         for child in root:
             if child.tag == "channel":
                 cid = child.get("id")
                 if cid is None:
                     continue
-                if cid in seen_channel_ids:
-                    print(
-                        f'AVISO: el canal id="{cid}" ya había venido de {seen_channel_ids[cid]}; '
-                        f"se ignora la versión de {path}.",
-                        file=sys.stderr,
-                    )
+                if cid in owner:
+                    print(f'AVISO: canal id="{cid}" ya venía de {owner[cid]}; '
+                          f"se ignora la definición de {path}.", file=sys.stderr)
                     continue
-                seen_channel_ids[cid] = path
-                combined.append(child)
-                local_channels += 1
-                channel_count += 1
+                owner[cid] = path
+                compact(child)
+                channels.append(child)
+                n_ch += 1
             elif child.tag == "programme":
-                local_programmes += 1
-                start = parse_xmltv_time(child.get("start"))
-                stop = parse_xmltv_time(child.get("stop"))
-                if start is None or stop is None:
-                    # No se pudo interpretar la fecha: se conserva por las
-                    # dudas (mejor de más que perder un programa válido
-                    # por un formato de fecha raro de alguna fuente).
-                    dropped_unparseable_kept += 1
-                    programme_elems.append(child)
-                    local_kept += 1
-                    continue
-                if stop < min_stop or start > max_start:
-                    dropped_out_of_window += 1
-                    continue
-                programme_elems.append(child)
-                local_kept += 1
-
-        print(
-            f"{path}: {local_channels} canales, {local_programmes} programas "
-            f"({local_kept} dentro de la ventana, se guardan)",
-            file=sys.stderr,
-        )
-
-    def sort_key(p):
-        return (p.get("channel") or "", p.get("start") or "")
-
-    programme_elems.sort(key=sort_key)
-    for p in programme_elems:
-        combined.append(p)
-
-    print(
-        f"TOTAL combinado: {channel_count} canales, {len(programme_elems)} programas "
-        f"(descartados {dropped_out_of_window} fuera de ventana "
-        f"[-{keep_past_hours}h, +{forward_hours}h]; {dropped_unparseable_kept} con fecha "
-        "rara se conservaron igual)",
-        file=sys.stderr,
-    )
-    return combined
+                ch = child.get("channel") or ""
+                st = parse_xmltv_time(child.get("start"))
+                sp = parse_xmltv_time(child.get("stop"))
+                if st is not None and sp is not None:
+                    # ¿Se solapa con un programa de una fuente anterior?
+                    clash = False
+                    for (ps, pe) in prior.get(ch, ()):
+                        if st < pe and sp > ps:
+                            clash = True
+                            break
+                    if clash:
+                        n_red += 1
+                        continue
+                    cur.setdefault(ch, []).append((st, sp))
+                compact(child)
+                progs.append((st, sp, child))
+                n_pr += 1
+        for ch, lst in cur.items():
+            prior.setdefault(ch, []).extend(lst)
+        redundant += n_red
+        print(f"{path}: {n_ch} canales nuevos, {n_pr} programas guardados, "
+              f"{n_red} repetidos de otra fuente omitidos", file=sys.stderr)
+    return channels, progs, redundant
 
 
-def write_output(root, output_path, also_gzip):
-    tree = ET.ElementTree(root)
-    try:
-        ET.indent(tree, space="  ")  # Python 3.9+, prolijo pero no obligatorio
-    except AttributeError:
-        pass
-    tree.write(output_path, encoding="utf-8", xml_declaration=True)
-    print(f"Escrito {output_path}", file=sys.stderr)
-
-    if also_gzip:
-        gz_path = output_path + ".gz"
-        with open(output_path, "rb") as f_in, gzip.open(gz_path, "wb") as f_out:
-            f_out.writelines(f_in)
-        print(f"Escrito {gz_path}", file=sys.stderr)
+def choose_window(progs, sizes, now, keep_past, forward, min_forward, max_bytes, base_bytes):
+    """Elige la ventana hacia adelante más grande que cabe en max_bytes."""
+    min_stop = now - datetime.timedelta(hours=keep_past)
+    f = forward
+    while True:
+        max_start = now + datetime.timedelta(hours=f)
+        total = base_bytes
+        count = 0
+        for (st, sp, el), sz in zip(progs, sizes):
+            if st is None or sp is None or (sp >= min_stop and st <= max_start):
+                total += sz
+                count += 1
+        if total <= max_bytes or f <= min_forward:
+            return f, total, count
+        f = max(min_forward, f - 12)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Combina varias guías XMLTV en una sola.")
-    parser.add_argument("inputs", nargs="+", help="Archivos XMLTV de entrada, en orden de prioridad")
-    parser.add_argument("--output", "-o", default="guide.xml", help="Archivo XMLTV combinado de salida")
-    parser.add_argument("--gzip", action="store_true", help="Además generar una copia .gz")
-    parser.add_argument(
-        "--keep-past-hours", type=float, default=2,
-        help="Conservar programas que terminaron hace como máximo esta cantidad de horas (default: 2)",
-    )
-    parser.add_argument(
-        "--forward-hours", type=float, default=18,
-        help="Conservar programas que empiezan hasta esta cantidad de horas hacia adelante (default: 18)",
-    )
-    args = parser.parse_args()
+    ap = argparse.ArgumentParser(description="Combina guías XMLTV sin perder contenido.")
+    ap.add_argument("inputs", nargs="+")
+    ap.add_argument("--output", "-o", default="guide.xml")
+    ap.add_argument("--gzip", action="store_true", help="Además generar una copia .gz")
+    ap.add_argument("--keep-past-hours", type=float, default=2)
+    ap.add_argument("--forward-hours", type=float, default=72)
+    ap.add_argument("--min-forward-hours", type=float, default=24)
+    ap.add_argument("--max-mb", type=float, default=95,
+                    help="Tamaño máximo del guide.xml (GitHub bloquea >100 MB)")
+    args = ap.parse_args()
 
-    combined = merge(args.inputs, args.keep_past_hours, args.forward_hours)
-    write_output(combined, args.output, args.gzip)
+    now = datetime.datetime.now(datetime.timezone.utc)
+    channels, progs, redundant = collect(args.inputs)
+
+    # Peso (en bytes) de cada elemento ya compactado
+    ch_bytes = sum(len(ET.tostring(c, encoding="utf-8")) + 1 for c in channels)
+    sizes = [len(ET.tostring(el, encoding="utf-8")) + 1 for (_, _, el) in progs]
+    base = 120 + ch_bytes
+    max_bytes = int(args.max_mb * 1024 * 1024)
+
+    fwd, est, count = choose_window(progs, sizes, now, args.keep_past_hours,
+                                    args.forward_hours, args.min_forward_hours,
+                                    max_bytes, base)
+    if fwd < args.forward_hours:
+        print(f"::warning::La guía completa de {args.forward_hours:g} h pesaría más de "
+              f"{args.max_mb:g} MB; se usó una ventana de {fwd:g} h para poder subirla a GitHub.",
+              file=sys.stderr)
+
+    min_stop = now - datetime.timedelta(hours=args.keep_past_hours)
+    max_start = now + datetime.timedelta(hours=fwd)
+    kept = [(st, sp, el) for (st, sp, el) in progs
+            if st is None or sp is None or (sp >= min_stop and st <= max_start)]
+    kept.sort(key=lambda t: (t[2].get("channel") or "", t[0] or _MIN))
+
+    out = ET.Element("tv")
+    out.set("generator-info-name", "jellyfimania-epg-merge")
+    out.text = "\n"
+    for c in channels:
+        c.tail = "\n"
+        out.append(c)
+    for (_, _, el) in kept:
+        el.tail = "\n"
+        out.append(el)
+
+    ET.ElementTree(out).write(args.output, encoding="utf-8", xml_declaration=True)
+    print(f"TOTAL: {len(channels)} canales, {len(kept)} programas, ventana "
+          f"-{args.keep_past_hours:g}h/+{fwd:g}h, {redundant} repetidos omitidos", file=sys.stderr)
+
+    if args.gzip:
+        with open(args.output, "rb") as fi, gzip.open(args.output + ".gz", "wb", compresslevel=9) as fo:
+            shutil.copyfileobj(fi, fo)
+
+    import os
+    mb = os.path.getsize(args.output) / (1024 * 1024)
+    print(f"Escrito {args.output}: {mb:.1f} MB", file=sys.stderr)
+    if mb > 99:
+        print("::error::guide.xml supera 99 MB; GitHub rechazará el push.", file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":
