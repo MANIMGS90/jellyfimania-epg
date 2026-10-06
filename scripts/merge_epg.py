@@ -462,8 +462,8 @@ def main():
         el.tail = "\n"
         out.append(el)
 
-    ET.ElementTree(out).write(args.output, encoding="utf-8", xml_declaration=True)
-        print(f"TOTAL: {len(channels)} canales, {len(kept)} programas, ventana "
+        ET.ElementTree(out).write(args.output, encoding="utf-8", xml_declaration=True)
+    print(f"TOTAL: {len(channels)} canales, {len(kept)} programas, ventana "
           f"-{args.keep_past_hours:g}h/+{fwd:g}h, {redundant} repetidos omitidos", file=sys.stderr)
 
     if args.gzip:
