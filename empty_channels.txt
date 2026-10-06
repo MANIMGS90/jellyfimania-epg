@@ -1,0 +1,169 @@
+316837 | TOONSCAST
+317571 | TNT SPORTS
+317595 | FOX PREMIUM
+322356 | RTS
+327423 | SHOWTIME HD
+333539 | CLARO SPORTS 2 HD
+333568 | ONCE KIDS
+333605 | GINX
+333612 | TNT SPORTS PREMIUM
+400006 | GREEN TV
+400007 | JUSTICIA TV
+A&E.MUNDO..uy | A&E MUNDO
+A&E.MUNDO.HD..uy | A&E MUNDO HD
+A.and.E.MUNDO.HD.uy | A and E MUNDO HD
+AMERICA.2..uy | AMERICA 2
+ARTV.(ARTV).pe | ARTV (ARTV)
+ATV.pe | ATV HD DIRECTO
+AandE.co | A&E OP3
+CANAL.4.MONTECARLO..uy | CANAL 4 MONTECARLO
+CANAL.5..uy | CANAL 5
+CANAL.EVENTOS.1001.uy | CANAL EVENTOS 1001
+CANAL.EVENTOS.32.uy | CANAL EVENTOS 32
+CANAL.N.(Canal.N).pe | CANAL N (Canal N)
+CCTV.(CCTV).pe | CCTV (CCTV)
+CINECANAL | CineCanal HD CH (DTV)
+CINEMAX HD.co | CINEMAX OP1
+CIUDAD.MAGAZINE..uy | CIUDAD MAGAZINE
+CIUDAD.MAGAZINE.HD..uy | CIUDAD MAGAZINE HD
+Canal.13.de.Panamá.(Telemetro).pa | Canal 13 de Panamá (Telemetro)
+Canal.13.de.Panamá.(Telemetro).sv | Canal 13 de Panamá (Telemetro)
+Canal.4.de.Panamá.(RPC.TV).pa | Canal 4 de Panamá (RPC TV)
+Canal.4.de.Panamá.(RPC.TV).sv | Canal 4 de Panamá (RPC TV)
+Canal.Decasa.sv | Canal Decasa
+Canal.Ecuavisa.(Ecuador).ec | Canal Ecuavisa (Ecuador)
+Canal.Ecuavisa.(Ecuador).sv | Canal Ecuavisa (Ecuador)
+Canal.El.Heraldo.TV.(México).mx | Canal El Heraldo TV (México)
+Canal.El.Heraldo.TV.(México).sv | Canal El Heraldo TV (México)
+Canal.Gamavisión.ec | Canal Gamavisión
+Canal.Gamavisión.sv | Canal Gamavisión
+Canal.Gol.TV.Estados.Unidos.sv | Canal Gol TV Estados Unidos
+Canal.Justicia.TV.(México).sv | Canal Justicia TV (México)
+Canal.RTS.ec | Canal RTS
+Canal.RTS.sv | Canal RTS
+Cinemax.ar | CINEMAX OP2
+DAYSTAR.co | DAYSTAR
+DIRECTV.SPORTS(DTS7).co | DIRECTV SPORTS(DTS7)
+DIRECTV.SPORTS(DTS9).co | DIRECTV SPORTS(DTS9)
+DIRECTV.SPORTS.HD(DTSHD9).co | DIRECTV SPORTS HD(DTSHD9)
+DIRECTV.SPORTS.HD(DTVSHD).co | DIRECTV SPORTS HD(DTVSHD)
+DIRECTV.Sports.5(DTS6).co | DIRECTV Sports 5(DTS6)
+DISCOVERY.H.and.H.HD.uy | DISCOVERY H and H HD
+DISCOVERY.HOME.&.GARDEN.(HomeGarden).pe | DISCOVERY HOME & GARDEN (HomeGarden)
+DISCOVERY.TLC.HD..uy | DISCOVERY TLC HD
+DISCOVERY.TLC.HD.uy | DISCOVERY TLC HD
+DSPORTS.Radio(DTSR).co | DSPORTS Radio(DTSR)
+DSports.Radio(DTSR).co | DSports Radio(DTSR)
+ENLACE.TBN.(Enlace).pe | ENLACE TBN (Enlace)
+ENTERTAINMENT.TELEVISION..uy | ENTERTAINMENT TELEVISION
+ENTERTAINMENT.TELEVISION.uy | ENTERTAINMENT TELEVISION
+ESPN | ESPN 1 MEX HD | ESPN 1 MEX FHD
+ESPN 2 HD.co | ESPN 2 CO
+ESPN.ar | ESPN 2 HD | ARG | ESPN 2 ARG | FHD
+EVENTOS.4.HD..uy | EVENTOS 4 HD
+EVENTOS.DEPORTIVOS.2.HD.uy | EVENTOS DEPORTIVOS 2 HD
+El Toro TV | [ES] EL TORO TV HD 1080P
+FOX.CLASSICS.(FoxClassics).pe | FOX CLASSICS (FoxClassics)
+FOX.COMEDY.(FoxComedy).pe | FOX COMEDY (FoxComedy)
+FOX.COMEDY.HD.(FoxComedyHD).pe | FOX COMEDY HD (FoxComedyHD)
+FOX.FAMILY.HD.(FoxFamilyHD).pe | FOX FAMILY HD (FoxFamilyHD)
+FOX.PREMIUM.ACTION.HD.(FoxActionHD).pe | FOX PREMIUM ACTION HD (FoxActionHD)
+FOX.PREMIUM.CINEMA.HD.(Fox.Cinema.HD).pe | FOX PREMIUM CINEMA HD (Fox Cinema HD)
+FOX.PREMIUM.MOVIES.HD.(FoxMoviesHD).pe | FOX PREMIUM MOVIES HD (FoxMoviesHD)
+FOX.SERIES.(Fox1).pe | FOX SERIES (Fox1)
+FOX.SERIES.HD.(FoxSeriesHD).pe | FOX SERIES HD (FoxSeriesHD)
+FOXSports3.ar | FOX SPORTS 3 FHD | ARG
+FXM.REGIONAL.OTT.(FX.Movies.DTH).pe | FXM REGIONAL OTT (FX Movies DTH)
+GLOBAL.(RED.TV).pe | GLOBAL (RED TV)
+GOL.PERU.HD.(GOL.PERU.HD).pe | GOL PERU HD (GOL PERU HD)
+GOLPERU.(GOLPERU).pe | GOLPERU (GOLPERU)
+GOLPERU.HD.(GOLPERU.HD).pe | GOLPERU HD (GOLPERU HD)
+HOME.&.HEALTH.(Home&Health).pe | HOME & HEALTH (Home&Health)
+HOME.&.HEALTH.HD.(Home&HealthHD).pe | HOME & HEALTH HD (Home&HealthHD)
+HOME.AND.HEALTH..uy | HOME AND HEALTH
+HOME.AND.HEALTH.HD..uy | HOME AND HEALTH HD
+Historia | [ES] HISTORIA HD 720P | [ES] HISTORIA HD 1080P
+LA.TELE.PERU.(La.Tele).pe | LA TELE PERU (La Tele)
+M+ ACCIÓN HD | ACCION por M+  HD
+M+ CLÁSICOS HD | CLASICOS por M+ HD | CLASICOS por M+ HD (2)
+M+ DRAMA HD | DRAMA por M+ | DRAMA por M+ FHD
+M+ Indie HD | INDIE por M+ | INDIE por M+ FHD
+M+ Originales HD | [ES] M+ ORIGINALES HD 1080P
+MOVISTAR.EVENTOS.(Movistar.Eventos).pe | MOVISTAR EVENTOS (Movistar Eventos)
+MTV.CLUB..uy | MTV CLUB
+Mega.cl | CHI | MEGA OP1
+NETFLIX.co | NETFLIX
+NHK.(NHK).pe | NHK (NHK)
+NICK.JR.OTT.(Nick.Jr).pe | NICK JR OTT (Nick Jr)
+NS.EVENTOS.1..uy | NS EVENTOS 1
+NS.EVENTOS.2..uy | NS EVENTOS 2
+NS.EVENTOS.2.HD..uy | NS EVENTOS 2 HD
+NS.EVENTOS.3..uy | NS EVENTOS 3
+NS.EVENTOS.3.HD..uy | NS EVENTOS 3 HD
+NS.EVENTOS.HD..uy | NS EVENTOS HD
+NUEVO.SIGLO.TV..uy | NUEVO SIGLO TV
+NUEVO.SIGLO.TV.HD..uy | NUEVO SIGLO TV HD
+PODER.JUDICIAL.(JusticiaTV).pe | PODER JUDICIAL (JusticiaTV)
+PRIME.VIDEO.co | PRIME VIDEO
+Portal.DIRECTV.Sports(DTVS).co | Portal DIRECTV Sports(DTVS)
+QUALITY.CHANNEL.(Quality).pe | QUALITY CHANNEL (Quality)
+RAI.TV.(RAI).pe | RAI TV (RAI)
+RCN.HDTV.2.(RCNHD2).co | RCN HDTV 2 (RCNHD2)
+RPP.TV.(RPP.TV).pe | RPP TV (RPP TV)
+SAETA..uy | SAETA
+SPACE.REGIONAL.DTH.LIVE.(Space.HD).pe | SPACE REGIONAL DTH LIVE (Space HD)
+STAR.+.co | STAR +
+São.Paulo/SP..Band.HD.br | São Paulo/SP  Band HD
+São.Paulo/SP..Band.br | São Paulo/SP  Band
+São.Paulo/SP..Cinecanal.br | São Paulo/SP  Cinecanal
+São.Paulo/SP..Combate.HD.br | São Paulo/SP  Combate HD
+São.Paulo/SP..Combate.br | São Paulo/SP  Combate
+São.Paulo/SP..Comedy.Central.HD.br | São Paulo/SP  Comedy Central HD
+São.Paulo/SP..Comedy.Central.br | São Paulo/SP  Comedy Central
+São.Paulo/SP..FX.HD.³.br | São Paulo/SP  FX HD ³
+São.Paulo/SP..FX.br | São Paulo/SP  FX
+São.Paulo/SP..GNT.HD.³.br | São Paulo/SP  GNT HD ³
+São.Paulo/SP..MTV.HD.³.br | São Paulo/SP  MTV HD ³
+São.Paulo/SP..MTV.Live.HD.br | São Paulo/SP  MTV Live HD
+São.Paulo/SP..MTV.br | São Paulo/SP  MTV
+São.Paulo/SP..NHK.World.Premium.br | São Paulo/SP  NHK World Premium
+São.Paulo/SP..Nick.Jr..br | São Paulo/SP  Nick Jr.
+São.Paulo/SP..Nick.Jr.HD.³.br | São Paulo/SP  Nick Jr HD ³
+São.Paulo/SP..Nickelodeon.HD.br | São Paulo/SP  Nickelodeon HD
+São.Paulo/SP..Nickelodeon.br | São Paulo/SP  Nickelodeon
+São.Paulo/SP..Off.br | São Paulo/SP  Off
+São.Paulo/SP..PREMIERE.HD.3.³.br | São Paulo/SP  PREMIERE HD 3 ³
+São.Paulo/SP..PREMIERE.HD.4.³.br | São Paulo/SP  PREMIERE HD 4 ³
+São.Paulo/SP..PREMIERE.HD.5.³.br | São Paulo/SP  PREMIERE HD 5 ³
+São.Paulo/SP..Paramount.Network.HD..br | São Paulo/SP  Paramount Network HD
+São.Paulo/SP..Paramount.Network.br | São Paulo/SP  Paramount Network
+São.Paulo/SP..Polishop.TV.br | São Paulo/SP  Polishop TV
+São.Paulo/SP..Premiere.5.br | São Paulo/SP  Premiere 5
+São.Paulo/SP..Rede.21.br | São Paulo/SP  Rede 21
+São.Paulo/SP..SIC.International.br | São Paulo/SP  SIC International
+São.Paulo/SP..STAR.CHANNEL.HD.br | São Paulo/SP  STAR CHANNEL HD
+São.Paulo/SP..Shoptime.TV.br | São Paulo/SP  Shoptime TV
+São.Paulo/SP..Sony.HD.³.br | São Paulo/SP  Sony HD ³
+São.Paulo/SP..Sony.br | São Paulo/SP  Sony
+São.Paulo/SP..Star.Channel.br | São Paulo/SP  Star Channel
+São.Paulo/SP..TNT.SÉRIES.HD.br | São Paulo/SP  TNT SÉRIES HD
+São.Paulo/SP..TV.Câmara.br | São Paulo/SP  TV Câmara
+São.Paulo/SP..Telecine.Action.HD.³.br | São Paulo/SP  Telecine Action HD ³
+São.Paulo/SP..Telecine.Pipoca.br | São Paulo/SP  Telecine Pipoca
+TBS.VERY.FUNNY.(TBS).pe | TBS VERY FUNNY (TBS)
+TBS.VERY.FUNNY.HD.(TBS.Very.Funny.HD).pe | TBS VERY FUNNY HD (TBS Very Funny HD)
+TELEFE.INTER..uy | TELEFE INTER
+TNT.HD.OTT.(TNT.HD).pe | TNT HD OTT (TNT HD)
+TOROS.TV.(TorosTV).pe | TOROS TV (TorosTV)
+TRECE | 13 tv HD
+TV.GLOBO.HD..uy | TV GLOBO HD
+UNIVERSAL CHANNEL | UNIVERSAL HD (DTV)
+UNIVERSAL.HD.uy | UNIVERSAL HD
+Universal TV.co | UNIVERSAL HD
+VOA.(VOA).pe | VOA (VOA)
+WIPR.pr | WIPR
+Win.Sports.Premium(Win+).co | Win Sports Premium(Win+)
+Win.Sports.Premium.HD(Win+HD).co | Win Sports Premium HD(Win+HD)
+YOUTUBE.KIDS.co | YOUTUBE KIDS
+YOUTUBE.co | YOUTUBE
+Época.co | Época
