@@ -114,6 +114,33 @@ jobs:
             rm -f epgtalk_latino.xml.gz
           fi
 
+      # Guías de APOYO ("donantes"): NO agregan canales a tu guía; solo se
+      # usan para rellenar canales que sigan sin programación (por nombre).
+      # Si alguna no se puede descargar, solo avisa y se sigue sin ella.
+      - name: Descargar guías de apoyo (donantes)
+        run: |
+          mkdir -p donantes
+          descargar() {
+            nombre="$1"
+            url="$2"
+            if [[ "$url" == *.gz ]]; then
+              if curl -fsSL "$url" -o "donantes/${nombre}.xml.gz"; then
+                gunzip -f "donantes/${nombre}.xml.gz" || { echo "::warning::No se pudo descomprimir $nombre"; rm -f "donantes/${nombre}.xml.gz" "donantes/${nombre}.xml"; }
+              else
+                echo "::warning::No se pudo descargar la guía de apoyo $nombre; se sigue sin ella."
+                rm -f "donantes/${nombre}.xml.gz"
+              fi
+            else
+              curl -fsSL "$url" -o "donantes/${nombre}.xml" || { echo "::warning::No se pudo descargar la guía de apoyo $nombre; se sigue sin ella."; rm -f "donantes/${nombre}.xml"; }
+            fi
+          }
+          descargar us2 "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz"
+          descargar us_sports "https://epgshare01.online/epgshare01/epg_ripper_US_SPORTS1.xml.gz"
+          descargar plex "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/Plex/all.xml.gz"
+          descargar samsung "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/SamsungTVPlus/all.xml.gz"
+          descargar espana "https://raw.githubusercontent.com/davidmuma/EPG_dobleM/master/guiatv.xml"
+          ls -la donantes || true
+
       - name: Generar guía genérica para canales sin fuente externa (65 temáticos/FAST)
         run: python3 scripts/generate_extra_epg.py --output extra_epg.xml --days 3
 
@@ -127,6 +154,7 @@ jobs:
           python3 scripts/merge_epg.py \
             --output guide.xml \
             --roku-output guide_roku.xml \
+            --empty-report empty_channels.txt \
             --gzip \
             --forward-hours 72 \
             --max-mb 95 \
@@ -135,16 +163,17 @@ jobs:
             epgshare_*.xml \
             iptvepg_*.xml \
             epgtalk_*.xml \
-            extra_epg.xml
+            extra_epg.xml \
+            --donors donantes/*.xml
 
       - name: Limpiar archivos intermedios
-        run: rm -f gatotv_guide.xml m3u4u_guide.xml epgshare_*.xml iptvepg_*.xml epgtalk_*.xml extra_epg.xml
+        run: rm -rf donantes gatotv_guide.xml m3u4u_guide.xml epgshare_*.xml iptvepg_*.xml epgtalk_*.xml extra_epg.xml
 
       - name: Commitear y subir la guía combinada
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add guide.xml guide.xml.gz guide_roku.xml
+          git add guide.xml guide.xml.gz guide_roku.xml empty_channels.txt
           if git diff --staged --quiet; then
             echo "Sin cambios en la guía hoy, no hay nada que commitear."
           else
