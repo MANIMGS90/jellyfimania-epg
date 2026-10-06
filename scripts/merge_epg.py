@@ -463,5 +463,30 @@ def main():
         out.append(el)
 
     ET.ElementTree(out).write(args.output, encoding="utf-8", xml_declaration=True)
-    print(f"TOTAL: {len(channels)} canales, {len(kept)} programas, ventana "
-          f"-{args.kee
+        print(f"TOTAL: {len(channels)} canales, {len(kept)} programas, ventana "
+          f"-{args.keep_past_hours:g}h/+{fwd:g}h, {redundant} repetidos omitidos", file=sys.stderr)
+
+    if args.gzip:
+        with open(args.output, "rb") as fi, gzip.open(args.output + ".gz", "wb", compresslevel=9) as fo:
+            shutil.copyfileobj(fi, fo)
+
+    mb = os.path.getsize(args.output) / (1024 * 1024)
+    print(f"Escrito {args.output}: {mb:.1f} MB", file=sys.stderr)
+
+    if args.roku_output:
+        build_roku_guide(channels, progs, now, args.roku_output, args.roku_keep_past_hours,
+                         args.roku_forward_hours, args.roku_desc_max)
+
+    if args.m3u:
+        try:
+            check_m3u(args.m3u, channels, kept, args.report)
+        except Exception as e:  # el reporte es opcional: nunca debe tumbar la guía
+            print(f"AVISO: no se pudo revisar la lista M3U ({e}).", file=sys.stderr)
+
+    if mb > 99:
+        print("::error::guide.xml supera 99 MB; GitHub rechazará el push.", file=sys.stderr)
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
