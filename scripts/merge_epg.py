@@ -4,6 +4,9 @@ merge_epg.py — combina varias guías XMLTV en una sola, SIN perder contenido.
 
 Uso:
     python3 scripts/merge_epg.py --output guide.xml [--gzip] a.xml b.xml [...]
+    (opcional) --m3u mi_lista.m3u   -> escribe missing_channels.txt con los
+                                       canales de tu lista que aun asi
+                                       siguen sin programacion
 
 El orden de los archivos es la prioridad: si el mismo canal (mismo id)
 viene en varias fuentes, gana el PRIMERO (se avisa por stderr).
@@ -15,6 +18,12 @@ QUÉ HACE (y qué NO toca):
   prioridad que se SOLAPA en horario con uno de una fuente anterior
   para el mismo canal (es el mismo programa repetido). Los huecos de
   la fuente principal se siguen llenando con las demás.
+- NUEVO — RELLENO DE CANALES VACÍOS: si un canal quedó SIN programas en
+  la ventana horaria, se busca en TODAS las fuentes otro canal con el
+  mismo nombre (aunque tenga otro id, otro país o venga con separadores
+  como "CINE | HBO" / "CINE|HBO", asteriscos, HD/FHD/SD, LATINO/MX...)
+  y se le copian sus programas. Así casi ningún canal queda en
+  "Sin programación". Se avisa por stderr cuántos se rellenaron.
 - Salida COMPACTA: se quitan los espacios/saltos de línea de relleno
   que traen las fuentes (no cambia ningún dato; solo baja el peso).
 
@@ -27,15 +36,62 @@ VENTANA HORARIA (único recorte, y es automático y mínimo):
   el log de la Action. Nada más se recorta.
 """
 import argparse
+import copy
 import datetime
 import gzip
+import io
+import os
 import re
 import shutil
 import sys
+import unicodedata
+import urllib.request
 import xml.etree.ElementTree as ET
+from collections import defaultdict
 
 _TS_RE = re.compile(r"^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})\s*([+-]\d{4})?$")
 _MIN = datetime.datetime.min.replace(tzinfo=datetime.timezone.utc)
+
+# ---------------------------------------------------------------------------
+# Comparación de nombres entre fuentes (misma idea que usa la app de Roku)
+# ---------------------------------------------------------------------------
+_STOP_WORDS = {"hd", "fhd", "sd", "uhd", "4k", "latino", "latinoamerica",
+               "latam", "mexico", "mx", "usa", "us", "hevc", "raw", "canal"}
+_SEPARATORS = ["¦", "│", "/", "»", "›", ">", "•", "·", ":", " - ", " – ", " — "]
+
+
+def loose_key(name):
+    """'CINE | *HBO* HD' -> 'cinehbo'; 'HBO (Latin America)' -> 'hbo'."""
+    t = unicodedata.normalize("NFKD", name.lower())
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    t = re.sub(r"\([^)]*\)|\[[^\]]*\]", " ", t)
+    t = t.replace("c1nemax", "cinemax")
+    t = re.sub(r"[^a-z0-9]+", " ", t)
+    out = "".join(w for w in t.split() if w not in _STOP_WORDS)
+    return out if len(out) >= 2 else ""
+
+
+def title_parts(name):
+    """Pedazos tras separar por | / : - » • (último primero). El primero
+    (categoría/país: 'CINE', 'ES') se descarta cuando hay más de uno."""
+    x = name
+    for sp in _SEPARATORS:
+        x = x.replace(sp, "|")
+    if "|" not in x:
+        return []
+    return [p.strip() for p in reversed(x.split("|")[1:]) if p.strip()]
+
+
+def keys_for(name):
+    keys = []
+    k = loose_key(name)
+    if k:
+        keys.append(k)
+    for part in title_parts(name):
+        pk = loose_key(part)
+        if pk and pk not in keys:
+            keys.append(pk)
+    return keys
 
 
 def parse_xmltv_time(ts):
@@ -130,6 +186,99 @@ def collect(paths):
     return channels, progs, redundant
 
 
+# ---------------------------------------------------------------------------
+# Relleno de canales vacíos + reporte de la lista M3U
+# ---------------------------------------------------------------------------
+def _in_window(st, sp, min_stop, max_start):
+    return st is None or sp is None or (sp >= min_stop and st <= max_start)
+
+
+def _names_and_index(channels, ids_with_data, extra_ids=()):
+    """names: id -> [nombres]; index: clave suelta -> [ids con programas]."""
+    names = {}
+    for c in channels:
+        cid = c.get("id")
+        if cid is None:
+            continue
+        nms = [dn.text.strip() for dn in c.findall("display-name") if dn.text and dn.text.strip()]
+        names[cid] = nms or [cid]
+    for cid in list(ids_with_data) + list(extra_ids):
+        names.setdefault(cid, [cid])
+    index = defaultdict(list)
+    for cid in ids_with_data:
+        for nm in names.get(cid, [cid]):
+            for k in keys_for(nm):
+                if cid not in index[k]:
+                    index[k].append(cid)
+    return names, index
+
+
+def fill_empty_channels(channels, progs, now, keep_past, forward):
+    """Canales sin programas en la ventana -> copiar los de otro canal con
+    el mismo nombre (de cualquier fuente). Devuelve (rellenados, sin_donante)."""
+    min_stop = now - datetime.timedelta(hours=keep_past)
+    max_start = now + datetime.timedelta(hours=forward)
+
+    by_chan = defaultdict(list)      # id -> [(st, sp, elem)] dentro de la ventana
+    for (st, sp, el) in progs:
+        if _in_window(st, sp, min_stop, max_start):
+            by_chan[el.get("channel") or ""].append((st, sp, el))
+
+    names, index = _names_and_index(channels, list(by_chan))
+    filled, no_donor = 0, []
+    new_progs = []
+    for c in channels:
+        cid = c.get("id")
+        if cid is None or by_chan.get(cid):
+            continue
+        donor = None
+        for nm in names.get(cid, [cid]):
+            for k in keys_for(nm):
+                cands = [d for d in index.get(k, []) if d != cid]
+                if cands:
+                    donor = max(cands, key=lambda d: len(by_chan[d]))
+                    break
+            if donor:
+                break
+        if donor is None:
+            no_donor.append(cid)
+            continue
+        for (st, sp, el) in by_chan[donor]:
+            cp = copy.deepcopy(el)
+            cp.set("channel", cid)
+            new_progs.append((st, sp, cp))
+        filled += 1
+    progs.extend(new_progs)
+    return filled, no_donor
+
+
+def check_m3u(m3u, channels, kept, report_path):
+    """Escribe los canales de tu lista M3U que siguen sin programación."""
+    if m3u.startswith("http"):
+        req = urllib.request.Request(m3u, headers={"User-Agent": "Mozilla/5.0"})
+        text = urllib.request.urlopen(req, timeout=120).read().decode("utf-8", "replace")
+    else:
+        with open(m3u, encoding="utf-8", errors="replace") as f:
+            text = f.read()
+    with_data = set((el.get("channel") or "") for (_, _, el) in kept)
+    _, index = _names_and_index(channels, with_data)
+    missing, total = [], 0
+    for ln in text.splitlines():
+        if not ln.startswith("#EXTINF"):
+            continue
+        total += 1
+        tid = re.search(r'tvg-id="([^"]*)"', ln)
+        title = ln.split(",", 1)[1].strip() if "," in ln else ""
+        ok = bool(tid and tid.group(1) and tid.group(1) in with_data)
+        if not ok:
+            ok = any(k in index for k in keys_for(title)) or (loose_key(title) in index)
+        if not ok:
+            missing.append(title)
+    with open(report_path, "w", encoding="utf-8") as r:
+        r.write("\n".join(missing) + "\n")
+    print(f"LISTA M3U: {total} canales, {len(missing)} sin programación -> {report_path}", file=sys.stderr)
+
+
 def choose_window(progs, sizes, now, keep_past, forward, min_forward, max_bytes, base_bytes):
     """Elige la ventana hacia adelante más grande que cabe en max_bytes."""
     min_stop = now - datetime.timedelta(hours=keep_past)
@@ -157,10 +306,24 @@ def main():
     ap.add_argument("--min-forward-hours", type=float, default=24)
     ap.add_argument("--max-mb", type=float, default=95,
                     help="Tamaño máximo del guide.xml (GitHub bloquea >100 MB)")
+    ap.add_argument("--no-fill", action="store_true",
+                    help="No rellenar canales vacíos con programas de otro canal del mismo nombre")
+    ap.add_argument("--m3u", help="Tu lista M3U (archivo o URL) para reportar canales sin programación")
+    ap.add_argument("--report", default="missing_channels.txt")
     args = ap.parse_args()
 
     now = datetime.datetime.now(datetime.timezone.utc)
     channels, progs, redundant = collect(args.inputs)
+    if not channels and not progs:
+        print("::error::Ninguna fuente se pudo leer; no se escribe guide.xml.", file=sys.stderr)
+        sys.exit(1)
+
+    if not args.no_fill:
+        filled, no_donor = fill_empty_channels(channels, progs, now,
+                                               args.keep_past_hours, args.forward_hours)
+        print(f"RELLENO: {filled} canales vacíos recibieron programas de otro canal del "
+              f"mismo nombre; {len(no_donor)} siguen sin ninguna fuente que los tenga.",
+              file=sys.stderr)
 
     # Peso (en bytes) de cada elemento ya compactado
     ch_bytes = sum(len(ET.tostring(c, encoding="utf-8")) + 1 for c in channels)
@@ -200,9 +363,15 @@ def main():
         with open(args.output, "rb") as fi, gzip.open(args.output + ".gz", "wb", compresslevel=9) as fo:
             shutil.copyfileobj(fi, fo)
 
-    import os
     mb = os.path.getsize(args.output) / (1024 * 1024)
     print(f"Escrito {args.output}: {mb:.1f} MB", file=sys.stderr)
+
+    if args.m3u:
+        try:
+            check_m3u(args.m3u, channels, kept, args.report)
+        except Exception as e:  # el reporte es opcional: nunca debe tumbar la guía
+            print(f"AVISO: no se pudo revisar la lista M3U ({e}).", file=sys.stderr)
+
     if mb > 99:
         print("::error::guide.xml supera 99 MB; GitHub rechazará el push.", file=sys.stderr)
         sys.exit(1)
