@@ -36,7 +36,10 @@ jobs:
         working-directory: epg-tool
         run: npm install
 
+      # Si una fuente falla, las demás se siguen usando (antes una sola
+      # fuente caída tumbaba toda la Action y la guía quedaba vieja).
       - name: Descargar guía de gatotv.com para mis canales
+        continue-on-error: true
         working-directory: epg-tool
         run: |
           npm run grab -- \
@@ -49,10 +52,11 @@ jobs:
           M3U4U_EPG_URL: ${{ secrets.M3U4U_EPG_URL }}
         run: |
           if [ -z "$M3U4U_EPG_URL" ]; then
-            echo "Falta el secret M3U4U_EPG_URL en este repositorio (Settings → Secrets and variables → Actions)." >&2
-            exit 1
+            echo "::warning::Falta el secret M3U4U_EPG_URL en este repositorio (Settings → Secrets and variables → Actions). Se sigue sin esa fuente."
+          elif ! curl -fsSL "$M3U4U_EPG_URL" -o m3u4u_guide.xml; then
+            echo "::warning::No se pudo descargar la guía de m3u4u. Se sigue sin esa fuente."
+            rm -f m3u4u_guide.xml
           fi
-          curl -fsSL "$M3U4U_EPG_URL" -o m3u4u_guide.xml
 
       - name: Descargar guías de epgshare01.online (México + Latinoamérica)
         run: |
@@ -74,8 +78,12 @@ jobs:
           for codigo in "${!paises[@]}"; do
             nombre="${paises[$codigo]}"
             echo "=== Descargando $nombre ($codigo) ==="
-            curl -fsSL "https://epgshare01.online/epgshare01/epg_ripper_${codigo}.xml.gz" -o "epgshare_${nombre}.xml.gz"
-            gunzip -f "epgshare_${nombre}.xml.gz"
+            if curl -fsSL "https://epgshare01.online/epgshare01/epg_ripper_${codigo}.xml.gz" -o "epgshare_${nombre}.xml.gz"; then
+              gunzip -f "epgshare_${nombre}.xml.gz" || echo "::warning::No se pudo descomprimir $nombre"
+            else
+              echo "::warning::No se pudo descargar $nombre ($codigo); se sigue sin esa fuente."
+              rm -f "epgshare_${nombre}.xml.gz"
+            fi
           done
 
       - name: Descargar guías de iptv-epg.org (países de Latinoamérica que faltaban)
@@ -91,17 +99,29 @@ jobs:
           for codigo in "${!paises[@]}"; do
             nombre="${paises[$codigo]}"
             echo "=== Descargando $nombre ($codigo) ==="
-            curl -fsSL "https://iptv-epg.org/files/epg-${codigo}.xml" -o "iptvepg_${nombre}.xml"
+            if ! curl -fsSL "https://iptv-epg.org/files/epg-${codigo}.xml" -o "iptvepg_${nombre}.xml"; then
+              echo "::warning::No se pudo descargar $nombre ($codigo); se sigue sin esa fuente."
+              rm -f "iptvepg_${nombre}.xml"
+            fi
           done
 
       - name: Descargar guía de EPGTalk (Latino/México, 607 canales extra)
         run: |
-          curl -fsSL "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/Latino_guide.xml.gz" -o epgtalk_latino.xml.gz
-          gunzip -f epgtalk_latino.xml.gz
+          if curl -fsSL "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/Latino_guide.xml.gz" -o epgtalk_latino.xml.gz; then
+            gunzip -f epgtalk_latino.xml.gz || echo "::warning::No se pudo descomprimir EPGTalk"
+          else
+            echo "::warning::No se pudo descargar EPGTalk; se sigue sin esa fuente."
+            rm -f epgtalk_latino.xml.gz
+          fi
 
       - name: Generar guía genérica para canales sin fuente externa (65 temáticos/FAST)
         run: python3 scripts/generate_extra_epg.py --output extra_epg.xml --days 3
 
+      # Orden = prioridad (gana el primero). Además, los canales que
+      # queden SIN programas se rellenan con los de otro canal del mismo
+      # nombre de cualquiera de estas fuentes (ver scripts/merge_epg.py).
+      # Para ver cuáles de TU lista siguen sin programación, agrega abajo
+      # la línea:   --m3u "URL_O_ARCHIVO_DE_TU_LISTA.m3u" \
       - name: Combinar todas las guías en una sola
         run: |
           python3 scripts/merge_epg.py \
