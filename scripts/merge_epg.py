@@ -24,9 +24,16 @@ QUÉ HACE (y qué NO toca):
   como "CINE | HBO" / "CINE|HBO", asteriscos, HD/FHD/SD, LATINO/MX...)
   y se le copian sus programas. Así casi ningún canal queda en
   "Sin programación". Se avisa por stderr cuántos se rellenaron.
+- NUEVO — FUENTES DONANTES (--donors a.xml b.xml ...): guías de APOYO que
+  solo sirven para rellenar canales que sigan vacíos. Sus canales NO se
+  agregan a la salida (así la guía no engorda); solo se usan sus
+  programas como "donante" por nombre. Ponlas AL FINAL del comando.
+- NUEVO — REPORTE DE CANALES SIN FUENTE (--empty-report empty_channels.txt):
+  lista los canales (id y nombres) que siguen sin programación aun
+  después del relleno, para saber qué fuente falta buscar.
 - NUEVO — GUÍA LIGERA PARA ROKU (--roku-output guide_roku.xml): además del
   guide.xml completo, escribe una segunda copia pensada para que la app
-  la lea rápido: solo la ventana que la app realmente usa (-1 h / +50 h),
+  la lea rápido: solo la ventana que la app realmente usa (-1 h / +40 h),
   solo los canales que tienen programas y solo los datos que la app
   muestra (título, descripción recortada, categoría). Los canales, los
   nombres y los programas de la ventana quedan TODOS; el guide.xml
@@ -221,18 +228,20 @@ def _names_and_index(channels, ids_with_data, extra_ids=()):
     return names, index
 
 
-def fill_empty_channels(channels, progs, now, keep_past, forward):
+def fill_empty_channels(channels, progs, now, keep_past, forward,
+                       donor_channels=(), donor_progs=()):
     """Canales sin programas en la ventana -> copiar los de otro canal con
-    el mismo nombre (de cualquier fuente). Devuelve (rellenados, sin_donante)."""
+    el mismo nombre (de cualquier fuente, incluidas las donantes).
+    Devuelve (rellenados, ids_sin_donante)."""
     min_stop = now - datetime.timedelta(hours=keep_past)
     max_start = now + datetime.timedelta(hours=forward)
 
     by_chan = defaultdict(list)      # id -> [(st, sp, elem)] dentro de la ventana
-    for (st, sp, el) in progs:
+    for (st, sp, el) in list(progs) + list(donor_progs):
         if _in_window(st, sp, min_stop, max_start):
             by_chan[el.get("channel") or ""].append((st, sp, el))
 
-    names, index = _names_and_index(channels, list(by_chan))
+    names, index = _names_and_index(list(channels) + list(donor_channels), list(by_chan))
     filled, no_donor = 0, []
     new_progs = []
     for c in channels:
@@ -258,6 +267,27 @@ def fill_empty_channels(channels, progs, now, keep_past, forward):
         filled += 1
     progs.extend(new_progs)
     return filled, no_donor
+
+
+def write_empty_report(channels, empty_ids, path):
+    names = {}
+    for c in channels:
+        cid = c.get("id")
+        if cid is not None:
+            names[cid] = [dn.text.strip() for dn in c.findall("display-name") if dn.text and dn.text.strip()]
+    with open(path, "w", encoding="utf-8") as f:
+        for cid in sorted(empty_ids):
+            f.write(" | ".join([cid] + names.get(cid, [])) + "\n")
+    print(f"REPORTE: {len(empty_ids)} canales sin programación -> {path}", file=sys.stderr)
+
+
+def prefix_donor_ids(channels, progs, prefix="~donor~"):
+    """Evita choques de id entre fuentes principales y donantes."""
+    for c in channels:
+        if c.get("id") is not None:
+            c.set("id", prefix + c.get("id"))
+    for (_, _, el) in progs:
+        el.set("channel", prefix + (el.get("channel") or ""))
 
 
 def check_m3u(m3u, channels, kept, report_path):
@@ -366,8 +396,11 @@ def main():
     ap.add_argument("--min-forward-hours", type=float, default=24)
     ap.add_argument("--max-mb", type=float, default=95,
                     help="Tamaño máximo del guide.xml (GitHub bloquea >100 MB)")
+    ap.add_argument("--donors", nargs="*", default=[],
+                    help="Guías de APOYO: solo se usan para rellenar canales vacíos (ponerlas al final)")
+    ap.add_argument("--empty-report", help="Escribir aquí los canales que siguen sin programación")
     ap.add_argument("--roku-output", help="Además escribir la guía LIGERA para Roku en este archivo (ej. guide_roku.xml)")
-    ap.add_argument("--roku-forward-hours", type=float, default=50)
+    ap.add_argument("--roku-forward-hours", type=float, default=40)
     ap.add_argument("--roku-keep-past-hours", type=float, default=1)
     ap.add_argument("--roku-desc-max", type=int, default=160)
     ap.add_argument("--no-fill", action="store_true",
@@ -382,12 +415,22 @@ def main():
         print("::error::Ninguna fuente se pudo leer; no se escribe guide.xml.", file=sys.stderr)
         sys.exit(1)
 
+    no_donor = []
     if not args.no_fill:
+        d_channels, d_progs = [], []
+        if args.donors:
+            print("--- Fuentes donantes (solo para rellenar) ---", file=sys.stderr)
+            d_channels, d_progs, _ = collect(args.donors)
+            prefix_donor_ids(d_channels, d_progs)
         filled, no_donor = fill_empty_channels(channels, progs, now,
-                                               args.keep_past_hours, args.forward_hours)
+                                               args.keep_past_hours, args.forward_hours,
+                                               d_channels, d_progs)
         print(f"RELLENO: {filled} canales vacíos recibieron programas de otro canal del "
               f"mismo nombre; {len(no_donor)} siguen sin ninguna fuente que los tenga.",
               file=sys.stderr)
+        del d_channels, d_progs
+    if args.empty_report:
+        write_empty_report(channels, no_donor, args.empty_report)
 
     # Peso (en bytes) de cada elemento ya compactado
     ch_bytes = sum(len(ET.tostring(c, encoding="utf-8")) + 1 for c in channels)
@@ -421,29 +464,4 @@ def main():
 
     ET.ElementTree(out).write(args.output, encoding="utf-8", xml_declaration=True)
     print(f"TOTAL: {len(channels)} canales, {len(kept)} programas, ventana "
-          f"-{args.keep_past_hours:g}h/+{fwd:g}h, {redundant} repetidos omitidos", file=sys.stderr)
-
-    if args.gzip:
-        with open(args.output, "rb") as fi, gzip.open(args.output + ".gz", "wb", compresslevel=9) as fo:
-            shutil.copyfileobj(fi, fo)
-
-    mb = os.path.getsize(args.output) / (1024 * 1024)
-    print(f"Escrito {args.output}: {mb:.1f} MB", file=sys.stderr)
-
-    if args.roku_output:
-        build_roku_guide(channels, kept, now, args.roku_output, args.roku_keep_past_hours,
-                         args.roku_forward_hours, args.roku_desc_max)
-
-    if args.m3u:
-        try:
-            check_m3u(args.m3u, channels, kept, args.report)
-        except Exception as e:  # el reporte es opcional: nunca debe tumbar la guía
-            print(f"AVISO: no se pudo revisar la lista M3U ({e}).", file=sys.stderr)
-
-    if mb > 99:
-        print("::error::guide.xml supera 99 MB; GitHub rechazará el push.", file=sys.stderr)
-        sys.exit(1)
-
-
-if __name__ == "__main__":
-    main()
+          f"-{args.kee
