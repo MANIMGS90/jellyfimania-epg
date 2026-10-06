@@ -16,7 +16,9 @@ _TS_RE = re.compile(r"^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})\s*([+-]\d{4})?
 # Comparación de nombres entre fuentes (misma idea que usa la app de Roku)
 # ---------------------------------------------------------------------------
 _STOP_WORDS = {"hd", "fhd", "sd", "uhd", "4k", "latino", "latinoamerica",
-               "latam", "mexico", "mx", "usa", "us", "hevc", "raw", "canal"}
+               "latam", "mexico", "mx", "usa", "us", "hevc", "raw", "canal",
+               "mex", "arg", "chi", "col", "per", "ch", "dtv", "dth", "ott",
+               "op1", "op2", "op3", "op4", "720p", "1080p"}
 _SEPARATORS = ["¦", "│", "/", "»", "›", ">", "•", "·", ":", " - ", " – ", " — "]
 
 
