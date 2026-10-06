@@ -24,6 +24,13 @@ QUÉ HACE (y qué NO toca):
   como "CINE | HBO" / "CINE|HBO", asteriscos, HD/FHD/SD, LATINO/MX...)
   y se le copian sus programas. Así casi ningún canal queda en
   "Sin programación". Se avisa por stderr cuántos se rellenaron.
+- NUEVO — GUÍA LIGERA PARA ROKU (--roku-output guide_roku.xml): además del
+  guide.xml completo, escribe una segunda copia pensada para que la app
+  la lea rápido: solo la ventana que la app realmente usa (-1 h / +50 h),
+  solo los canales que tienen programas y solo los datos que la app
+  muestra (título, descripción recortada, categoría). Los canales, los
+  nombres y los programas de la ventana quedan TODOS; el guide.xml
+  completo se sigue publicando igual.
 - Salida COMPACTA: se quitan los espacios/saltos de línea de relleno
   que traen las fuentes (no cambia ningún dato; solo baja el peso).
 
@@ -48,6 +55,7 @@ import unicodedata
 import urllib.request
 import xml.etree.ElementTree as ET
 from collections import defaultdict
+from xml.sax.saxutils import escape, quoteattr
 
 _TS_RE = re.compile(r"^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})\s*([+-]\d{4})?$")
 _MIN = datetime.datetime.min.replace(tzinfo=datetime.timezone.utc)
@@ -279,6 +287,58 @@ def check_m3u(m3u, channels, kept, report_path):
     print(f"LISTA M3U: {total} canales, {len(missing)} sin programación -> {report_path}", file=sys.stderr)
 
 
+def build_roku_guide(channels, kept, now, path, keep_past, forward, desc_max):
+    """Escribe la guía LIGERA para la app de Roku (ver --roku-output)."""
+    lo = now - datetime.timedelta(hours=keep_past)
+    hi = now + datetime.timedelta(hours=forward)
+    by_chan = defaultdict(list)
+    for (st, sp, el) in kept:
+        if st is None or sp is None:
+            continue
+        if sp >= lo and st <= hi:
+            by_chan[el.get("channel") or ""].append((st, el))
+
+    names = {}
+    for c in channels:
+        cid = c.get("id")
+        if cid is None:
+            continue
+        names[cid] = [dn.text.strip() for dn in c.findall("display-name") if dn.text and dn.text.strip()]
+
+    def txt(el, tag, limit=None):
+        t = el.find(tag)
+        if t is None or not t.text:
+            return ""
+        v = " ".join(t.text.split())
+        return v[:limit] if limit else v
+
+    n_prog = 0
+    with open(path, "w", encoding="utf-8") as out:
+        out.write('<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="jellyfimania-epg-roku">\n')
+        for cid in sorted(by_chan):
+            out.write("<channel id=%s>" % quoteattr(cid))
+            for nm in (names.get(cid) or [cid]):
+                out.write("<display-name>%s</display-name>" % escape(nm))
+            out.write("</channel>\n")
+        for cid in sorted(by_chan):
+            for st, el in sorted(by_chan[cid], key=lambda t: t[0]):
+                parts = ["<title>%s</title>" % escape(txt(el, "title", 300))]
+                d = txt(el, "desc", desc_max)
+                if d:
+                    parts.append("<desc>%s</desc>" % escape(d))
+                c = txt(el, "category", 100)
+                if c:
+                    parts.append("<category>%s</category>" % escape(c))
+                out.write("<programme start=%s stop=%s channel=%s>%s</programme>\n" % (
+                    quoteattr(el.get("start") or ""), quoteattr(el.get("stop") or ""),
+                    quoteattr(cid), "".join(parts)))
+                n_prog += 1
+        out.write("</tv>\n")
+    mb = os.path.getsize(path) / (1024 * 1024)
+    print(f"GUÍA ROKU: {len(by_chan)} canales, {n_prog} programas, ventana "
+          f"-{keep_past:g}h/+{forward:g}h -> {path} ({mb:.1f} MB)", file=sys.stderr)
+
+
 def choose_window(progs, sizes, now, keep_past, forward, min_forward, max_bytes, base_bytes):
     """Elige la ventana hacia adelante más grande que cabe en max_bytes."""
     min_stop = now - datetime.timedelta(hours=keep_past)
@@ -306,6 +366,10 @@ def main():
     ap.add_argument("--min-forward-hours", type=float, default=24)
     ap.add_argument("--max-mb", type=float, default=95,
                     help="Tamaño máximo del guide.xml (GitHub bloquea >100 MB)")
+    ap.add_argument("--roku-output", help="Además escribir la guía LIGERA para Roku en este archivo (ej. guide_roku.xml)")
+    ap.add_argument("--roku-forward-hours", type=float, default=50)
+    ap.add_argument("--roku-keep-past-hours", type=float, default=1)
+    ap.add_argument("--roku-desc-max", type=int, default=160)
     ap.add_argument("--no-fill", action="store_true",
                     help="No rellenar canales vacíos con programas de otro canal del mismo nombre")
     ap.add_argument("--m3u", help="Tu lista M3U (archivo o URL) para reportar canales sin programación")
@@ -365,6 +429,10 @@ def main():
 
     mb = os.path.getsize(args.output) / (1024 * 1024)
     print(f"Escrito {args.output}: {mb:.1f} MB", file=sys.stderr)
+
+    if args.roku_output:
+        build_roku_guide(channels, kept, now, args.roku_output, args.roku_keep_past_hours,
+                         args.roku_forward_hours, args.roku_desc_max)
 
     if args.m3u:
         try:
