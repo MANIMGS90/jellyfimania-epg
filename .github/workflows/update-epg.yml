@@ -15,6 +15,7 @@ concurrency:
 jobs:
   update-epg:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Descargar el repositorio
         uses: actions/checkout@v4
