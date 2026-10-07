@@ -43,6 +43,10 @@ QUÉ HACE (y qué NO toca):
   muestra (título, descripción recortada, categoría). Los canales, los
   nombres y los programas de la ventana quedan TODOS; el guide.xml
   completo se sigue publicando igual.
+- NUEVO — GUÍA RÁPIDA PARA ROKU (--roku-fast-output guide_roku_now.xml):
+  una copia MUY chica con solo las próximas horas (--roku-fast-hours, 6 por
+  default). La app la lee primero y la guía aparece en segundos; mientras
+  tanto sigue leyendo la guía completa de ~40 horas.
 - Salida COMPACTA: se quitan los espacios/saltos de línea de relleno
   que traen las fuentes (no cambia ningún dato; solo baja el peso).
 
@@ -100,6 +104,8 @@ def main():
                     help="Guías de APOYO: solo se usan para rellenar canales vacíos (ponerlas al final)")
     ap.add_argument("--empty-report", help="Escribir aquí los canales que siguen sin programación")
     ap.add_argument("--roku-output", help="Además escribir la guía LIGERA para Roku en este archivo (ej. guide_roku.xml)")
+    ap.add_argument("--roku-fast-output", help="Además escribir la guía RÁPIDA (solo próximas horas), ej. guide_roku_now.xml")
+    ap.add_argument("--roku-fast-hours", type=float, default=6)
     ap.add_argument("--roku-forward-hours", type=float, default=40)
     ap.add_argument("--roku-keep-past-hours", type=float, default=1)
     ap.add_argument("--roku-desc-max", type=int, default=160)
@@ -185,6 +191,10 @@ def main():
     if args.roku_output:
         build_roku_guide(channels, progs, now, args.roku_output, args.roku_keep_past_hours,
                          args.roku_forward_hours, args.roku_desc_max)
+
+    if args.roku_fast_output:
+        build_roku_guide(channels, progs, now, args.roku_fast_output, args.roku_keep_past_hours,
+                         args.roku_fast_hours, 100)
 
     if args.m3u:
         try:
