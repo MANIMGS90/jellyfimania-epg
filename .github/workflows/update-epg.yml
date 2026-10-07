@@ -155,6 +155,7 @@ jobs:
           python3 scripts/merge_epg.py \
             --output guide.xml \
             --roku-output guide_roku.xml \
+            --roku-fast-output guide_roku_now.xml \
             --empty-report empty_channels.txt \
             --gzip \
             --forward-hours 72 \
@@ -174,7 +175,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add guide.xml guide.xml.gz guide_roku.xml empty_channels.txt
+          git add guide.xml guide.xml.gz guide_roku.xml guide_roku_now.xml empty_channels.txt
           if git diff --staged --quiet; then
             echo "Sin cambios en la guía hoy, no hay nada que commitear."
           else
