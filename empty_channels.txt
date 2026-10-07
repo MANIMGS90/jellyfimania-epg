@@ -39,7 +39,14 @@ Canal.Justicia.TV.(México).sv | Canal Justicia TV (México)
 Canal.RTS.ec | Canal RTS
 Canal.RTS.sv | Canal RTS
 DAYSTAR.co | DAYSTAR
+DIRECTV.SPORTS(DTS7).co | DIRECTV SPORTS(DTS7)
+DIRECTV.SPORTS(DTS9).co | DIRECTV SPORTS(DTS9)
+DIRECTV.SPORTS.HD(DTSHD9).co | DIRECTV SPORTS HD(DTSHD9)
+DIRECTV.SPORTS.HD(DTVSHD).co | DIRECTV SPORTS HD(DTVSHD)
+DIRECTV.Sports.5(DTS6).co | DIRECTV Sports 5(DTS6)
 DISCOVERY.HOME.&.GARDEN.(HomeGarden).pe | DISCOVERY HOME & GARDEN (HomeGarden)
+DSPORTS.Radio(DTSR).co | DSPORTS Radio(DTSR)
+DSports.Radio(DTSR).co | DSports Radio(DTSR)
 ENLACE.TBN.(Enlace).pe | ENLACE TBN (Enlace)
 ENTERTAINMENT.TELEVISION..uy | ENTERTAINMENT TELEVISION
 ENTERTAINMENT.TELEVISION.uy | ENTERTAINMENT TELEVISION
@@ -96,8 +103,6 @@ STAR.+.co | STAR +
 São.Paulo/SP..Band.HD.br | São Paulo/SP  Band HD
 São.Paulo/SP..Band.br | São Paulo/SP  Band
 São.Paulo/SP..Cinecanal.br | São Paulo/SP  Cinecanal
-São.Paulo/SP..Combate.HD.br | São Paulo/SP  Combate HD
-São.Paulo/SP..Combate.br | São Paulo/SP  Combate
 São.Paulo/SP..Comedy.Central.HD.br | São Paulo/SP  Comedy Central HD
 São.Paulo/SP..Comedy.Central.br | São Paulo/SP  Comedy Central
 São.Paulo/SP..FX.HD.³.br | São Paulo/SP  FX HD ³
@@ -138,6 +143,8 @@ TRECE | 13 tv HD
 TV.GLOBO.HD..uy | TV GLOBO HD
 VOA.(VOA).pe | VOA (VOA)
 WIPR.pr | WIPR
+Win.Sports.Premium(Win+).co | Win Sports Premium(Win+)
+Win.Sports.Premium.HD(Win+HD).co | Win Sports Premium HD(Win+HD)
 YOUTUBE.KIDS.co | YOUTUBE KIDS
 YOUTUBE.co | YOUTUBE
 Época.co | Época
