@@ -1,3 +1,4 @@
+316769 | ADN40
 316837 | TOONSCAST
 317571 | TNT SPORTS
 317595 | FOX PREMIUM
@@ -27,6 +28,7 @@ Canal.13.de.Panamá.(Telemetro).pa | Canal 13 de Panamá (Telemetro)
 Canal.13.de.Panamá.(Telemetro).sv | Canal 13 de Panamá (Telemetro)
 Canal.4.de.Panamá.(RPC.TV).pa | Canal 4 de Panamá (RPC TV)
 Canal.4.de.Panamá.(RPC.TV).sv | Canal 4 de Panamá (RPC TV)
+Canal.ADN.40.sv | Canal ADN 40
 Canal.Decasa.sv | Canal Decasa
 Canal.Ecuavisa.(Ecuador).ec | Canal Ecuavisa (Ecuador)
 Canal.Ecuavisa.(Ecuador).sv | Canal Ecuavisa (Ecuador)
@@ -77,7 +79,6 @@ M+ ACCIÓN HD | ACCION por M+  HD
 M+ CLÁSICOS HD | CLASICOS por M+ HD | CLASICOS por M+ HD (2)
 M+ DRAMA HD | DRAMA por M+ | DRAMA por M+ FHD
 M+ Indie HD | INDIE por M+ | INDIE por M+ FHD
-MAGAZINE.HD.uy | MAGAZINE HD
 MOVISTAR.EVENTOS.(Movistar.Eventos).pe | MOVISTAR EVENTOS (Movistar Eventos)
 MTV.CLUB..uy | MTV CLUB
 NETFLIX.co | NETFLIX
