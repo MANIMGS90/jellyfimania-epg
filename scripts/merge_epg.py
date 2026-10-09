@@ -14,49 +14,33 @@ viene en varias fuentes, gana el PRIMERO (se avisa por stderr).
 QUÉ HACE (y qué NO toca):
 - <channel>: unión por id (el primero gana).
 - <programme>: se conservan TODOS los programas de todas las fuentes,
-  salvo los que son redundantes: un programa de una fuente de menor
-  prioridad que se SOLAPA en horario con uno de una fuente anterior
-  para el mismo canal (es el mismo programa repetido). Los huecos de
-  la fuente principal se siguen llenando con las demás.
-- NUEVO — RELLENO DE CANALES VACÍOS: si un canal quedó SIN programas en
-  la ventana horaria, se busca en TODAS las fuentes otro canal con el
-  mismo nombre (aunque tenga otro id, otro país o venga con separadores
-  como "CINE | HBO" / "CINE|HBO", asteriscos, HD/FHD/SD, LATINO/MX...)
-  y se le copian sus programas. Así casi ningún canal queda en
-  "Sin programación". Se avisa por stderr cuántos se rellenaron.
-- NUEVO — LECTURA SIN LLENAR LA MEMORIA: los archivos se leen "al vuelo"
-  (por pedazos) y se descarta enseguida todo lo que queda fuera de la
-  ventana horaria. Así se pueden usar guías enormes (Plex, Samsung TV
-  Plus, etc.) sin que la Action se quede sin memoria ni se trabe.
-- NUEVO — FUENTES DONANTES (--donors a.xml b.xml ...): guías de APOYO que
-  solo sirven para rellenar canales que sigan vacíos. Sus canales NO se
-  agregan a la salida (así la guía no engorda); de cada donante solo se
-  guardan los canales cuyo nombre coincide con algún canal vacío tuyo.
-  Ponlas AL FINAL del comando.
-- NUEVO — REPORTE DE CANALES SIN FUENTE (--empty-report empty_channels.txt):
-  lista los canales (id y nombres) que siguen sin programación aun
-  después del relleno, para saber qué fuente falta buscar.
-- NUEVO — GUÍA LIGERA PARA ROKU (--roku-output guide_roku.xml): además del
-  guide.xml completo, escribe una segunda copia pensada para que la app
-  la lea rápido: solo la ventana que la app realmente usa (-1 h / +40 h),
-  solo los canales que tienen programas y solo los datos que la app
-  muestra (título, descripción recortada, categoría). Los canales, los
-  nombres y los programas de la ventana quedan TODOS; el guide.xml
-  completo se sigue publicando igual.
-- NUEVO — GUÍA RÁPIDA PARA ROKU (--roku-fast-output guide_roku_now.xml):
-  una copia MUY chica con solo las próximas horas (--roku-fast-hours, 6 por
-  default). La app la lee primero y la guía aparece en segundos; mientras
-  tanto sigue leyendo la guía completa de ~40 horas.
-- Salida COMPACTA: se quitan los espacios/saltos de línea de relleno
-  que traen las fuentes (no cambia ningún dato; solo baja el peso).
+  salvo los que son redundantes (el mismo programa repetido en una fuente
+  de menor prioridad que se solapa en horario con uno de una fuente anterior).
+- RELLENO DE CANALES VACÍOS (--donors): si un canal quedó sin programas en
+  la ventana, se copian los de otro canal con el mismo nombre de cualquier
+  fuente, incluidas las donantes.
+- HUECOS (nuevo): dentro de la ventana, cada canal que ya tiene programas
+  recibe un bloque de relleno ("Programación regular") en cada hueco entre
+  programas y al inicio/final de la ventana. Así no quedan espacios en
+  blanco y SIEMPRE hay programa en "ahora". Los bloques son largos (hasta
+  --gap-max-hours, 24 h por defecto) para no gastar el límite de programas
+  por canal de la app. Se apaga con --no-gap-fill.
+- --fill-empty (nuevo, apagado por defecto): además da el bloque genérico a
+  canales que no tienen NINGÚN dato. Úsalo solo si aceptas mostrar
+  programación genérica en canales de los que no hay guía real.
+- LECTURA SIN LLENAR LA MEMORIA: los archivos se leen por pedazos y se
+  descarta enseguida lo que queda fuera de la ventana horaria.
+- REPORTE DE CANALES SIN FUENTE (--empty-report): lista los canales que
+  siguen sin programación aun después de todo lo anterior.
+- GUÍA LIGERA PARA ROKU (--roku-output) y GUÍA RÁPIDA (--roku-fast-output):
+  copias chicas con solo la ventana que usa la app.
+- Salida COMPACTA: se quitan espacios de relleno (no cambia ningún dato).
 
-VENTANA HORARIA (único recorte, y es automático y mínimo):
-- Se descarta lo que terminó hace más de --keep-past-hours.
-- Hacia adelante se intenta guardar --forward-hours (default 72 h).
-- GitHub rechaza archivos de más de 100 MB. Si la ventana pedida no
-  cabe en --max-mb (default 95), se baja de a 12 h hasta que quepa
-  (nunca menos de --min-forward-hours) y se deja un AVISO visible en
-  el log de la Action. Nada más se recorta.
+VENTANA HORARIA: se descarta lo que terminó hace más de --keep-past-hours.
+Hacia adelante se intenta --forward-hours (72 h). Si el guide.xml pesaría más
+de --max-mb (95), se baja de a 12 h hasta que quepa (nunca menos de
+--min-forward-hours) y se avisa en el log. Las guías de la app usan su propia
+ventana (--roku-*), así que ese recorte no les afecta.
 """
 import argparse
 import datetime
@@ -68,7 +52,7 @@ import xml.etree.ElementTree as ET
 
 from epg_core import collect, keys_for, read_donors
 from epg_extras import (build_roku_guide, check_m3u, fill_empty_channels,
-                        write_empty_report)
+                        fill_gaps, write_empty_report)
 
 _MIN = datetime.datetime.min.replace(tzinfo=datetime.timezone.utc)
 
@@ -102,15 +86,23 @@ def main():
                     help="Tamaño máximo del guide.xml (GitHub bloquea >100 MB)")
     ap.add_argument("--donors", nargs="*", default=[],
                     help="Guías de APOYO: solo se usan para rellenar canales vacíos (ponerlas al final)")
+    ap.add_argument("--no-fill", action="store_true",
+                    help="No rellenar canales vacíos con programas de otro canal del mismo nombre")
+    ap.add_argument("--no-gap-fill", action="store_true",
+                    help="No rellenar los huecos entre programas")
+    ap.add_argument("--gap-title", default="Programación regular",
+                    help="Título de los bloques de relleno de huecos")
+    ap.add_argument("--gap-max-hours", type=float, default=24,
+                    help="Largo máximo de cada bloque de relleno")
+    ap.add_argument("--fill-empty", action="store_true",
+                    help="Dar también el bloque genérico a canales sin ningún dato (apagado por defecto)")
     ap.add_argument("--empty-report", help="Escribir aquí los canales que siguen sin programación")
-    ap.add_argument("--roku-output", help="Además escribir la guía LIGERA para Roku en este archivo (ej. guide_roku.xml)")
+    ap.add_argument("--roku-output", help="Además escribir la guía LIGERA para Roku (ej. guide_roku.xml)")
     ap.add_argument("--roku-fast-output", help="Además escribir la guía RÁPIDA (solo próximas horas), ej. guide_roku_now.xml")
     ap.add_argument("--roku-fast-hours", type=float, default=6)
     ap.add_argument("--roku-forward-hours", type=float, default=40)
     ap.add_argument("--roku-keep-past-hours", type=float, default=1)
     ap.add_argument("--roku-desc-max", type=int, default=160)
-    ap.add_argument("--no-fill", action="store_true",
-                    help="No rellenar canales vacíos con programas de otro canal del mismo nombre")
     ap.add_argument("--m3u", help="Tu lista M3U (archivo o URL) para reportar canales sin programación")
     ap.add_argument("--report", default="missing_channels.txt")
     args = ap.parse_args()
@@ -146,6 +138,14 @@ def main():
         del d_channels, d_progs
     if args.empty_report:
         write_empty_report(channels, no_donor, args.empty_report)
+
+    if not args.no_gap_fill:
+        n_gap = fill_gaps(progs, [c.get("id") for c in channels], now,
+                          args.keep_past_hours, args.forward_hours,
+                          args.gap_title, args.gap_max_hours, args.fill_empty)
+        suffix = " (incluye canales sin ningún dato)" if args.fill_empty else ""
+        print(f"HUECOS: {n_gap} bloques de relleno \"{args.gap_title}\" agregados{suffix}.",
+              file=sys.stderr)
 
     # Peso (en bytes) de cada elemento ya compactado
     ch_bytes = sum(len(ET.tostring(c, encoding="utf-8")) + 1 for c in channels)
