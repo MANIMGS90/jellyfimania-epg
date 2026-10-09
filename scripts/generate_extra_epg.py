@@ -8,9 +8,9 @@ nicho, etc. que transmiten contenido continuo sin una grilla horaria
 publicada en ningún lado.
 
 En vez de mantener un archivo fijo con fechas (que se vence), este
-script arma bloques genéricos de 6 horas (madrugada/mañana/tarde/noche)
-empezando HOY, para los próximos N días — así nunca queda vencido,
-sin depender de ninguna fuente externa.
+script arma bloques genéricos de 6 horas empezando HOY (en UTC), para
+los próximos N días — así nunca queda vencido, sin depender de ninguna
+fuente externa.
 
 Uso:
     python3 scripts/generate_extra_epg.py --output extra_epg.xml --days 3
@@ -88,12 +88,10 @@ CANALES = [
     ("334151", "RANMA 1/2"),
 ]
 
-BLOQUES = [
-    (0, "madrugada"),
-    (6, "mañana"),
-    (12, "tarde"),
-    (18, "noche"),
-]
+# Bloques de 6 horas en UTC (la hora local depende de la zona del usuario,
+# por eso la descripción no nombra el momento del día).
+BLOQUES = [0, 6, 12, 18]
+DESCRIPCION = "Programación continua: canal de contenido continuo, sin horario fijo publicado."
 
 
 def build(days):
@@ -112,7 +110,7 @@ def build(days):
     for cid, nombre in CANALES:
         for d in range(days):
             dia = hoy + datetime.timedelta(days=d)
-            for hora, momento in BLOQUES:
+            for hora in BLOQUES:
                 start = dia + datetime.timedelta(hours=hora)
                 stop = start + datetime.timedelta(hours=6)
                 p = ET.SubElement(
@@ -125,10 +123,7 @@ def build(days):
                 title = ET.SubElement(p, "title", lang="es")
                 title.text = nombre
                 desc = ET.SubElement(p, "desc", lang="es")
-                desc.text = (
-                    f"Programación continua ({momento}) — canal de "
-                    "contenido continuo, sin horario fijo publicado."
-                )
+                desc.text = DESCRIPCION
     return tv
 
 
@@ -147,7 +142,7 @@ def main():
     except AttributeError:
         pass
     tree.write(args.output, encoding="utf-8", xml_declaration=True)
-    print(f"Escrito {args.output}: {len(CANALES)} canales, {len(CANALES) * args.days * 4} programas")
+    print(f"Escrito {args.output}: {len(CANALES)} canales, {len(CANALES) * args.days * len(BLOQUES)} programas")
 
 
 if __name__ == "__main__":
