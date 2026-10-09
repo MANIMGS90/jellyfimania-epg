@@ -15,7 +15,7 @@ concurrency:
 jobs:
   update-epg:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - name: Descargar el repositorio
         uses: actions/checkout@v4
@@ -37,13 +37,13 @@ jobs:
         working-directory: epg-tool
         run: npm install
 
-      # Si una fuente falla, las demás se siguen usando (antes una sola
-      # fuente caída tumbaba toda la Action y la guía quedaba vieja).
+      # Si una fuente falla o tarda demasiado, las demás se siguen usando.
+      # El timeout evita que un grabber colgado deje la guía sin actualizar.
       - name: Descargar guía de gatotv.com para mis canales
         continue-on-error: true
         working-directory: epg-tool
         run: |
-          npm run grab -- \
+          timeout 900 npm run grab -- \
             --channels=../channels/mis_canales_channels.xml \
             --output=../gatotv_guide.xml \
             --days=3
@@ -54,7 +54,7 @@ jobs:
         run: |
           if [ -z "$M3U4U_EPG_URL" ]; then
             echo "::warning::Falta el secret M3U4U_EPG_URL en este repositorio (Settings → Secrets and variables → Actions). Se sigue sin esa fuente."
-          elif ! curl -fsSL "$M3U4U_EPG_URL" -o m3u4u_guide.xml; then
+          elif ! curl -fsSL --retry 2 --retry-delay 5 --max-time 300 "$M3U4U_EPG_URL" -o m3u4u_guide.xml; then
             echo "::warning::No se pudo descargar la guía de m3u4u. Se sigue sin esa fuente."
             rm -f m3u4u_guide.xml
           fi
@@ -79,7 +79,7 @@ jobs:
           for codigo in "${!paises[@]}"; do
             nombre="${paises[$codigo]}"
             echo "=== Descargando $nombre ($codigo) ==="
-            if curl -fsSL "https://epgshare01.online/epgshare01/epg_ripper_${codigo}.xml.gz" -o "epgshare_${nombre}.xml.gz"; then
+            if curl -fsSL --retry 2 --retry-delay 5 --max-time 300 "https://epgshare01.online/epgshare01/epg_ripper_${codigo}.xml.gz" -o "epgshare_${nombre}.xml.gz"; then
               gunzip -f "epgshare_${nombre}.xml.gz" || echo "::warning::No se pudo descomprimir $nombre"
             else
               echo "::warning::No se pudo descargar $nombre ($codigo); se sigue sin esa fuente."
@@ -100,7 +100,7 @@ jobs:
           for codigo in "${!paises[@]}"; do
             nombre="${paises[$codigo]}"
             echo "=== Descargando $nombre ($codigo) ==="
-            if ! curl -fsSL "https://iptv-epg.org/files/epg-${codigo}.xml" -o "iptvepg_${nombre}.xml"; then
+            if ! curl -fsSL --retry 2 --retry-delay 5 --max-time 300 "https://iptv-epg.org/files/epg-${codigo}.xml" -o "iptvepg_${nombre}.xml"; then
               echo "::warning::No se pudo descargar $nombre ($codigo); se sigue sin esa fuente."
               rm -f "iptvepg_${nombre}.xml"
             fi
@@ -108,7 +108,7 @@ jobs:
 
       - name: Descargar guía de EPGTalk (Latino/México, 607 canales extra)
         run: |
-          if curl -fsSL "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/Latino_guide.xml.gz" -o epgtalk_latino.xml.gz; then
+          if curl -fsSL --retry 2 --retry-delay 5 --max-time 300 "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/Latino_guide.xml.gz" -o epgtalk_latino.xml.gz; then
             gunzip -f epgtalk_latino.xml.gz || echo "::warning::No se pudo descomprimir EPGTalk"
           else
             echo "::warning::No se pudo descargar EPGTalk; se sigue sin esa fuente."
@@ -125,14 +125,14 @@ jobs:
             nombre="$1"
             url="$2"
             if [[ "$url" == *.gz ]]; then
-              if curl -fsSL "$url" -o "donantes/${nombre}.xml.gz"; then
+              if curl -fsSL --retry 2 --retry-delay 5 --max-time 300 "$url" -o "donantes/${nombre}.xml.gz"; then
                 gunzip -f "donantes/${nombre}.xml.gz" || { echo "::warning::No se pudo descomprimir $nombre"; rm -f "donantes/${nombre}.xml.gz" "donantes/${nombre}.xml"; }
               else
                 echo "::warning::No se pudo descargar la guía de apoyo $nombre; se sigue sin ella."
                 rm -f "donantes/${nombre}.xml.gz"
               fi
             else
-              curl -fsSL "$url" -o "donantes/${nombre}.xml" || { echo "::warning::No se pudo descargar la guía de apoyo $nombre; se sigue sin ella."; rm -f "donantes/${nombre}.xml"; }
+              curl -fsSL --retry 2 --retry-delay 5 --max-time 300 "$url" -o "donantes/${nombre}.xml" || { echo "::warning::No se pudo descargar la guía de apoyo $nombre; se sigue sin ella."; rm -f "donantes/${nombre}.xml"; }
             fi
           }
           descargar us2 "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz"
@@ -145,11 +145,11 @@ jobs:
       - name: Generar guía genérica para canales sin fuente externa (65 temáticos/FAST)
         run: python3 scripts/generate_extra_epg.py --output extra_epg.xml --days 3
 
-      # Orden = prioridad (gana el primero). Además, los canales que
-      # queden SIN programas se rellenan con los de otro canal del mismo
-      # nombre de cualquiera de estas fuentes (ver scripts/merge_epg.py).
-      # Para ver cuáles de TU lista siguen sin programación, agrega abajo
-      # la línea:   --m3u "URL_O_ARCHIVO_DE_TU_LISTA.m3u" \
+      # Orden = prioridad (gana el primero). Después: canales vacíos se rellenan
+      # con los de otro canal del mismo nombre (donantes incluidas) y los
+      # HUECOS entre programas se rellenan con bloques "Programación regular"
+      # (ver scripts/merge_epg.py). Para ver cuáles de TU lista siguen sin
+      # programación, agrega abajo la línea:   --m3u "URL_O_ARCHIVO.m3u" \
       - name: Combinar todas las guías en una sola
         run: |
           python3 scripts/merge_epg.py \
@@ -168,14 +168,26 @@ jobs:
             extra_epg.xml \
             --donors donantes/*.xml
 
+      - name: Verificar que las guías de la app salieron bien
+        run: |
+          for f in guide_roku.xml guide_roku_now.xml guide.xml.gz; do
+            if [ ! -s "$f" ]; then
+              echo "::error::Falta $f o está vacío; no se sube nada hoy."
+              exit 1
+            fi
+          done
+
       - name: Limpiar archivos intermedios
         run: rm -rf donantes gatotv_guide.xml m3u4u_guide.xml epgshare_*.xml iptvepg_*.xml epgtalk_*.xml extra_epg.xml
 
+      # Solo se suben el .gz y las guías de la app. guide.xml (sin comprimir,
+      # hasta 95 MB) se borra: subirlo cada día haría crecer el repo sin control.
       - name: Commitear y subir la guía combinada
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add guide.xml guide.xml.gz guide_roku.xml guide_roku_now.xml empty_channels.txt
+          rm -f guide.xml
+          git add guide.xml.gz guide_roku.xml guide_roku_now.xml empty_channels.txt
           if git diff --staged --quiet; then
             echo "Sin cambios en la guía hoy, no hay nada que commitear."
           else
