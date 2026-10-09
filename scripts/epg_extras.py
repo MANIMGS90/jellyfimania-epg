@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-epg_extras.py — piezas de merge_epg.py: relleno de canales vacíos, reporte
-de canales sin programación, revisión de una lista M3U y la guía ligera
-para Roku.
+epg_extras.py — piezas de merge_epg.py: relleno de canales vacíos, relleno
+de huecos dentro de la programación, reporte de canales sin programación,
+revisión de una lista M3U y la guía ligera para Roku.
 """
 import copy
 import datetime
@@ -10,10 +10,14 @@ import os
 import re
 import sys
 import urllib.request
+import xml.etree.ElementTree as ET
 from collections import defaultdict
 from xml.sax.saxutils import escape, quoteattr
 
 from epg_core import keys_for, loose_key
+
+# Un hueco más corto que esto se ignora (salvo que tape el momento "ahora")
+GAP_MIN = datetime.timedelta(minutes=10)
 
 
 def _in_window(st, sp, min_stop, max_start):
@@ -79,6 +83,59 @@ def fill_empty_channels(channels, progs, now, keep_past, forward,
         filled += 1
     progs.extend(new_progs)
     return filled, no_donor
+
+
+def _placeholder(cid, start, stop, title):
+    p = ET.Element("programme", start=start.strftime("%Y%m%d%H%M%S +0000"),
+                   stop=stop.strftime("%Y%m%d%H%M%S +0000"), channel=cid)
+    t = ET.SubElement(p, "title", lang="es")
+    t.text = title
+    return p
+
+
+def fill_gaps(progs, channel_ids, now, keep_past, forward, title, max_hours, fill_empty=False):
+    """Rellena los HUECOS de la programación de cada canal dentro de la
+    ventana con bloques de relleno (un bloque por hueco, de hasta max_hours).
+    Así no quedan espacios en blanco y siempre hay un programa en 'ahora'.
+    Por defecto solo se tocan canales que ya tienen algún programa; con
+    fill_empty=True también los que no tienen ninguno (ver merge_epg.py).
+    Devuelve cuántos bloques se agregaron."""
+    lo = now - datetime.timedelta(hours=keep_past)
+    hi = now + datetime.timedelta(hours=forward)
+    step = datetime.timedelta(hours=max_hours)
+
+    spans = defaultdict(list)
+    for (st, sp, el) in progs:
+        if st is None or sp is None:
+            continue
+        if sp > lo and st < hi:
+            spans[el.get("channel") or ""].append((st, sp))
+
+    targets = set(c for c in spans if c)
+    if fill_empty:
+        targets |= set(c for c in channel_ids if c)
+
+    added = 0
+    for cid in sorted(targets):
+        gaps = []
+        cursor = lo
+        for st, sp in sorted(spans.get(cid, [])):
+            if st > cursor:
+                gaps.append((cursor, st))
+            if sp > cursor:
+                cursor = sp
+        if cursor < hi:
+            gaps.append((cursor, hi))
+        for g0, g1 in gaps:
+            t = g0
+            while t < g1:
+                t2 = min(g1, t + step)
+                covers_now = t <= now < t2
+                if (t2 - t) >= GAP_MIN or covers_now:
+                    progs.append((t, t2, _placeholder(cid, t, t2, title)))
+                    added += 1
+                t = t2
+    return added
 
 
 def write_empty_report(channels, empty_ids, path):
