@@ -13,8 +13,6 @@
 A&E.MUNDO..uy | A&E MUNDO
 A&E.MUNDO.HD..uy | A&E MUNDO HD
 A.and.E.MUNDO.HD.uy | A and E MUNDO HD
-ALLEGRO.HD..uy | ALLEGRO HD
-ALLEGRO.HD.uy | ALLEGRO HD
 AMERICA.2..uy | AMERICA 2
 ARTV.(ARTV).pe | ARTV (ARTV)
 ATV.pe | ATV HD DIRECTO
@@ -26,13 +24,14 @@ Belo.Horizonte/MG..Shoptime.br | Belo Horizonte/MG  Shoptime
 Belo.Horizonte/MG..TV.Pai.Eterno.br | Belo Horizonte/MG  TV Pai Eterno
 CANAL.4.MONTECARLO..uy | CANAL 4 MONTECARLO
 CANAL.5..uy | CANAL 5
-CANAL.7.HD.uy | CANAL 7 HD
 CANAL.EVENTOS.1001.uy | CANAL EVENTOS 1001
 CANAL.EVENTOS.32.uy | CANAL EVENTOS 32
 CANAL.N.(Canal.N).pe | CANAL N (Canal N)
 CCTV.(CCTV).pe | CCTV (CCTV)
 CIUDAD.MAGAZINE..uy | CIUDAD MAGAZINE
 CIUDAD.MAGAZINE.HD..uy | CIUDAD MAGAZINE HD
+Campinas/SP..Canal.do.Boi.br | Campinas/SP  Canal do Boi
+Campinas/SP..Film&Arts.br | Campinas/SP  Film&Arts
 Canal.13.de.Panamá.(Telemetro).pa | Canal 13 de Panamá (Telemetro)
 Canal.13.de.Panamá.(Telemetro).sv | Canal 13 de Panamá (Telemetro)
 Canal.4.de.Panamá.(RPC.TV).pa | Canal 4 de Panamá (RPC TV)
@@ -50,14 +49,7 @@ Canal.Justicia.TV.(México).sv | Canal Justicia TV (México)
 Canal.RTS.ec | Canal RTS
 Canal.RTS.sv | Canal RTS
 DAYSTAR.co | DAYSTAR
-DIRECTV.SPORTS(DTS7).co | DIRECTV SPORTS(DTS7)
-DIRECTV.SPORTS(DTS9).co | DIRECTV SPORTS(DTS9)
-DIRECTV.SPORTS.HD(DTSHD9).co | DIRECTV SPORTS HD(DTSHD9)
-DIRECTV.SPORTS.HD(DTVSHD).co | DIRECTV SPORTS HD(DTVSHD)
-DIRECTV.Sports.5(DTS6).co | DIRECTV Sports 5(DTS6)
 DISCOVERY.HOME.&.GARDEN.(HomeGarden).pe | DISCOVERY HOME & GARDEN (HomeGarden)
-DSPORTS.Radio(DTSR).co | DSPORTS Radio(DTSR)
-DSports.Radio(DTSR).co | DSports Radio(DTSR)
 ENLACE.TBN.(Enlace).pe | ENLACE TBN (Enlace)
 ENTERTAINMENT.TELEVISION..uy | ENTERTAINMENT TELEVISION
 ENTERTAINMENT.TELEVISION.uy | ENTERTAINMENT TELEVISION
@@ -83,13 +75,11 @@ HOME.&.HEALTH.(Home&Health).pe | HOME & HEALTH (Home&Health)
 HOME.&.HEALTH.HD.(Home&HealthHD).pe | HOME & HEALTH HD (Home&HealthHD)
 HOME.AND.HEALTH..uy | HOME AND HEALTH
 HOME.AND.HEALTH.HD..uy | HOME AND HEALTH HD
-KANAL.D.HD.uy | KANAL D HD
 LA.TELE.PERU.(La.Tele).pe | LA TELE PERU (La Tele)
 M+ ACCIÓN HD | ACCION por M+  HD
 M+ CLÁSICOS HD | CLASICOS por M+ HD | CLASICOS por M+ HD (2)
 M+ DRAMA HD | DRAMA por M+ | DRAMA por M+ FHD
 M+ Indie HD | INDIE por M+ | INDIE por M+ FHD
-MAROÑAS.HD.uy | MAROÑAS HD
 MOVISTAR.EVENTOS.(Movistar.Eventos).pe | MOVISTAR EVENTOS (Movistar Eventos)
 MTV.CLUB..uy | MTV CLUB
 NETFLIX.co | NETFLIX
@@ -102,15 +92,10 @@ NS.EVENTOS.3.HD..uy | NS EVENTOS 3 HD
 NS.EVENTOS.HD..uy | NS EVENTOS HD
 NUEVO.SIGLO.TV..uy | NUEVO SIGLO TV
 NUEVO.SIGLO.TV.HD..uy | NUEVO SIGLO TV HD
-PLAYBOY.ETIQUETA.uy | PLAYBOY ETIQUETA
-PLIM.PLIM..uy | PLIM PLIM
-PLIM.PLIM.uy | PLIM PLIM
 PODER.JUDICIAL.(JusticiaTV).pe | PODER JUDICIAL (JusticiaTV)
 PRIME.VIDEO.co | PRIME VIDEO
 Portal.DIRECTV.Sports(DTVS).co | Portal DIRECTV Sports(DTVS)
 QUALITY.CHANNEL.(Quality).pe | QUALITY CHANNEL (Quality)
-QUIERO..uy | QUIERO
-QUIERO.HD.uy | QUIERO HD
 RAI.TV.(RAI).pe | RAI TV (RAI)
 RCN.HDTV.2.(RCNHD2).co | RCN HDTV 2 (RCNHD2)
 RPP.TV.(RPP.TV).pe | RPP TV (RPP TV)
@@ -141,26 +126,37 @@ São.Paulo/SP..CNN.Brasil.br | São Paulo/SP  CNN Brasil
 São.Paulo/SP..CNN.International.br | São Paulo/SP  CNN International
 São.Paulo/SP..CONMEBOL.TV.4.HD.br | São Paulo/SP  CONMEBOL TV 4 HD
 São.Paulo/SP..Canal.2.br | São Paulo/SP  Canal 2
+São.Paulo/SP..Canal.Comunitário.br | São Paulo/SP  Canal Comunitário
 São.Paulo/SP..Canal.Legislativo.br | São Paulo/SP  Canal Legislativo
 São.Paulo/SP..Canal.Rural.br | São Paulo/SP  Canal Rural
 São.Paulo/SP..Canal.Universitário.br | São Paulo/SP  Canal Universitário
 São.Paulo/SP..Canal.de.Vendas.NET.br | São Paulo/SP  Canal de Vendas NET
+São.Paulo/SP..Canal.do.Boi.br | São Paulo/SP  Canal do Boi
 São.Paulo/SP..Cinecanal.br | São Paulo/SP  Cinecanal
+São.Paulo/SP..Combate.HD.br | São Paulo/SP  Combate HD
+São.Paulo/SP..Combate.br | São Paulo/SP  Combate
 São.Paulo/SP..Comedy.Central.HD.br | São Paulo/SP  Comedy Central HD
 São.Paulo/SP..Comedy.Central.br | São Paulo/SP  Comedy Central
+São.Paulo/SP..Cultura.HD.br | São Paulo/SP  Cultura HD
+São.Paulo/SP..Cultura.br | São Paulo/SP  Cultura
 São.Paulo/SP..Curta!.HD.br | São Paulo/SP  Curta! HD
 São.Paulo/SP..Curta!.br | São Paulo/SP  Curta!
 São.Paulo/SP..DW-TV.br | São Paulo/SP  DW-TV
 São.Paulo/SP..Discovery.Home.and.Health.br | São Paulo/SP  Discovery Home and Health
+São.Paulo/SP..DogTV.HD.br | São Paulo/SP  DogTV HD
 São.Paulo/SP..E!..br | São Paulo/SP  E!
 São.Paulo/SP..E!.HD.br | São Paulo/SP  E! HD
 São.Paulo/SP..Eurochannel.HD.br | São Paulo/SP  Eurochannel HD
 São.Paulo/SP..FISH.TV.HD.br | São Paulo/SP  FISH TV HD
 São.Paulo/SP..FISH.TV.br | São Paulo/SP  FISH TV
+São.Paulo/SP..FOOD.NETWORK.HD.br | São Paulo/SP  FOOD NETWORK HD
 São.Paulo/SP..FX.HD.³.br | São Paulo/SP  FX HD ³
 São.Paulo/SP..FX.br | São Paulo/SP  FX
 São.Paulo/SP..Fashion.TV.HD.br | São Paulo/SP  Fashion TV HD
+São.Paulo/SP..Film&Arts.HD.br | São Paulo/SP  Film&Arts HD
+São.Paulo/SP..Food.Network.br | São Paulo/SP  Food Network
 São.Paulo/SP..GNT.HD.³.br | São Paulo/SP  GNT HD ³
+São.Paulo/SP..GNT.br | São Paulo/SP  GNT
 São.Paulo/SP..Gazeta.HD.br | São Paulo/SP  Gazeta HD
 São.Paulo/SP..Gazeta.br | São Paulo/SP  Gazeta
 São.Paulo/SP..Globo.HD.br | São Paulo/SP  Globo HD
@@ -197,6 +193,7 @@ São.Paulo/SP..Paramount.Network.br | São Paulo/SP  Paramount Network
 São.Paulo/SP..Polishop.TV.br | São Paulo/SP  Polishop TV
 São.Paulo/SP..Premiere.2.br | São Paulo/SP  Premiere 2
 São.Paulo/SP..Premiere.3.br | São Paulo/SP  Premiere 3
+São.Paulo/SP..Premiere.4.br | São Paulo/SP  Premiere 4
 São.Paulo/SP..Premiere.5.br | São Paulo/SP  Premiere 5
 São.Paulo/SP..Premiere.6.br | São Paulo/SP  Premiere 6
 São.Paulo/SP..Premiere.7.br | São Paulo/SP  Premiere 7
@@ -249,6 +246,7 @@ São.Paulo/SP..Telecine.Pipoca.HD.³.br | São Paulo/SP  Telecine Pipoca HD ³
 São.Paulo/SP..Telecine.Pipoca.br | São Paulo/SP  Telecine Pipoca
 São.Paulo/SP..Telecine.Premium.HD.³.br | São Paulo/SP  Telecine Premium HD ³
 São.Paulo/SP..Telecine.Premium.br | São Paulo/SP  Telecine Premium
+São.Paulo/SP..Telecine.Touch.HD.³.br | São Paulo/SP  Telecine Touch HD ³
 São.Paulo/SP..Telecine.Touch.br | São Paulo/SP  Telecine Touch
 São.Paulo/SP..Terra.Viva.br | São Paulo/SP  Terra Viva
 São.Paulo/SP..Tnt.novelas.HD.br | São Paulo/SP  Tnt novelas HD
@@ -267,11 +265,8 @@ TELEFE.INTER..uy | TELEFE INTER
 TOROS.TV.(TorosTV).pe | TOROS TV (TorosTV)
 TRECE | 13 tv HD
 TV.GLOBO.HD..uy | TV GLOBO HD
-VENUS.ETIQUETA.uy | VENUS ETIQUETA
 VOA.(VOA).pe | VOA (VOA)
 WIPR.pr | WIPR
-Win.Sports.Premium(Win+).co | Win Sports Premium(Win+)
-Win.Sports.Premium.HD(Win+HD).co | Win Sports Premium HD(Win+HD)
 YOUTUBE.KIDS.co | YOUTUBE KIDS
 YOUTUBE.co | YOUTUBE
 Época.co | Época
