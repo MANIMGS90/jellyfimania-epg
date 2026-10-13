@@ -50,7 +50,14 @@ Canal.Justicia.TV.(México).sv | Canal Justicia TV (México)
 Canal.RTS.ec | Canal RTS
 Canal.RTS.sv | Canal RTS
 DAYSTAR.co | DAYSTAR
+DIRECTV.SPORTS(DTS7).co | DIRECTV SPORTS(DTS7)
+DIRECTV.SPORTS(DTS9).co | DIRECTV SPORTS(DTS9)
+DIRECTV.SPORTS.HD(DTSHD9).co | DIRECTV SPORTS HD(DTSHD9)
+DIRECTV.SPORTS.HD(DTVSHD).co | DIRECTV SPORTS HD(DTVSHD)
+DIRECTV.Sports.5(DTS6).co | DIRECTV Sports 5(DTS6)
 DISCOVERY.HOME.&.GARDEN.(HomeGarden).pe | DISCOVERY HOME & GARDEN (HomeGarden)
+DSPORTS.Radio(DTSR).co | DSPORTS Radio(DTSR)
+DSports.Radio(DTSR).co | DSports Radio(DTSR)
 DW.ESPAÑOL.HD.uy | DW ESPAÑOL HD
 ENLACE.TBN.(Enlace).pe | ENLACE TBN (Enlace)
 ENTERTAINMENT.TELEVISION..uy | ENTERTAINMENT TELEVISION
@@ -276,6 +283,8 @@ TVN.CHILE..uy | TVN CHILE
 TVN.CHILE.HD.uy | TVN CHILE HD
 VOA.(VOA).pe | VOA (VOA)
 WIPR.pr | WIPR
+Win.Sports.Premium(Win+).co | Win Sports Premium(Win+)
+Win.Sports.Premium.HD(Win+HD).co | Win Sports Premium HD(Win+HD)
 YOUTUBE.KIDS.co | YOUTUBE KIDS
 YOUTUBE.co | YOUTUBE
 Época.co | Época
