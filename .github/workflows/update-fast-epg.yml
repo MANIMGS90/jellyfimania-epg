@@ -1,0 +1,64 @@
+name: Actualizar guía rápida (cada 3 horas)
+
+# La guía rápida (guide_roku_now.xml) solo trae las próximas 6 horas. Con una
+# sola corrida diaria quedaba vencida ~18 h al día. Este flujo la regenera
+# cada 3 horas A PARTIR de guide_roku.xml (ya publicada): no descarga fuentes,
+# tarda ~1 minuto y solo sube un archivo.
+on:
+  schedule:
+    - cron: "20 */3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+# Mismo grupo que el flujo diario: nunca corren al mismo tiempo (se hacen
+# fila) y no se pisan al subir cambios.
+concurrency:
+  group: update-epg
+  cancel-in-progress: false
+
+jobs:
+  update-fast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Si la guía completa está vencida o vacía, el script falla y NO se
+      # toca la guía rápida que ya estaba publicada.
+      - name: Regenerar la guía rápida desde la guía completa
+        run: |
+          python3 scripts/make_fast_epg.py \
+            --input guide_roku.xml \
+            --output guide_roku_now.xml \
+            --hours 6 \
+            --keep-past-hours 1 \
+            --desc-max 100
+
+      - name: Verificar que salió bien
+        run: |
+          if [ ! -s guide_roku_now.xml ]; then
+            echo "::error::guide_roku_now.xml quedó vacío; no se sube nada."
+            exit 1
+          fi
+          ls -la guide_roku_now.xml
+
+      - name: Commitear y subir la guía rápida
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add guide_roku_now.xml
+          if git diff --staged --quiet; then
+            echo "Sin cambios, no hay nada que commitear."
+          else
+            git commit -m "Actualiza guía rápida [automático]"
+            git pull --rebase
+            git push
+          fi
