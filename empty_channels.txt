@@ -32,22 +32,66 @@ CIUDAD.MAGAZINE..uy | CIUDAD MAGAZINE
 CIUDAD.MAGAZINE.HD..uy | CIUDAD MAGAZINE HD
 Campinas/SP..Canal.do.Boi.br | Campinas/SP  Canal do Boi
 Campinas/SP..Film&Arts.br | Campinas/SP  Film&Arts
+Canal.11.de.Costa.Rica.cr | Canal 11 de Costa Rica
+Canal.11.de.Costa.Rica.sv | Canal 11 de Costa Rica
+Canal.11.de.Guatemala.sv | Canal 11 de Guatemala
+Canal.12.de.El.Salvador.sv | Canal 12 de El Salvador
+Canal.13.de.Costa.Rica.cr | Canal 13 de Costa Rica
+Canal.13.de.Costa.Rica.sv | Canal 13 de Costa Rica
+Canal.13.de.Guatemala.sv | Canal 13 de Guatemala
+Canal.13.de.Nicaragua.(Viva.Nicaragua).sv | Canal 13 de Nicaragua (Viva Nicaragua)
 Canal.13.de.Panamá.(Telemetro).pa | Canal 13 de Panamá (Telemetro)
 Canal.13.de.Panamá.(Telemetro).sv | Canal 13 de Panamá (Telemetro)
+Canal.2.de.El.Salvador.sv | Canal 2 de El Salvador
+Canal.2.de.Nicaragua.(Televicentro).sv | Canal 2 de Nicaragua (Televicentro)
+Canal.2.de.República.Dominicana.(Teleantillas).do | Canal 2 de República Dominicana (Teleantillas)
+Canal.2.de.República.Dominicana.(Teleantillas).sv | Canal 2 de República Dominicana (Teleantillas)
+Canal.21.de.El.Salvador.(Megavisión).sv | Canal 21 de El Salvador (Megavisión)
+Canal.29.de.TeleUniverso.(República.Dominicana).do | Canal 29 de TeleUniverso (República Dominicana)
+Canal.29.de.TeleUniverso.(República.Dominicana).sv | Canal 29 de TeleUniverso (República Dominicana)
+Canal.3.de.Guatemala.sv | Canal 3 de Guatemala
+Canal.37.de.República.Dominicana.(CDN).do | Canal 37 de República Dominicana (CDN)
+Canal.37.de.República.Dominicana.(CDN).sv | Canal 37 de República Dominicana (CDN)
+Canal.4.de.El.Salvador.sv | Canal 4 de El Salvador
 Canal.4.de.Panamá.(RPC.TV).pa | Canal 4 de Panamá (RPC TV)
 Canal.4.de.Panamá.(RPC.TV).sv | Canal 4 de Panamá (RPC TV)
+Canal.5.El.Líder.(Honduras).sv | Canal 5 El Líder (Honduras)
+Canal.6.de.El.Salvador.sv | Canal 6 de El Salvador
+Canal.7.de.Antena.Latina.(República.Dominicana).do | Canal 7 de Antena Latina (República Dominicana)
+Canal.7.de.Antena.Latina.(República.Dominicana).sv | Canal 7 de Antena Latina (República Dominicana)
+Canal.7.de.Costa.Rica.(Teletica).cr | Canal 7 de Costa Rica (Teletica)
+Canal.7.de.Costa.Rica.(Teletica).pa | Canal 7 de Costa Rica (Teletica)
+Canal.7.de.Costa.Rica.(Teletica).sv | Canal 7 de Costa Rica (Teletica)
+Canal.7.de.Guatemala.sv | Canal 7 de Guatemala
+Canal.9.de.Color.Visión.(República.Dominicana).do | Canal 9 de Color Visión (República Dominicana)
+Canal.9.de.Color.Visión.(República.Dominicana).sv | Canal 9 de Color Visión (República Dominicana)
 Canal.ADN.40.sv | Canal ADN 40
 Canal.Decasa.sv | Canal Decasa
 Canal.Ecuavisa.(Ecuador).ec | Canal Ecuavisa (Ecuador)
 Canal.Ecuavisa.(Ecuador).sv | Canal Ecuavisa (Ecuador)
 Canal.El.Heraldo.TV.(México).mx | Canal El Heraldo TV (México)
 Canal.El.Heraldo.TV.(México).sv | Canal El Heraldo TV (México)
+Canal.Extra.TV.42.de.Costa.Rica.cr | Canal Extra TV 42 de Costa Rica
+Canal.Extra.TV.42.de.Costa.Rica.sv | Canal Extra TV 42 de Costa Rica
 Canal.Gamavisión.ec | Canal Gamavisión
 Canal.Gamavisión.sv | Canal Gamavisión
 Canal.Gol.TV.Estados.Unidos.sv | Canal Gol TV Estados Unidos
 Canal.Justicia.TV.(México).sv | Canal Justicia TV (México)
+Canal.La.Red.TV.(Guatemala).sv | Canal La Red TV (Guatemala)
 Canal.RTS.ec | Canal RTS
 Canal.RTS.sv | Canal RTS
+Canal.Sony.Centro.sv | Canal Sony Centro
+Canal.Sun.Channel.ar | Canal Sun Channel
+Canal.Sun.Channel.cl | Canal Sun Channel
+Canal.Sun.Channel.pa | Canal Sun Channel
+Canal.Sun.Channel.sv | Canal Sun Channel
+Canal.Telecentro.(13.de.República.Dominicana).do | Canal Telecentro (13 de República Dominicana)
+Canal.Telecentro.(13.de.República.Dominicana).sv | Canal Telecentro (13 de República Dominicana)
+Canal.Telesistema.11.(República.Dominicana).do | Canal Telesistema 11 (República Dominicana)
+Canal.Telesistema.11.(República.Dominicana).sv | Canal Telesistema 11 (República Dominicana)
+Canal.Telesistema.Informativo.(TSI).(Honduras).sv | Canal Telesistema Informativo (TSI) (Honduras)
+Canal.Teleunion.(República.Dominicana).do | Canal Teleunion (República Dominicana)
+Canal.Teleunion.(República.Dominicana).sv | Canal Teleunion (República Dominicana)
 DAYSTAR.co | DAYSTAR
 DIRECTV.SPORTS(DTS7).co | DIRECTV SPORTS(DTS7)
 DIRECTV.SPORTS(DTS9).co | DIRECTV SPORTS(DTS9)
