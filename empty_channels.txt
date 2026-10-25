@@ -1,9 +1,6 @@
-26.TV.HD..uy | 26 TV HD
-26.TV.uy | 26 TV
 316769 | ADN40
 316837 | TOONSCAST
 317571 | TNT SPORTS
-317583 | ESPN 7
 317595 | FOX PREMIUM
 322356 | RTS
 327423 | SHOWTIME HD
@@ -13,336 +10,56 @@
 333612 | TNT SPORTS PREMIUM
 400006 | GREEN TV
 400007 | JUSTICIA TV
-400008 | NICKTOONS
 A&E.MUNDO..uy | A&E MUNDO
 A&E.MUNDO.HD..uy | A&E MUNDO HD
 A.and.E.MUNDO.HD.uy | A and E MUNDO HD
-A24..uy | A24
-A24.HD.uy | A24 HD
-ADN.Noticia.mx | ADN Noticia
-ALLEGRO.HD..uy | ALLEGRO HD
-ALLEGRO.HD.uy | ALLEGRO HD
 AMERICA.2..uy | AMERICA 2
-AMERICA.SPORTS.uy | AMERICA SPORTS
-AMERICA.TV.uy | AMERICA TV
 ARTV.(ARTV).pe | ARTV (ARTV)
-ASPEN.uy | ASPEN
-ATRES.SERIES.HD.co | ATRES SERIES HD
-ATV+.(ATV+).pe | ATV+ (ATV+)
-ATV.(ATV).pe | ATV (ATV)
-ATV.HD.(ATV.HD).pe | ATV HD (ATV HD)
 ATV.pe | ATV HD DIRECTO
-Animal Planet.co | Animal Planet  | AR HD
-Arte.1.br | Arte 1
-Azteca.(XHOR).mx | Azteca (XHOR)
-Azteca.7.(XHLAT).Nuevo.Laredo.MX.mx | Azteca 7 (XHLAT) Nuevo Laredo MX
-Band.News.br | Band News
-Band.Sports.br | Band Sports
-Band.br | Band
-Belo.Horizonte/MG...TV.Aparecida.(espelho).br | Belo Horizonte/MG   TV Aparecida (espelho)
 Belo.Horizonte/MG..Polishop.br | Belo Horizonte/MG  Polishop
-Belo.Horizonte/MG..Premiere.6.br | Belo Horizonte/MG  Premiere 6
 Belo.Horizonte/MG..Premiere.7.br | Belo Horizonte/MG  Premiere 7
 Belo.Horizonte/MG..Shoptime.br | Belo Horizonte/MG  Shoptime
 Belo.Horizonte/MG..TV.Pai.Eterno.br | Belo Horizonte/MG  TV Pai Eterno
-Bis.br | Bis
-C5N..uy | C5N
-CAMPO.RURAL.TV.HD..uy | CAMPO RURAL TV HD
-CANAL.24.HS..uy | CANAL 24 HS
-CANAL.24.HS.uy | CANAL 24 HS
 CANAL.4.MONTECARLO..uy | CANAL 4 MONTECARLO
 CANAL.5..uy | CANAL 5
-CANAL.7.HD.uy | CANAL 7 HD
-CANAL.A.HD.uy | CANAL A HD
-CANAL.CONGRESO.co | CANAL CONGRESO
 CANAL.EVENTOS.1001.uy | CANAL EVENTOS 1001
 CANAL.EVENTOS.32.uy | CANAL EVENTOS 32
-CANAL.J.(Canal.J).pe | CANAL J (Canal J)
-CANAL.LUZ.uy | CANAL LUZ
 CANAL.N.(Canal.N).pe | CANAL N (Canal N)
-CANAL.N.HD.(Canal.N.HD).pe | CANAL N HD (Canal N HD)
-CANAL.RURAL.uy | CANAL RURAL
 CCTV.(CCTV).pe | CCTV (CCTV)
 CIUDAD.MAGAZINE..uy | CIUDAD MAGAZINE
 CIUDAD.MAGAZINE.HD..uy | CIUDAD MAGAZINE HD
-CNN.ESPAÑOL.(CNNEsp).pe | CNN ESPAÑOL (CNNEsp)
-CNN.Español.co | CNN Español
-CONGRESO.(Congreso).pe | CONGRESO (Congreso)
-CRONICA.TV..uy | CRONICA TV
-CRONICA.uy | CRONICA
-Campinas/SP..Canal.do.Boi.br | Campinas/SP  Canal do Boi
-Campinas/SP..Film&Arts.br | Campinas/SP  Film&Arts
-Canal.#Vamos.sv | Canal #Vamos
-Canal.1.(Colombia).ar | Canal 1 (Colombia)
-Canal.1.(Colombia).sv | Canal 1 (Colombia)
-Canal.1.co | Canal 1
-Canal.11.de.Costa.Rica.cr | Canal 11 de Costa Rica
-Canal.11.de.Costa.Rica.sv | Canal 11 de Costa Rica
-Canal.11.de.Guatemala.sv | Canal 11 de Guatemala
-Canal.11.de.México.mx | Canal 11 de México
-Canal.11.de.México.sv | Canal 11 de México
-Canal.12.de.El.Salvador.sv | Canal 12 de El Salvador
-Canal.13.de.Chile.cl | Canal 13 de Chile
-Canal.13.de.Chile.sv | Canal 13 de Chile
-Canal.13.de.Colombia.(Trece).sv | Canal 13 de Colombia (Trece)
-Canal.13.de.Costa.Rica.cr | Canal 13 de Costa Rica
-Canal.13.de.Costa.Rica.sv | Canal 13 de Costa Rica
-Canal.13.de.Guatemala.sv | Canal 13 de Guatemala
-Canal.13.de.Nicaragua.(Viva.Nicaragua).sv | Canal 13 de Nicaragua (Viva Nicaragua)
 Canal.13.de.Panamá.(Telemetro).pa | Canal 13 de Panamá (Telemetro)
 Canal.13.de.Panamá.(Telemetro).sv | Canal 13 de Panamá (Telemetro)
-Canal.13.de.Paraguay.(Trece).sv | Canal 13 de Paraguay (Trece)
-Canal.13.de.Puerto.Rico.(Teleoro).sv | Canal 13 de Puerto Rico (Teleoro)
-Canal.14.de.México.mx | Canal 14 de México
-Canal.14.de.México.sv | Canal 14 de México
-Canal.2.de.El.Salvador.sv | Canal 2 de El Salvador
-Canal.2.de.México.(Canal.Las.Estrellas.-.XEW).mx | Canal 2 de México (Canal Las Estrellas - XEW)
-Canal.2.de.México.(Canal.Las.Estrellas.-.XEW).sv | Canal 2 de México (Canal Las Estrellas - XEW)
-Canal.2.de.Nicaragua.(Televicentro).sv | Canal 2 de Nicaragua (Televicentro)
-Canal.2.de.Panamá.(TVN-2).cr | Canal 2 de Panamá (TVN-2)
-Canal.2.de.Panamá.(TVN-2).pa | Canal 2 de Panamá (TVN-2)
-Canal.2.de.Panamá.(TVN-2).sv | Canal 2 de Panamá (TVN-2)
-Canal.2.de.República.Dominicana.(Teleantillas).do | Canal 2 de República Dominicana (Teleantillas)
-Canal.2.de.República.Dominicana.(Teleantillas).sv | Canal 2 de República Dominicana (Teleantillas)
-Canal.21.de.El.Salvador.(Megavisión).sv | Canal 21 de El Salvador (Megavisión)
-Canal.22.de.México.mx | Canal 22 de México
-Canal.22.de.México.sv | Canal 22 de México
-Canal.29.de.TeleUniverso.(República.Dominicana).do | Canal 29 de TeleUniverso (República Dominicana)
-Canal.29.de.TeleUniverso.(República.Dominicana).sv | Canal 29 de TeleUniverso (República Dominicana)
-Canal.3.de.Guatemala.sv | Canal 3 de Guatemala
-Canal.37.de.República.Dominicana.(CDN).do | Canal 37 de República Dominicana (CDN)
-Canal.37.de.República.Dominicana.(CDN).sv | Canal 37 de República Dominicana (CDN)
-Canal.4.de.Costa.Rica.cr | Canal 4 de Costa Rica
-Canal.4.de.Costa.Rica.sv | Canal 4 de Costa Rica
-Canal.4.de.El.Salvador.sv | Canal 4 de El Salvador
-Canal.4.de.Guadalajara.(México).sv | Canal 4 de Guadalajara (México)
-Canal.4.de.Monterrey.(XEFB-TDT).sv | Canal 4 de Monterrey (XEFB-TDT)
 Canal.4.de.Panamá.(RPC.TV).pa | Canal 4 de Panamá (RPC TV)
 Canal.4.de.Panamá.(RPC.TV).sv | Canal 4 de Panamá (RPC TV)
-Canal.5.(XHPNH).mx | Canal 5 (XHPNH)
-Canal.5.El.Líder.(Honduras).sv | Canal 5 El Líder (Honduras)
-Canal.5.de.México.(XHGC).mx | Canal 5 de México (XHGC)
-Canal.5.de.México.(XHGC).sv | Canal 5 de México (XHGC)
-Canal.5.de.República.Dominicana.(Telemicro).do | Canal 5 de República Dominicana (Telemicro)
-Canal.5.de.República.Dominicana.(Telemicro).sv | Canal 5 de República Dominicana (Telemicro)
-Canal.6.de.Costa.Rica.cr | Canal 6 de Costa Rica
-Canal.6.de.Costa.Rica.sv | Canal 6 de Costa Rica
-Canal.6.de.El.Salvador.sv | Canal 6 de El Salvador
-Canal.6.de.Puerto.Rico.(WIPR-TV).sv | Canal 6 de Puerto Rico (WIPR-TV)
-Canal.7.de.Antena.Latina.(República.Dominicana).do | Canal 7 de Antena Latina (República Dominicana)
-Canal.7.de.Antena.Latina.(República.Dominicana).sv | Canal 7 de Antena Latina (República Dominicana)
-Canal.7.de.Costa.Rica.(Teletica).cr | Canal 7 de Costa Rica (Teletica)
-Canal.7.de.Costa.Rica.(Teletica).pa | Canal 7 de Costa Rica (Teletica)
-Canal.7.de.Costa.Rica.(Teletica).sv | Canal 7 de Costa Rica (Teletica)
-Canal.7.de.Guatemala.sv | Canal 7 de Guatemala
-Canal.7.de.Puerto.Rico.(teleisla).sv | Canal 7 de Puerto Rico (teleisla)
-Canal.9.Noticias.(Paraguay).sv | Canal 9 Noticias (Paraguay)
-Canal.9.de.Color.Visión.(República.Dominicana).do | Canal 9 de Color Visión (República Dominicana)
-Canal.9.de.Color.Visión.(República.Dominicana).sv | Canal 9 de Color Visión (República Dominicana)
-Canal.9.de.Honduras.(Vica).sv | Canal 9 de Honduras (Vica)
-Canal.9.de.México.(XEQ-TDT).mx | Canal 9 de México (XEQ-TDT)
-Canal.9.de.México.(XEQ-TDT).sv | Canal 9 de México (XEQ-TDT)
-Canal.9.de.Panamá.(TVMax).pa | Canal 9 de Panamá (TVMax)
-Canal.9.de.Panamá.(TVMax).sv | Canal 9 de Panamá (TVMax)
 Canal.ADN.40.sv | Canal ADN 40
-Canal.ATV.sv | Canal ATV
-Canal.Agrotendencia.TV.cr | Canal Agrotendencia TV
-Canal.Agrotendencia.TV.sv | Canal Agrotendencia TV
-Canal.America.TV.(Argentina).ar | Canal America TV (Argentina)
-Canal.America.TV.(Argentina).sv | Canal America TV (Argentina)
-Canal.América.TeVé.sv | Canal América TeVé
-Canal.Antena.3.de.España.sv | Canal Antena 3 de España
-Canal.Azteca.Uno.-2.Horas.mx | Canal Azteca Uno -2 Horas
-Canal.Azteca.Uno.-2.Horas.sv | Canal Azteca Uno -2 Horas
-Canal.BET.Jams.sv | Canal BET Jams
-Canal.Barça.TV.sv | Canal Barça TV
-Canal.Brasil.br | Canal Brasil
-Canal.CDN.Deportes.do | Canal CDN Deportes
-Canal.CDN.Deportes.sv | Canal CDN Deportes
-Canal.CNN.Chile.cl | Canal CNN Chile
-Canal.CNN.Chile.ec | Canal CNN Chile
-Canal.CNN.Chile.sv | Canal CNN Chile
-Canal.Capital.(Colombia).ar | Canal Capital (Colombia)
-Canal.Capital.(Colombia).sv | Canal Capital (Colombia)
-Canal.Capital.co | Canal Capital
-Canal.Caracol.(Colombia).sv | Canal Caracol (Colombia)
-Canal.Castilla-La.Mancha.Media.sv | Canal Castilla-La Mancha Media
-Canal.Chilevisión.(CHV).cl | Canal Chilevisión (CHV)
-Canal.Chilevisión.(CHV).sv | Canal Chilevisión (CHV)
-Canal.Cine.Estelar.sv | Canal Cine Estelar
-Canal.Cine.Nostalgia.sv | Canal Cine Nostalgia
-Canal.Cine.Sony.sv | Canal Cine Sony
-Canal.CineClick.sv | Canal CineClick
-Canal.Cinelatino.U.S.A..sv | Canal Cinelatino U.S.A.
-Canal.Clan.TVE.sv | Canal Clan TVE
-Canal.Congreso.(Colombia).sv | Canal Congreso (Colombia)
-Canal.Cosmopolitan.(España).sv | Canal Cosmopolitan (España)
-Canal.Cuatro.de.España.sv | Canal Cuatro de España
 Canal.Decasa.sv | Canal Decasa
-Canal.Discovery.Familia.sv | Canal Discovery Familia
-Canal.Discovery.en.Español.sv | Canal Discovery en Español
-Canal.ESPN.7.(Bolivia).sv | Canal ESPN 7 (Bolivia)
-Canal.ESPN.7.(Chile).sv | Canal ESPN 7 (Chile)
-Canal.ESPN.7.(Colombia).sv | Canal ESPN 7 (Colombia)
-Canal.ESPN.7.(Ecuador).sv | Canal ESPN 7 (Ecuador)
-Canal.ESPN.7.(Paraguay).sv | Canal ESPN 7 (Paraguay)
-Canal.ESPN.7.(Perú).sv | Canal ESPN 7 (Perú)
-Canal.ESPN.7.(Sudamérica).sv | Canal ESPN 7 (Sudamérica)
-Canal.ESPN.7.(Uruguay).sv | Canal ESPN 7 (Uruguay)
-Canal.ESPN.7.(Venezuela).sv | Canal ESPN 7 (Venezuela)
-Canal.Ecuador.TV.ec | Canal Ecuador TV
-Canal.Ecuador.TV.sv | Canal Ecuador TV
 Canal.Ecuavisa.(Ecuador).ec | Canal Ecuavisa (Ecuador)
 Canal.Ecuavisa.(Ecuador).sv | Canal Ecuavisa (Ecuador)
-Canal.Ecuavisa.Internacional.sv | Canal Ecuavisa Internacional
 Canal.El.Heraldo.TV.(México).mx | Canal El Heraldo TV (México)
 Canal.El.Heraldo.TV.(México).sv | Canal El Heraldo TV (México)
-Canal.Excelsior.TV.mx | Canal Excelsior TV
-Canal.Excelsior.TV.sv | Canal Excelsior TV
-Canal.Extra.TV.42.de.Costa.Rica.cr | Canal Extra TV 42 de Costa Rica
-Canal.Extra.TV.42.de.Costa.Rica.sv | Canal Extra TV 42 de Costa Rica
-Canal.Film.and.Arts.mx | Canal Film and Arts
-Canal.Fox.Deportes.sv | Canal Fox Deportes
-Canal.Frecuencia.Latina.sv | Canal Frecuencia Latina
-Canal.GOL.PLAY.(España).sv | Canal GOL PLAY (España)
 Canal.Gamavisión.ec | Canal Gamavisión
 Canal.Gamavisión.sv | Canal Gamavisión
 Canal.Gol.TV.Estados.Unidos.sv | Canal Gol TV Estados Unidos
-Canal.HITN.sv | Canal HITN
-Canal.History.en.Español.sv | Canal History en Español
-Canal.Ingenio.TV.(México).sv | Canal Ingenio TV (México)
-Canal.Institucional.(Colombia).ar | Canal Institucional (Colombia)
-Canal.Institucional.(Colombia).sv | Canal Institucional (Colombia)
-Canal.Institucional.co | Canal Institucional
-Canal.Inti.Network.cl | Canal Inti Network
-Canal.Inti.Network.ec | Canal Inti Network
-Canal.Inti.Network.sv | Canal Inti Network
 Canal.Justicia.TV.(México).sv | Canal Justicia TV (México)
-Canal.La.Red.TV.(Guatemala).sv | Canal La Red TV (Guatemala)
-Canal.Mexiquense.TV.mx | Canal Mexiquense TV
-Canal.Mexiquense.TV.sv | Canal Mexiquense TV
-Canal.Movistar.Comedia.sv | Canal Movistar Comedia
-Canal.Movistar.LaLiga.sv | Canal Movistar LaLiga
-Canal.Multimedios.(Costa.Rica).cr | Canal Multimedios (Costa Rica)
-Canal.Multimedios.(Costa.Rica).sv | Canal Multimedios (Costa Rica)
-Canal.Noticias.PY.(Paraguay).sv | Canal Noticias PY (Paraguay)
-Canal.Panamericana.Televisión.sv | Canal Panamericana Televisión
-Canal.Pasiones.Estados.Unidos.(Costa.Rica).cr | Canal Pasiones Estados Unidos (Costa Rica)
-Canal.Perú.Mágico.sv | Canal Perú Mágico
-Canal.Punto.2.Puerto.Rico.sv | Canal Punto 2 Puerto Rico
 Canal.RTS.ec | Canal RTS
 Canal.RTS.sv | Canal RTS
-Canal.Rural.br | Canal Rural
-Canal.Señal.Colombia.ar | Canal Señal Colombia
-Canal.Señal.Colombia.sv | Canal Señal Colombia
-Canal.Sky.Sports.1.(México).mx | Canal Sky Sports 1 (México)
-Canal.Sky.Sports.1.(México).sv | Canal Sky Sports 1 (México)
-Canal.Sky.Sports.24.mx | Canal Sky Sports 24
-Canal.Sky.Sports.24.sv | Canal Sky Sports 24
-Canal.Sony.Centro.sv | Canal Sony Centro
-Canal.Sorpresa.sv | Canal Sorpresa
-Canal.Starz.Encore.Español.sv | Canal Starz Encore Español
-Canal.Sun.Channel.ar | Canal Sun Channel
-Canal.Sun.Channel.cl | Canal Sun Channel
-Canal.Sun.Channel.pa | Canal Sun Channel
-Canal.Sun.Channel.sv | Canal Sun Channel
-Canal.Sur.TV.Itapúa.(Paraguay).sv | Canal Sur TV Itapúa (Paraguay)
-Canal.TC.Televisión.ec | Canal TC Televisión
-Canal.TC.Televisión.sv | Canal TC Televisión
-Canal.TN23.sv | Canal TN23
-Canal.TRO.co | Canal TRO
-Canal.TV.Agro.Centroamérica.pa | Canal TV Agro Centroamérica
-Canal.TV.Agro.Centroamérica.sv | Canal TV Agro Centroamérica
-Canal.Teleamazonas.sv | Canal Teleamazonas
-Canal.Teleantioquia.ar | Canal Teleantioquia
-Canal.Teleantioquia.ec | Canal Teleantioquia
-Canal.Teleantioquia.sv | Canal Teleantioquia
-Canal.Telecaribe.ar | Canal Telecaribe
-Canal.Telecaribe.sv | Canal Telecaribe
-Canal.Telecentro.(13.de.República.Dominicana).do | Canal Telecentro (13 de República Dominicana)
-Canal.Telecentro.(13.de.República.Dominicana).sv | Canal Telecentro (13 de República Dominicana)
-Canal.Telecentro.TV.sv | Canal Telecentro TV
-Canal.Teleislas.sv | Canal Teleislas
-Canal.Telemundo.Puerto.Rico.sv | Canal Telemundo Puerto Rico
-Canal.Telepacífico.sv | Canal Telepacífico
-Canal.Telesistema.11.(República.Dominicana).do | Canal Telesistema 11 (República Dominicana)
-Canal.Telesistema.11.(República.Dominicana).sv | Canal Telesistema 11 (República Dominicana)
-Canal.Telesistema.Informativo.(TSI).(Honduras).sv | Canal Telesistema Informativo (TSI) (Honduras)
-Canal.Teleunion.(República.Dominicana).do | Canal Teleunion (República Dominicana)
-Canal.Teleunion.(República.Dominicana).sv | Canal Teleunion (República Dominicana)
-Canal.Televisión.Canaria.sv | Canal Televisión Canaria
-Canal.Televisión.Dominicana.do | Canal Televisión Dominicana
-Canal.Televisión.Dominicana.sv | Canal Televisión Dominicana
-Canal.Tr3s.sv | Canal Tr3s
-Canal.Tro.sv | Canal Tro
-Canal.Ultra.Cine.sv | Canal Ultra Cine
-Canal.Ultra.Docu.sv | Canal Ultra Docu
-Canal.Ultra.Fiesta.sv | Canal Ultra Fiesta
-Canal.Ultra.Film.sv | Canal Ultra Film
-Canal.Ultra.Kidz.sv | Canal Ultra Kidz
-Canal.Ultra.Tainment.sv | Canal Ultra Tainment
-Canal.Universo.sv | Canal Universo
-Canal.Univision.TLNovelas.sv | Canal Univision TLNovelas
-Canal.VTV.Honduras.(Vica.TV).sv | Canal VTV Honduras (Vica TV)
-Canal.ViendoMovies.sv | Canal ViendoMovies
-Canal.Vía.X.cl | Canal Vía X
-Canal.Vía.X.sv | Canal Vía X
-Canal.WAPA-TV.sv | Canal WAPA-TV
-Canal.WAPA.2.Deportes.sv | Canal WAPA 2 Deportes
-Canal.Willax.TV.sv | Canal Willax TV
-Canal.ZOOM.(Colombia).sv | Canal ZOOM (Colombia)
-Canal.Zona.Latina.cl | Canal Zona Latina
-Canal.Zona.Latina.ec | Canal Zona Latina
-Canal.Zona.Latina.sv | Canal Zona Latina
-Canal.Zoom.co | Canal Zoom
-Canal.a+.mx | Canal a+
-Canal.a+.sv | Canal a+
-Canal.beIN.Sport.en.Español.sv | Canal beIN Sport en Español
-Canal.de.las.Estrellas.-1.Hora.-.México.(XEW).sv | Canal de las Estrellas -1 Hora - México (XEW)
-Canal.de.las.Estrellas.-2.Horas.-.México.(XEW).mx | Canal de las Estrellas -2 Horas - México (XEW)
-Canal.de.las.Estrellas.-2.Horas.-.México.(XEW).sv | Canal de las Estrellas -2 Horas - México (XEW)
-Canal.do.Boi.br | Canal do Boi
-Caracol.co | Caracol | Caracol HD | Caracol FHD
-Cine.Platino.cr | Cine Platino
-Claro.Sports.1.mx | Claro Sports 1
-Combate.br | Combate
-Comedy.Central.Centro.(Costa.Rica).cr | Comedy Central Centro (Costa Rica)
-Comedy.Central.Espana.(Costa.Rica).cr | Comedy Central Espana (Costa Rica)
 DAYSTAR.co | DAYSTAR
 DIRECTV.SPORTS(DTS7).co | DIRECTV SPORTS(DTS7)
 DIRECTV.SPORTS(DTS9).co | DIRECTV SPORTS(DTS9)
 DIRECTV.SPORTS.HD(DTSHD9).co | DIRECTV SPORTS HD(DTSHD9)
 DIRECTV.SPORTS.HD(DTVSHD).co | DIRECTV SPORTS HD(DTVSHD)
 DIRECTV.Sports.5(DTS6).co | DIRECTV Sports 5(DTS6)
-DISCOVERY.H.and.H.HD.uy | DISCOVERY H and H HD
 DISCOVERY.HOME.&.GARDEN.(HomeGarden).pe | DISCOVERY HOME & GARDEN (HomeGarden)
-DISCOVERY.TLC.HD..uy | DISCOVERY TLC HD
-DISCOVERY.TLC.HD.uy | DISCOVERY TLC HD
-DISNEY.+.co | DISNEY +
-DISNEY..uy | DISNEY
-DISNEY.HD..uy | DISNEY HD
-DISNEY.uy | DISNEY
 DSPORTS.Radio(DTSR).co | DSPORTS Radio(DTSR)
 DSports.Radio(DTSR).co | DSports Radio(DTSR)
-DW.ESPAÑOL.HD.uy | DW ESPAÑOL HD
-Discovery.H&H.co | Discovery H&H
-EL.TRECE.INTER.HD.uy | EL TRECE INTER HD
-ENCUENTRO.uy | ENCUENTRO
 ENLACE.TBN.(Enlace).pe | ENLACE TBN (Enlace)
 ENTERTAINMENT.TELEVISION..uy | ENTERTAINMENT TELEVISION
 ENTERTAINMENT.TELEVISION.uy | ENTERTAINMENT TELEVISION
 ESPN | ESPN 1 MEX HD | ESPN 1 MEX FHD
 ESPN 2 HD.co | ESPN 2 CO
-ESPN.7..uy | ESPN 7
-ESPN.7.HD..uy | ESPN 7 HD
-ESPN.7.HD.co | ESPN 7 HD
-ESPN.7.HD.uy | ESPN 7 HD
-ESPN.co | ESPN 1 CO FHD
-ESPN2.ar | ESPN 1 HD | AR | ESPN 1 FHD | ARG
 EVENTOS.4.HD..uy | EVENTOS 4 HD
 EVENTOS.DEPORTIVOS.2.HD.uy | EVENTOS DEPORTIVOS 2 HD
-El.Tiempo.Televisión.co | El Tiempo Televisión
-FILM.and.ARTS.HD.uy | FILM and ARTS HD
 FOX.CLASSICS.(FoxClassics).pe | FOX CLASSICS (FoxClassics)
 FOX.COMEDY.(FoxComedy).pe | FOX COMEDY (FoxComedy)
 FOX.COMEDY.HD.(FoxComedyHD).pe | FOX COMEDY HD (FoxComedyHD)
@@ -352,51 +69,22 @@ FOX.PREMIUM.CINEMA.HD.(Fox.Cinema.HD).pe | FOX PREMIUM CINEMA HD (Fox Cinema HD)
 FOX.PREMIUM.MOVIES.HD.(FoxMoviesHD).pe | FOX PREMIUM MOVIES HD (FoxMoviesHD)
 FOX.SERIES.(Fox1).pe | FOX SERIES (Fox1)
 FOX.SERIES.HD.(FoxSeriesHD).pe | FOX SERIES HD (FoxSeriesHD)
-FRANCE.24.ESPAÑOL.HD.uy | FRANCE 24 ESPAÑOL HD
-FRANCE.24.INGLES.HD.uy | FRANCE 24 INGLES HD
-FX HD.co | FX | AR HD
 FXM.REGIONAL.OTT.(FX.Movies.DTH).pe | FXM REGIONAL OTT (FX Movies DTH)
-Futura.br | Futura
 GLOBAL.(RED.TV).pe | GLOBAL (RED TV)
-GNT.br | GNT
-GOL PLAY | GOL PLAY FHD
 GOL.PERU.HD.(GOL.PERU.HD).pe | GOL PERU HD (GOL PERU HD)
-GOLDEN EDGE | GOLDEN EDGE | AR
-GOLDEN HD.co | GOLDEN PLUS | AR
 GOLPERU.(GOLPERU).pe | GOLPERU (GOLPERU)
 GOLPERU.HD.(GOLPERU.HD).pe | GOLPERU HD (GOLPERU HD)
-Globo.News.br | Globo News
-Gloob.br | Gloob
-HBO.FAMILY.ESTE.co | HBO FAMILY ESTE
-HGTV.co | HGTV  | AR HD
-HISTORY.CHANNEL.(History).pe | HISTORY CHANNEL (History)
-HISTORY.CHANNEL.HD.(HistoryHD).pe | HISTORY CHANNEL HD (HistoryHD)
-HISTORY.CHANNEL.co | HISTORY CHANNEL
 HOME.&.HEALTH.(Home&Health).pe | HOME & HEALTH (Home&Health)
 HOME.&.HEALTH.HD.(Home&HealthHD).pe | HOME & HEALTH HD (Home&HealthHD)
 HOME.AND.HEALTH..uy | HOME AND HEALTH
 HOME.AND.HEALTH.HD..uy | HOME AND HEALTH HD
-History.Channel.br | History Channel
-History.Channel.co | History Channel
-KANAL.D.HD.uy | KANAL D HD
-LA.NACION.HD.uy | LA NACION HD
 LA.TELE.PERU.(La.Tele).pe | LA TELE PERU (La Tele)
-LATINA.(Latina).pe | LATINA (Latina)
-LATINA.HD.(Latina.HD).pe | LATINA HD (Latina HD)
-LN+..uy | LN+
 M+ ACCIÓN HD | ACCION por M+  HD
 M+ CLÁSICOS HD | CLASICOS por M+ HD | CLASICOS por M+ HD (2)
 M+ DRAMA HD | DRAMA por M+ | DRAMA por M+ FHD
 M+ Indie HD | INDIE por M+ | INDIE por M+ FHD
-M.PLUS.(M.Plus).pe | M PLUS (M Plus)
-M.PLUS.HD.(M.Plus.HD).pe | M PLUS HD (M Plus HD)
-MAGAZINE.HD.uy | MAGAZINE HD
-MAROÑAS.HD.uy | MAROÑAS HD
-MONTECARLO.HD.uy | MONTECARLO HD
 MOVISTAR.EVENTOS.(Movistar.Eventos).pe | MOVISTAR EVENTOS (Movistar Eventos)
 MTV.CLUB..uy | MTV CLUB
-Megapix.br | Megapix
-Multishow.br | Multishow
 NETFLIX.co | NETFLIX
 NHK.(NHK).pe | NHK (NHK)
 NS.EVENTOS.1..uy | NS EVENTOS 1
@@ -405,310 +93,53 @@ NS.EVENTOS.2.HD..uy | NS EVENTOS 2 HD
 NS.EVENTOS.3..uy | NS EVENTOS 3
 NS.EVENTOS.3.HD..uy | NS EVENTOS 3 HD
 NS.EVENTOS.HD..uy | NS EVENTOS HD
-NUESTRA.TELE.(NuestraTele).pe | NUESTRA TELE (NuestraTele)
-NUESTRA.TELE.co | NUESTRA TELE
 NUEVO.SIGLO.TV..uy | NUEVO SIGLO TV
 NUEVO.SIGLO.TV.HD..uy | NUEVO SIGLO TV HD
-Nick.co | NICKELODEON AR
-OFF.HD.br | OFF HD
-ORBE.21.(Orbe21).pe | ORBE 21 (Orbe21)
-PANAMERICANA.TELEVISION.(Panamericana.TV).pe | PANAMERICANA TELEVISION (Panamericana TV)
-PANAMERICANA.TELEVISION.HD.(Panamericana.HD).pe | PANAMERICANA TELEVISION HD (Panamericana HD)
-PLAYBOY.ETIQUETA.uy | PLAYBOY ETIQUETA
-PLIM.PLIM..uy | PLIM PLIM
-PLIM.PLIM.uy | PLIM PLIM
 PODER.JUDICIAL.(JusticiaTV).pe | PODER JUDICIAL (JusticiaTV)
 PRIME.VIDEO.co | PRIME VIDEO
 Portal.DIRECTV.Sports(DTVS).co | Portal DIRECTV Sports(DTVS)
-Premiere.Clubes.br | Premiere Clubes
 QUALITY.CHANNEL.(Quality).pe | QUALITY CHANNEL (Quality)
-QUIERO..uy | QUIERO
-QUIERO.HD.uy | QUIERO HD
-RAI..uy | RAI
-RAI.HD.uy | RAI HD
 RAI.TV.(RAI).pe | RAI TV (RAI)
 RCN.HDTV.2.(RCNHD2).co | RCN HDTV 2 (RCNHD2)
-REDE.RECORD.uy | REDE RECORD
-REDE.TV..uy | REDE TV
-REDE.TV.HD.uy | REDE TV HD
-RPP.HD.(RPP.HD).pe | RPP HD (RPP HD)
 RPP.TV.(RPP.TV).pe | RPP TV (RPP TV)
-Record.News.br | Record News
-Rede.Boa.Vontade.br | Rede Boa Vontade
-Rede.TV.br | Rede TV
-Rede.Vida.br | Rede Vida
 SAETA..uy | SAETA
-SBT.br | SBT
-SIC.International.br | SIC International
-SONY MOVIES | SONY MOVIES HD | AR
 SPACE.REGIONAL.DTH.LIVE.(Space.HD).pe | SPACE REGIONAL DTH LIVE (Space HD)
 STAR.+.co | STAR +
-STUDIO UNIVERSAL | STUDIO UNIVERSAL HD | AR
-Señal.Colombia.co | Señal Colombia
-Sky.Sports.24.mx | Sky Sports 24
-SporTV.2.br | SporTV 2
-SporTV.3.br | SporTV 3
-SporTV.br | SporTV
-São.Paulo/SP...TV.Aparecida.(espelho).br | São Paulo/SP   TV Aparecida (espelho)
-São.Paulo/SP...Universal.TV.HD.br | São Paulo/SP   Universal TV HD
-São.Paulo/SP..AXN.HD.³.br | São Paulo/SP  AXN HD ³
-São.Paulo/SP..AXN.br | São Paulo/SP  AXN
-São.Paulo/SP..Agro.Mais.HD..br | São Paulo/SP  Agro Mais HD
-São.Paulo/SP..Agro.Mais.br | São Paulo/SP  Agro Mais
-São.Paulo/SP..Arte.1.HD.br | São Paulo/SP  Arte 1 HD
-São.Paulo/SP..Arte.1.br | São Paulo/SP  Arte 1
-São.Paulo/SP..BBC.World.News.br | São Paulo/SP  BBC World News
-São.Paulo/SP..Band.News.HD.br | São Paulo/SP  Band News HD
-São.Paulo/SP..Band.News.br | São Paulo/SP  Band News
-São.Paulo/SP..Bloomberg.TV.br | São Paulo/SP  Bloomberg TV
-São.Paulo/SP..Boa.Vontade.TV.br | São Paulo/SP  Boa Vontade TV
-São.Paulo/SP..CGTN.br | São Paulo/SP  CGTN
-São.Paulo/SP..CNN.Brasil.HD.br | São Paulo/SP  CNN Brasil HD
-São.Paulo/SP..CNN.Brasil.br | São Paulo/SP  CNN Brasil
-São.Paulo/SP..CNN.International.br | São Paulo/SP  CNN International
-São.Paulo/SP..CONMEBOL.TV.4.HD.br | São Paulo/SP  CONMEBOL TV 4 HD
-São.Paulo/SP..Canal.2.br | São Paulo/SP  Canal 2
 São.Paulo/SP..Canal.Comunitário.br | São Paulo/SP  Canal Comunitário
-São.Paulo/SP..Canal.Legislativo.br | São Paulo/SP  Canal Legislativo
-São.Paulo/SP..Canal.Rural.br | São Paulo/SP  Canal Rural
-São.Paulo/SP..Canal.Universitário.br | São Paulo/SP  Canal Universitário
-São.Paulo/SP..Canal.de.Vendas.NET.br | São Paulo/SP  Canal de Vendas NET
-São.Paulo/SP..Canal.do.Boi.br | São Paulo/SP  Canal do Boi
 São.Paulo/SP..Cinecanal.br | São Paulo/SP  Cinecanal
-São.Paulo/SP..Combate.HD.br | São Paulo/SP  Combate HD
-São.Paulo/SP..Combate.br | São Paulo/SP  Combate
 São.Paulo/SP..Comedy.Central.HD.br | São Paulo/SP  Comedy Central HD
 São.Paulo/SP..Comedy.Central.br | São Paulo/SP  Comedy Central
-São.Paulo/SP..Cultura.HD.br | São Paulo/SP  Cultura HD
-São.Paulo/SP..Cultura.br | São Paulo/SP  Cultura
-São.Paulo/SP..Curta!.HD.br | São Paulo/SP  Curta! HD
-São.Paulo/SP..Curta!.br | São Paulo/SP  Curta!
-São.Paulo/SP..DW-TV.br | São Paulo/SP  DW-TV
-São.Paulo/SP..Discovery.Home.and.Health.br | São Paulo/SP  Discovery Home and Health
-São.Paulo/SP..DogTV.HD.br | São Paulo/SP  DogTV HD
-São.Paulo/SP..E!..br | São Paulo/SP  E!
-São.Paulo/SP..E!.HD.br | São Paulo/SP  E! HD
-São.Paulo/SP..Eurochannel.HD.br | São Paulo/SP  Eurochannel HD
-São.Paulo/SP..FISH.TV.HD.br | São Paulo/SP  FISH TV HD
-São.Paulo/SP..FISH.TV.br | São Paulo/SP  FISH TV
-São.Paulo/SP..FOOD.NETWORK.HD.br | São Paulo/SP  FOOD NETWORK HD
-São.Paulo/SP..FX.HD.³.br | São Paulo/SP  FX HD ³
-São.Paulo/SP..FX.br | São Paulo/SP  FX
 São.Paulo/SP..Fashion.TV.HD.br | São Paulo/SP  Fashion TV HD
-São.Paulo/SP..Film&Arts.HD.br | São Paulo/SP  Film&Arts HD
-São.Paulo/SP..Food.Network.br | São Paulo/SP  Food Network
-São.Paulo/SP..GNT.HD.³.br | São Paulo/SP  GNT HD ³
-São.Paulo/SP..GNT.br | São Paulo/SP  GNT
-São.Paulo/SP..Gazeta.HD.br | São Paulo/SP  Gazeta HD
-São.Paulo/SP..Gazeta.br | São Paulo/SP  Gazeta
-São.Paulo/SP..Globo.HD.br | São Paulo/SP  Globo HD
-São.Paulo/SP..Globo.br | São Paulo/SP  Globo
 São.Paulo/SP..GloboNews.br | São Paulo/SP  GloboNews
-São.Paulo/SP..HGTV.HD.br | São Paulo/SP  HGTV HD
-São.Paulo/SP..HGTV.br | São Paulo/SP  HGTV
-São.Paulo/SP..ID.HD.³.br | São Paulo/SP  ID HD ³
-São.Paulo/SP..ID.br | São Paulo/SP  ID
-São.Paulo/SP..LIKE.HD.br | São Paulo/SP  LIKE HD
-São.Paulo/SP..Lifetime.HD.br | São Paulo/SP  Lifetime HD
-São.Paulo/SP..Lifetime.br | São Paulo/SP  Lifetime
 São.Paulo/SP..MTV.HD.³.br | São Paulo/SP  MTV HD ³
 São.Paulo/SP..MTV.Live.HD.br | São Paulo/SP  MTV Live HD
 São.Paulo/SP..MTV.br | São Paulo/SP  MTV
-São.Paulo/SP..Mega.TV.HD.br | São Paulo/SP  Mega TV HD
-São.Paulo/SP..Mega.TV.br | São Paulo/SP  Mega TV
-São.Paulo/SP..Modo.viagem.HD.br | São Paulo/SP  Modo viagem HD
-São.Paulo/SP..Modo.viagem.br | São Paulo/SP  Modo viagem
-São.Paulo/SP..Mosaico.Multijogos.br | São Paulo/SP  Mosaico Multijogos
-São.Paulo/SP..NHK.World.Premium.br | São Paulo/SP  NHK World Premium
 São.Paulo/SP..Nick.Jr..br | São Paulo/SP  Nick Jr.
 São.Paulo/SP..Nick.Jr.HD.³.br | São Paulo/SP  Nick Jr HD ³
 São.Paulo/SP..Nickelodeon.HD.br | São Paulo/SP  Nickelodeon HD
 São.Paulo/SP..Nickelodeon.br | São Paulo/SP  Nickelodeon
-São.Paulo/SP..Off.HD.³.br | São Paulo/SP  Off HD ³
-São.Paulo/SP..Off.br | São Paulo/SP  Off
-São.Paulo/SP..PREMIERE.HD.3.³.br | São Paulo/SP  PREMIERE HD 3 ³
-São.Paulo/SP..PREMIERE.HD.4.³.br | São Paulo/SP  PREMIERE HD 4 ³
-São.Paulo/SP..PREMIERE.HD.5.³.br | São Paulo/SP  PREMIERE HD 5 ³
 São.Paulo/SP..Paramount.Network.HD..br | São Paulo/SP  Paramount Network HD
 São.Paulo/SP..Paramount.Network.br | São Paulo/SP  Paramount Network
 São.Paulo/SP..Polishop.TV.br | São Paulo/SP  Polishop TV
-São.Paulo/SP..Premiere.2.br | São Paulo/SP  Premiere 2
-São.Paulo/SP..Premiere.4.br | São Paulo/SP  Premiere 4
-São.Paulo/SP..Premiere.5.br | São Paulo/SP  Premiere 5
-São.Paulo/SP..Premiere.6.br | São Paulo/SP  Premiere 6
-São.Paulo/SP..Premiere.7.br | São Paulo/SP  Premiere 7
-São.Paulo/SP..Premiere.HD.2.br | São Paulo/SP  Premiere HD 2
-São.Paulo/SP..RAI.International.br | São Paulo/SP  RAI International
-São.Paulo/SP..Record.HD.br | São Paulo/SP  Record HD
-São.Paulo/SP..Record.br | São Paulo/SP  Record
-São.Paulo/SP..Rede.21.br | São Paulo/SP  Rede 21
-São.Paulo/SP..Rede.Gospel.HD.br | São Paulo/SP  Rede Gospel HD
-São.Paulo/SP..Rede.Gospel.br | São Paulo/SP  Rede Gospel
-São.Paulo/SP..Rede.TV.HD.br | São Paulo/SP  Rede TV HD
-São.Paulo/SP..Rede.TV.br | São Paulo/SP  Rede TV
-São.Paulo/SP..SIC.International.br | São Paulo/SP  SIC International
 São.Paulo/SP..STAR.CHANNEL.HD.br | São Paulo/SP  STAR CHANNEL HD
 São.Paulo/SP..Shoptime.TV.br | São Paulo/SP  Shoptime TV
-São.Paulo/SP..Sony.HD.³.br | São Paulo/SP  Sony HD ³
-São.Paulo/SP..Sony.br | São Paulo/SP  Sony
 São.Paulo/SP..Star.Channel.br | São Paulo/SP  Star Channel
-São.Paulo/SP..Syfy.HD.br | São Paulo/SP  Syfy HD
-São.Paulo/SP..Syfy.br | São Paulo/SP  Syfy
 São.Paulo/SP..TLC.HD.³.br | São Paulo/SP  TLC HD ³
-São.Paulo/SP..TLC.br | São Paulo/SP  TLC
-São.Paulo/SP..TNT.SÉRIES.HD.br | São Paulo/SP  TNT SÉRIES HD
-São.Paulo/SP..TV.Brasil.HD.br | São Paulo/SP  TV Brasil HD
-São.Paulo/SP..TV.Brasil.br | São Paulo/SP  TV Brasil
-São.Paulo/SP..TV.Climatempo.br | São Paulo/SP  TV Climatempo
-São.Paulo/SP..TV.Câmara.br | São Paulo/SP  TV Câmara
-São.Paulo/SP..TV.Escola.br | São Paulo/SP  TV Escola
 São.Paulo/SP..TV.Justiça.br | São Paulo/SP  TV Justiça
-São.Paulo/SP..TV.Korea.br | São Paulo/SP  TV Korea
-São.Paulo/SP..TV.Pai.Eterno.br | São Paulo/SP  TV Pai Eterno
-São.Paulo/SP..TV.Rá.Tim.Bum.HD.³.br | São Paulo/SP  TV Rá Tim Bum HD ³
-São.Paulo/SP..TV.Senado.br | São Paulo/SP  TV Senado
 São.Paulo/SP..TV5.Monde.br | São Paulo/SP  TV5 Monde
-São.Paulo/SP..TVE.International.br | São Paulo/SP  TVE International
 São.Paulo/SP..Telecine.Action.HD.³.br | São Paulo/SP  Telecine Action HD ³
-São.Paulo/SP..Telecine.Action.br | São Paulo/SP  Telecine Action
-São.Paulo/SP..Telecine.Cult.HD.³.br | São Paulo/SP  Telecine Cult HD ³
-São.Paulo/SP..Telecine.Cult.br | São Paulo/SP  Telecine Cult
-São.Paulo/SP..Telecine.Fun.HD.³.br | São Paulo/SP  Telecine Fun HD ³
-São.Paulo/SP..Telecine.Fun.br | São Paulo/SP  Telecine Fun
-São.Paulo/SP..Telecine.Pipoca.HD.³.br | São Paulo/SP  Telecine Pipoca HD ³
 São.Paulo/SP..Telecine.Pipoca.br | São Paulo/SP  Telecine Pipoca
 São.Paulo/SP..Telecine.Premium.HD.³.br | São Paulo/SP  Telecine Premium HD ³
-São.Paulo/SP..Telecine.Premium.br | São Paulo/SP  Telecine Premium
-São.Paulo/SP..Telecine.Touch.HD.³.br | São Paulo/SP  Telecine Touch HD ³
-São.Paulo/SP..Telecine.Touch.br | São Paulo/SP  Telecine Touch
-São.Paulo/SP..Terra.Viva.br | São Paulo/SP  Terra Viva
-São.Paulo/SP..Tnt.novelas.HD.br | São Paulo/SP  Tnt novelas HD
-São.Paulo/SP..Tnt.novelas.br | São Paulo/SP  Tnt novelas
-São.Paulo/SP..Travel.Box.Brasil.HD..br | São Paulo/SP  Travel Box Brasil HD
-São.Paulo/SP..Universal.TV.br | São Paulo/SP  Universal TV
-São.Paulo/SP..Viva.HD.br | São Paulo/SP  Viva HD
-São.Paulo/SP..Viva.br | São Paulo/SP  Viva
-São.Paulo/SP..Woohoo.HD.br | São Paulo/SP  Woohoo HD
-São.Paulo/SP..Woohoo.br | São Paulo/SP  Woohoo
 TBS.VERY.FUNNY.(TBS).pe | TBS VERY FUNNY (TBS)
 TBS.VERY.FUNNY.HD.(TBS.Very.Funny.HD).pe | TBS VERY FUNNY HD (TBS Very Funny HD)
-TCM.-.Turner.Classic.br | TCM - Turner Classic
-TELEDOCE..uy | TELEDOCE
-TELEDOCE.HD..uy | TELEDOCE HD
 TELEFE.INTER..uy | TELEFE INTER
-TELEVID.co | TELEVID
-TN..uy | TN
-TN.HD..uy | TN HD
-TN.HD.uy | TN HD
 TOROS.TV.(TorosTV).pe | TOROS TV (TorosTV)
 TRECE | 13 tv HD
-TV.5.uy | TV 5
-TV.Aparecida.(aberta).br | TV Aparecida (aberta)
-TV.Brasil.br | TV Brasil
-TV.CIUDAD..uy | TV CIUDAD
-TV.CIUDAD.HD..uy | TV CIUDAD HD
-TV.Cultura.br | TV Cultura
-TV.Escola.br | TV Escola
-TV.Espanha.br | TV Espanha
 TV.GLOBO.HD..uy | TV GLOBO HD
-TV.Gazeta.br | TV Gazeta
-TV.Justiça.br | TV Justiça
-TV.NACIONAL.HD.uy | TV NACIONAL HD
-TV.PUBLICA.uy | TV PUBLICA
-TV.Senado.br | TV Senado
-TV5.(TV5).pe | TV5 (TV5)
-TVN.CHILE..uy | TVN CHILE
-TVN.CHILE.HD.uy | TVN CHILE HD
-Teleantioquia.co | Teleantioquia
-Telecaribe.co | Telecaribe
-Telecine.Action.br | Telecine Action
-Telecine.Cult.br | Telecine Cult
-Telecine.Fun.br | Telecine Fun
-Telecine.Pipoca.br | Telecine Pipoca
-Telecine.Premium.br | Telecine Premium
-Telecine.Touch.br | Telecine Touch
-Teleislas.co | Teleislas
-Telepacifico.co | Telepacifico
-Televisa.(XERV).mx | Televisa (XERV)
-Televisa.(XHAB).mx | Televisa (XHAB)
-Travel.Box.Brazil.br | Travel Box Brazil
-UNIVERSAL CHANNEL | UNIVERSAL HD (DTV)
-UNIVERSAL.HD.uy | UNIVERSAL HD
-USMP.TV.(USMP.TV).pe | USMP TV (USMP TV)
-Universal TV.co | UNIVERSAL HD
-VENUS.ETIQUETA.uy | VENUS ETIQUETA
 VOA.(VOA).pe | VOA (VOA)
-VTV.PLUS..uy | VTV PLUS
-VTV.PLUS.HD..uy | VTV PLUS HD
-Viva.br | Viva
-WILLAX.(Willax).pe | WILLAX (Willax)
 WIPR.pr | WIPR
-WOOHOO.uy | WOOHOO
 Win.Sports.Premium(Win+).co | Win Sports Premium(Win+)
 Win.Sports.Premium.HD(Win+HD).co | Win Sports Premium HD(Win+HD)
-Woohoo.br | Woohoo
 YOUTUBE.KIDS.co | YOUTUBE KIDS
 YOUTUBE.co | YOUTUBE
-[ADCOHOL].DMX.Adult.Contemporary.Holiday.uy | [ADCOHOL] DMX Adult Contemporary Holiday
-[AMETVA].América.TV.uy | [AMETVA] América TV
-[AMSAT].América.Tv.uy | [AMSAT] América Tv
-[C5NARG].C5N.uy | [C5NARG] C5N
-[CALUZ].Canal.Luz.uy | [CALUZ] Canal Luz
-[CAMPOTV].Campo.Rural.Tv.uy | [CAMPOTV] Campo Rural Tv
-[CARAI].CARACOL.INTERNATIONAL.uy | [CARAI] CARACOL INTERNATIONAL
-[CARA].Caracol.TV.Canal.1.uy | [CARA] Caracol TV Canal 1
-[CHATV].Chacra.TV.uy | [CHATV] Chacra TV
-[CLASSRB].DMX:.Classic.R&B.uy | [CLASSRB] DMX: Classic R&B
-[CNNCH].CNN.Chile.uy | [CNNCH] CNN Chile
-[CNUR].Union.Radio.Noticias.uy | [CNUR] Union Radio Noticias
-[CRON].Cronica.TV.uy | [CRON] Cronica TV
-[CRU].Canal.Rural.uy | [CRU] Canal Rural
-[CTIEMPO].El.Tiempo.Televisión.uy | [CTIEMPO] El Tiempo Televisión
-[DEP1300].Deportiva.1300.uy | [DEP1300] Deportiva 1300
-[DLALOVE].AUDIO.DLA.LOVE.MUSIC.uy | [DLALOVE] AUDIO DLA LOVE MUSIC
-[DLAMEX].AUDIO.DLA.REGIONAL.MEXICAN.uy | [DLAMEX] AUDIO DLA REGIONAL MEXICAN
-[DT2SPT].DirecTV2.Sports.uy | [DT2SPT] DirecTV2 Sports
-[DTVGEN].DirecTV.Generic.uy | [DTVGEN] DirecTV Generic
-[ENCU].Encuentro.uy | [ENCU] Encuentro
-[ESPN7SS].ESPN.7.uy | [ESPN7SS] ESPN 7
-[EXITO70].Audio.DLA.Éxitos.de.los.70.uy | [EXITO70] Audio DLA Éxitos de los 70
-[GOLTVL].GolTV.Latin.America.uy | [GOLTVL] GolTV Latin America
-[IVCVENE].IVC.uy | [IVCVENE] IVC
-[IVNETHD].IVC.Net.HD.uy | [IVNETHD] IVC Net HD
-[JAZZ].DMX:.Jazz.uy | [JAZZ] DMX: Jazz
-[JZZVCL].DMX:.Jazz.Vocal.Blends.uy | [JZZVCL] DMX: Jazz Vocal Blends
-[KZOAR].KZO.uy | [KZOAR] KZO
-[MIX750].DMX.Mix.750.uy | [MIX750] DMX Mix 750
-[MONTTV].Canal.4.uy | [MONTTV] Canal 4
-[MTOPHD].Music.Top.uy | [MTOPHD] Music Top
-[MUSICAM].AUDIO.DLA.MÚSICA.DE.LAS.AMÉRI.uy | [MUSICAM] AUDIO DLA MÚSICA DE LAS AMÉRI
-[MUSTROP].AUDIO.DLA.MÚSICA.TROPICAL.uy | [MUSTROP] AUDIO DLA MÚSICA TROPICAL
-[NACPSD].LN+.uy | [NACPSD] LN+
-[NEWAGES].AUDIO.DLA.NEW.AGE.uy | [NEWAGES] AUDIO DLA NEW AGE
-[NEWSMIX].DIRECTV.NEWS.MIX.uy | [NEWSMIX] DIRECTV NEWS MIX
-[NUEVOPE].NUEVO.TIEMPO.uy | [NUEVOPE] NUEVO TIEMPO
-[ONDTHS].OnDIRECTV.HD.(South).uy | [ONDTHS] OnDIRECTV HD (South)
-[ORBE21].Canal.Orbe.21.uy | [ORBE21] Canal Orbe 21
-[QMMIHD].Quiero.Mi.Musica.en.Mi.Idioma.HD.uy | [QMMIHD] Quiero Mi Musica en Mi Idioma HD
-[RCARA].Radio.Caracol.uy | [RCARA] Radio Caracol
-[RDISCO].DMX:.Riviera.Discotheque.uy | [RDISCO] DMX: Riviera Discotheque
-[RFIRAD].RFI.uy | [RFIRAD] RFI
-[ROCKCLS].AUDIO.DLA.ROCK.CLÁSICO.uy | [ROCKCLS] AUDIO DLA ROCK CLÁSICO
-[RTPI].RTPi.RadioTV.Portuguesa.Int’l.uy | [RTPI] RTPi RadioTV Portuguesa Int’l
-[RURAL].Canal.Rural.uy | [RURAL] Canal Rural
-[SCNN].SPAN.CNN.uy | [SCNN] SPAN CNN
-[SFTHITS].DMX:.Soft.Hits.uy | [SFTHITS] DMX: Soft Hits
-[SINGERS].AUDIO.DLA.GREAT.STANDARDS.uy | [SINGERS] AUDIO DLA GREAT STANDARDS
-[SONYHD].Sony.Movie.Channel.HD.uy | [SONYHD] Sony Movie Channel HD
-[SPOARHD].DSports.Argentina.HD.uy | [SPOARHD] DSports Argentina HD
-[TELED].TELEDOCE.uy | [TELED] TELEDOCE
-[TODONOT].TODO.NOTICIAS.uy | [TODONOT] TODO NOTICIAS
-[TVCIUD].Tv.Ciudad.uy | [TVCIUD] Tv Ciudad
-[TVNUR].Televisión.Nacional.Uruguaya.uy | [TVNUR] Televisión Nacional Uruguaya
-[UCLPLAY].UCL.TV.Unión.Continental.Latinoamérica.uy | [UCLPLAY] UCL TV Unión Continental Latinoamérica
-[UNIPRMH].UNIPRMH.uy | [UNIPRMH] UNIPRMH
-[VTVMUR].VTV.PLUS.uy | [VTVMUR] VTV PLUS
-[ZEE].Zee.TV.HD.uy | [ZEE] Zee TV HD
-chv.cl | CHILEVISIONᴴᴰ
-filmAndarts.ar | Film & Arts | AR HD
 Época.co | Época
