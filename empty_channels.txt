@@ -1,4 +1,4 @@
-316769 | ADN40
+13VivaNicaragua.ni | NI - Canal 13 Viva Nicaragua
 316837 | TOONSCAST
 317571 | TNT SPORTS
 317595 | FOX PREMIUM
@@ -30,7 +30,6 @@ Canal.13.de.Panamá.(Telemetro).pa | Canal 13 de Panamá (Telemetro)
 Canal.13.de.Panamá.(Telemetro).sv | Canal 13 de Panamá (Telemetro)
 Canal.4.de.Panamá.(RPC.TV).pa | Canal 4 de Panamá (RPC TV)
 Canal.4.de.Panamá.(RPC.TV).sv | Canal 4 de Panamá (RPC TV)
-Canal.ADN.40.sv | Canal ADN 40
 Canal.Decasa.sv | Canal Decasa
 Canal.Ecuavisa.(Ecuador).ec | Canal Ecuavisa (Ecuador)
 Canal.Ecuavisa.(Ecuador).sv | Canal Ecuavisa (Ecuador)
@@ -42,6 +41,8 @@ Canal.Gol.TV.Estados.Unidos.sv | Canal Gol TV Estados Unidos
 Canal.Justicia.TV.(México).sv | Canal Justicia TV (México)
 Canal.RTS.ec | Canal RTS
 Canal.RTS.sv | Canal RTS
+Canal2Televicentro.ni | NI - Canal 2 Televicentro
+Cartoonito.gt | GT - Cartoonito Latin America
 DAYSTAR.co | DAYSTAR
 DIRECTV.SPORTS(DTS7).co | DIRECTV SPORTS(DTS7)
 DIRECTV.SPORTS(DTS9).co | DIRECTV SPORTS(DTS9)
