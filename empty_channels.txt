@@ -1,4 +1,3 @@
-13VivaNicaragua.ni | NI - Canal 13 Viva Nicaragua
 316837 | TOONSCAST
 317571 | TNT SPORTS
 317595 | FOX PREMIUM
@@ -41,8 +40,6 @@ Canal.Gol.TV.Estados.Unidos.sv | Canal Gol TV Estados Unidos
 Canal.Justicia.TV.(México).sv | Canal Justicia TV (México)
 Canal.RTS.ec | Canal RTS
 Canal.RTS.sv | Canal RTS
-Canal2Televicentro.ni | NI - Canal 2 Televicentro
-Cartoonito.gt | GT - Cartoonito Latin America
 DAYSTAR.co | DAYSTAR
 DIRECTV.SPORTS(DTS7).co | DIRECTV SPORTS(DTS7)
 DIRECTV.SPORTS(DTS9).co | DIRECTV SPORTS(DTS9)
