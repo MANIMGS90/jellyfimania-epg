@@ -29,8 +29,6 @@ CANAL.N.(Canal.N).pe | CANAL N (Canal N)
 CCTV.(CCTV).pe | CCTV (CCTV)
 CIUDAD.MAGAZINE..uy | CIUDAD MAGAZINE
 CIUDAD.MAGAZINE.HD..uy | CIUDAD MAGAZINE HD
-Campinas/SP..Canal.do.Boi.br | Campinas/SP  Canal do Boi
-Campinas/SP..Film&Arts.br | Campinas/SP  Film&Arts
 Canal.13.de.Panamá.(Telemetro).pa | Canal 13 de Panamá (Telemetro)
 Canal.13.de.Panamá.(Telemetro).sv | Canal 13 de Panamá (Telemetro)
 Canal.4.de.Panamá.(RPC.TV).pa | Canal 4 de Panamá (RPC TV)
@@ -136,10 +134,7 @@ São.Paulo/SP..Canal.Legislativo.br | São Paulo/SP  Canal Legislativo
 São.Paulo/SP..Canal.Rural.br | São Paulo/SP  Canal Rural
 São.Paulo/SP..Canal.Universitário.br | São Paulo/SP  Canal Universitário
 São.Paulo/SP..Canal.de.Vendas.NET.br | São Paulo/SP  Canal de Vendas NET
-São.Paulo/SP..Canal.do.Boi.br | São Paulo/SP  Canal do Boi
 São.Paulo/SP..Cinecanal.br | São Paulo/SP  Cinecanal
-São.Paulo/SP..Combate.HD.br | São Paulo/SP  Combate HD
-São.Paulo/SP..Combate.br | São Paulo/SP  Combate
 São.Paulo/SP..Comedy.Central.HD.br | São Paulo/SP  Comedy Central HD
 São.Paulo/SP..Comedy.Central.br | São Paulo/SP  Comedy Central
 São.Paulo/SP..Cultura.HD.br | São Paulo/SP  Cultura HD
@@ -157,8 +152,6 @@ São.Paulo/SP..FISH.TV.br | São Paulo/SP  FISH TV
 São.Paulo/SP..FOOD.NETWORK.HD.br | São Paulo/SP  FOOD NETWORK HD
 São.Paulo/SP..FX.HD.³.br | São Paulo/SP  FX HD ³
 São.Paulo/SP..FX.br | São Paulo/SP  FX
-São.Paulo/SP..Fashion.TV.HD.br | São Paulo/SP  Fashion TV HD
-São.Paulo/SP..Film&Arts.HD.br | São Paulo/SP  Film&Arts HD
 São.Paulo/SP..Food.Network.br | São Paulo/SP  Food Network
 São.Paulo/SP..GNT.HD.³.br | São Paulo/SP  GNT HD ³
 São.Paulo/SP..GNT.br | São Paulo/SP  GNT
@@ -171,7 +164,6 @@ São.Paulo/SP..GloboNews.br | São Paulo/SP  GloboNews
 São.Paulo/SP..HGTV.HD.br | São Paulo/SP  HGTV HD
 São.Paulo/SP..HGTV.br | São Paulo/SP  HGTV
 São.Paulo/SP..ID.HD.³.br | São Paulo/SP  ID HD ³
-São.Paulo/SP..ID.br | São Paulo/SP  ID
 São.Paulo/SP..LIKE.HD.br | São Paulo/SP  LIKE HD
 São.Paulo/SP..Lifetime.HD.br | São Paulo/SP  Lifetime HD
 São.Paulo/SP..Lifetime.br | São Paulo/SP  Lifetime
@@ -192,7 +184,6 @@ São.Paulo/SP..Off.HD.³.br | São Paulo/SP  Off HD ³
 São.Paulo/SP..Off.br | São Paulo/SP  Off
 São.Paulo/SP..PREMIERE.HD.3.³.br | São Paulo/SP  PREMIERE HD 3 ³
 São.Paulo/SP..PREMIERE.HD.4.³.br | São Paulo/SP  PREMIERE HD 4 ³
-São.Paulo/SP..PREMIERE.HD.5.³.br | São Paulo/SP  PREMIERE HD 5 ³
 São.Paulo/SP..Paramount.Network.HD..br | São Paulo/SP  Paramount Network HD
 São.Paulo/SP..Paramount.Network.br | São Paulo/SP  Paramount Network
 São.Paulo/SP..Polishop.TV.br | São Paulo/SP  Polishop TV
@@ -212,20 +203,15 @@ São.Paulo/SP..Record.br | São Paulo/SP  Record
 São.Paulo/SP..Rede.21.br | São Paulo/SP  Rede 21
 São.Paulo/SP..Rede.Gospel.HD.br | São Paulo/SP  Rede Gospel HD
 São.Paulo/SP..Rede.Gospel.br | São Paulo/SP  Rede Gospel
-São.Paulo/SP..Rede.TV.HD.br | São Paulo/SP  Rede TV HD
-São.Paulo/SP..Rede.TV.br | São Paulo/SP  Rede TV
 São.Paulo/SP..Rede.Vida.HD.br | São Paulo/SP  Rede Vida HD
 São.Paulo/SP..Rede.Vida.br | São Paulo/SP  Rede Vida
 São.Paulo/SP..SBT.HD.br | São Paulo/SP  SBT HD
 São.Paulo/SP..SBT.br | São Paulo/SP  SBT
-São.Paulo/SP..SIC.International.br | São Paulo/SP  SIC International
 São.Paulo/SP..STAR.CHANNEL.HD.br | São Paulo/SP  STAR CHANNEL HD
 São.Paulo/SP..Shoptime.TV.br | São Paulo/SP  Shoptime TV
 São.Paulo/SP..Sony.HD.³.br | São Paulo/SP  Sony HD ³
 São.Paulo/SP..Sony.br | São Paulo/SP  Sony
 São.Paulo/SP..Star.Channel.br | São Paulo/SP  Star Channel
-São.Paulo/SP..Syfy.HD.br | São Paulo/SP  Syfy HD
-São.Paulo/SP..Syfy.br | São Paulo/SP  Syfy
 São.Paulo/SP..TLC.HD.³.br | São Paulo/SP  TLC HD ³
 São.Paulo/SP..TLC.br | São Paulo/SP  TLC
 São.Paulo/SP..TNT.SÉRIES.HD.br | São Paulo/SP  TNT SÉRIES HD
@@ -243,7 +229,6 @@ São.Paulo/SP..TV5.Monde.br | São Paulo/SP  TV5 Monde
 São.Paulo/SP..TVE.International.br | São Paulo/SP  TVE International
 São.Paulo/SP..Telecine.Action.HD.³.br | São Paulo/SP  Telecine Action HD ³
 São.Paulo/SP..Telecine.Action.br | São Paulo/SP  Telecine Action
-São.Paulo/SP..Telecine.Cult.HD.³.br | São Paulo/SP  Telecine Cult HD ³
 São.Paulo/SP..Telecine.Cult.br | São Paulo/SP  Telecine Cult
 São.Paulo/SP..Telecine.Fun.HD.³.br | São Paulo/SP  Telecine Fun HD ³
 São.Paulo/SP..Telecine.Fun.br | São Paulo/SP  Telecine Fun
