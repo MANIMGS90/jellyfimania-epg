@@ -15,10 +15,8 @@ ARTV.(ARTV).pe | ARTV (ARTV)
 ATV.pe | ATV HD DIRECTO
 Belo.Horizonte/MG...TV.Aparecida.(espelho).br | Belo Horizonte/MG   TV Aparecida (espelho)
 Belo.Horizonte/MG..Polishop.br | Belo Horizonte/MG  Polishop
-Belo.Horizonte/MG..Premiere.6.br | Belo Horizonte/MG  Premiere 6
 Belo.Horizonte/MG..Premiere.7.br | Belo Horizonte/MG  Premiere 7
 Belo.Horizonte/MG..Shoptime.br | Belo Horizonte/MG  Shoptime
-Belo.Horizonte/MG..TV.Pai.Eterno.br | Belo Horizonte/MG  TV Pai Eterno
 CANAL.4.MONTECARLO..uy | CANAL 4 MONTECARLO
 CANAL.5..uy | CANAL 5
 CANAL.EVENTOS.1001.uy | CANAL EVENTOS 1001
@@ -28,7 +26,6 @@ CCTV.(CCTV).pe | CCTV (CCTV)
 CIUDAD.MAGAZINE..uy | CIUDAD MAGAZINE
 CIUDAD.MAGAZINE.HD..uy | CIUDAD MAGAZINE HD
 Campinas/SP..Canal.do.Boi.br | Campinas/SP  Canal do Boi
-Campinas/SP..Film&Arts.br | Campinas/SP  Film&Arts
 Canal.13.de.Panamá.(Telemetro).pa | Canal 13 de Panamá (Telemetro)
 Canal.13.de.Panamá.(Telemetro).sv | Canal 13 de Panamá (Telemetro)
 Canal.4.de.Panamá.(RPC.TV).pa | Canal 4 de Panamá (RPC TV)
@@ -115,7 +112,6 @@ São.Paulo/SP..Band.HD.br | São Paulo/SP  Band HD
 São.Paulo/SP..Band.News.HD.br | São Paulo/SP  Band News HD
 São.Paulo/SP..Band.News.br | São Paulo/SP  Band News
 São.Paulo/SP..Band.br | São Paulo/SP  Band
-São.Paulo/SP..Bloomberg.TV.br | São Paulo/SP  Bloomberg TV
 São.Paulo/SP..Boa.Vontade.TV.br | São Paulo/SP  Boa Vontade TV
 São.Paulo/SP..CGTN.br | São Paulo/SP  CGTN
 São.Paulo/SP..CNN.Brasil.HD.br | São Paulo/SP  CNN Brasil HD
@@ -146,12 +142,9 @@ São.Paulo/SP..E!.HD.br | São Paulo/SP  E! HD
 São.Paulo/SP..Eurochannel.HD.br | São Paulo/SP  Eurochannel HD
 São.Paulo/SP..FISH.TV.HD.br | São Paulo/SP  FISH TV HD
 São.Paulo/SP..FISH.TV.br | São Paulo/SP  FISH TV
-São.Paulo/SP..FOOD.NETWORK.HD.br | São Paulo/SP  FOOD NETWORK HD
 São.Paulo/SP..FX.HD.³.br | São Paulo/SP  FX HD ³
 São.Paulo/SP..FX.br | São Paulo/SP  FX
 São.Paulo/SP..Fashion.TV.HD.br | São Paulo/SP  Fashion TV HD
-São.Paulo/SP..Film&Arts.HD.br | São Paulo/SP  Film&Arts HD
-São.Paulo/SP..Food.Network.br | São Paulo/SP  Food Network
 São.Paulo/SP..GNT.HD.³.br | São Paulo/SP  GNT HD ³
 São.Paulo/SP..GNT.br | São Paulo/SP  GNT
 São.Paulo/SP..Gazeta.HD.br | São Paulo/SP  Gazeta HD
@@ -172,19 +165,15 @@ São.Paulo/SP..MTV.Live.HD.br | São Paulo/SP  MTV Live HD
 São.Paulo/SP..MTV.br | São Paulo/SP  MTV
 São.Paulo/SP..Mega.TV.HD.br | São Paulo/SP  Mega TV HD
 São.Paulo/SP..Mega.TV.br | São Paulo/SP  Mega TV
-São.Paulo/SP..Modo.viagem.HD.br | São Paulo/SP  Modo viagem HD
-São.Paulo/SP..Modo.viagem.br | São Paulo/SP  Modo viagem
 São.Paulo/SP..Mosaico.Multijogos.br | São Paulo/SP  Mosaico Multijogos
 São.Paulo/SP..NHK.World.Premium.br | São Paulo/SP  NHK World Premium
 São.Paulo/SP..Nick.Jr..br | São Paulo/SP  Nick Jr.
 São.Paulo/SP..Nick.Jr.HD.³.br | São Paulo/SP  Nick Jr HD ³
 São.Paulo/SP..Nickelodeon.HD.br | São Paulo/SP  Nickelodeon HD
 São.Paulo/SP..Nickelodeon.br | São Paulo/SP  Nickelodeon
-São.Paulo/SP..Off.HD.³.br | São Paulo/SP  Off HD ³
 São.Paulo/SP..Off.br | São Paulo/SP  Off
 São.Paulo/SP..PREMIERE.HD.3.³.br | São Paulo/SP  PREMIERE HD 3 ³
 São.Paulo/SP..PREMIERE.HD.4.³.br | São Paulo/SP  PREMIERE HD 4 ³
-São.Paulo/SP..PREMIERE.HD.5.³.br | São Paulo/SP  PREMIERE HD 5 ³
 São.Paulo/SP..Paramount.Network.HD..br | São Paulo/SP  Paramount Network HD
 São.Paulo/SP..Paramount.Network.br | São Paulo/SP  Paramount Network
 São.Paulo/SP..Polishop.TV.br | São Paulo/SP  Polishop TV
