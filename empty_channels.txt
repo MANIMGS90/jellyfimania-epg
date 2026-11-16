@@ -12,7 +12,6 @@ A&E.MUNDO.HD..uy | A&E MUNDO HD
 A.and.E.MUNDO.HD.uy | A and E MUNDO HD
 AMERICA.2..uy | AMERICA 2
 ARTV.(ARTV).pe | ARTV (ARTV)
-ATV.pe | ATV HD DIRECTO
 CANAL.4.MONTECARLO..uy | CANAL 4 MONTECARLO
 CANAL.5..uy | CANAL 5
 CANAL.EVENTOS.1001.uy | CANAL EVENTOS 1001
@@ -42,11 +41,8 @@ DSports.Radio(DTSR).co | DSports Radio(DTSR)
 ENLACE.TBN.(Enlace).pe | ENLACE TBN (Enlace)
 ENTERTAINMENT.TELEVISION..uy | ENTERTAINMENT TELEVISION
 ENTERTAINMENT.TELEVISION.uy | ENTERTAINMENT TELEVISION
-ESPN | ESPN 1 MEX HD | ESPN 1 MEX FHD
-ESPN 2 HD.co | ESPN 2 CO
 EVENTOS.4.HD..uy | EVENTOS 4 HD
 EVENTOS.DEPORTIVOS.2.HD.uy | EVENTOS DEPORTIVOS 2 HD
-Enfamilia | [ES] ENFAMILIA SD
 FOX.CLASSICS.(FoxClassics).pe | FOX CLASSICS (FoxClassics)
 FOX.COMEDY.(FoxComedy).pe | FOX COMEDY (FoxComedy)
 FOX.COMEDY.HD.(FoxComedyHD).pe | FOX COMEDY HD (FoxComedyHD)
@@ -66,10 +62,6 @@ HOME.&.HEALTH.HD.(Home&HealthHD).pe | HOME & HEALTH HD (Home&HealthHD)
 HOME.AND.HEALTH..uy | HOME AND HEALTH
 HOME.AND.HEALTH.HD..uy | HOME AND HEALTH HD
 LA.TELE.PERU.(La.Tele).pe | LA TELE PERU (La Tele)
-M+ ACCIÓN HD | ACCION por M+  HD
-M+ CLÁSICOS HD | CLASICOS por M+ HD | CLASICOS por M+ HD (2)
-M+ DRAMA HD | DRAMA por M+ | DRAMA por M+ FHD
-M+ Indie HD | INDIE por M+ | INDIE por M+ FHD
 MOVISTAR.EVENTOS.(Movistar.Eventos).pe | MOVISTAR EVENTOS (Movistar Eventos)
 MTV.CLUB..uy | MTV CLUB
 NETFLIX.co | NETFLIX
@@ -98,6 +90,7 @@ São.Paulo/SP..Canal.Legislativo.br | São Paulo/SP  Canal Legislativo
 São.Paulo/SP..Canal.Rural.br | São Paulo/SP  Canal Rural
 São.Paulo/SP..Comedy.Central.HD.br | São Paulo/SP  Comedy Central HD
 São.Paulo/SP..Comedy.Central.br | São Paulo/SP  Comedy Central
+São.Paulo/SP..Disney.Channel.HD.³.br | São Paulo/SP  Disney Channel HD ³
 São.Paulo/SP..Fashion.TV.HD.br | São Paulo/SP  Fashion TV HD
 São.Paulo/SP..MTV.HD.³.br | São Paulo/SP  MTV HD ³
 São.Paulo/SP..MTV.Live.HD.br | São Paulo/SP  MTV Live HD
@@ -128,10 +121,8 @@ TBS.VERY.FUNNY.(TBS).pe | TBS VERY FUNNY (TBS)
 TBS.VERY.FUNNY.HD.(TBS.Very.Funny.HD).pe | TBS VERY FUNNY HD (TBS Very Funny HD)
 TELEFE.INTER..uy | TELEFE INTER
 TOROS.TV.(TorosTV).pe | TOROS TV (TorosTV)
-TRECE | 13 tv HD
 TV.GLOBO.HD..uy | TV GLOBO HD
 VOA.(VOA).pe | VOA (VOA)
-WIPR.pr | WIPR
 Win.Sports.Premium(Win+).co | Win Sports Premium(Win+)
 Win.Sports.Premium.HD(Win+HD).co | Win Sports Premium HD(Win+HD)
 YOUTUBE.KIDS.co | YOUTUBE KIDS
