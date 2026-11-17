@@ -12,6 +12,8 @@ A&E.MUNDO.HD..uy | A&E MUNDO HD
 A.and.E.MUNDO.HD.uy | A and E MUNDO HD
 AMERICA.2..uy | AMERICA 2
 ARTV.(ARTV).pe | ARTV (ARTV)
+ASPEN.uy | ASPEN
+ATV.pe | ATV HD DIRECTO
 CANAL.4.MONTECARLO..uy | CANAL 4 MONTECARLO
 CANAL.5..uy | CANAL 5
 CANAL.EVENTOS.1001.uy | CANAL EVENTOS 1001
@@ -41,8 +43,11 @@ DSports.Radio(DTSR).co | DSports Radio(DTSR)
 ENLACE.TBN.(Enlace).pe | ENLACE TBN (Enlace)
 ENTERTAINMENT.TELEVISION..uy | ENTERTAINMENT TELEVISION
 ENTERTAINMENT.TELEVISION.uy | ENTERTAINMENT TELEVISION
+ESPN | ESPN 1 MEX HD | ESPN 1 MEX FHD
+ESPN 2 HD.co | ESPN 2 CO
 EVENTOS.4.HD..uy | EVENTOS 4 HD
 EVENTOS.DEPORTIVOS.2.HD.uy | EVENTOS DEPORTIVOS 2 HD
+Enfamilia | [ES] ENFAMILIA SD
 FOX.CLASSICS.(FoxClassics).pe | FOX CLASSICS (FoxClassics)
 FOX.COMEDY.(FoxComedy).pe | FOX COMEDY (FoxComedy)
 FOX.COMEDY.HD.(FoxComedyHD).pe | FOX COMEDY HD (FoxComedyHD)
@@ -62,6 +67,10 @@ HOME.&.HEALTH.HD.(Home&HealthHD).pe | HOME & HEALTH HD (Home&HealthHD)
 HOME.AND.HEALTH..uy | HOME AND HEALTH
 HOME.AND.HEALTH.HD..uy | HOME AND HEALTH HD
 LA.TELE.PERU.(La.Tele).pe | LA TELE PERU (La Tele)
+M+ ACCIÓN HD | ACCION por M+  HD
+M+ CLÁSICOS HD | CLASICOS por M+ HD | CLASICOS por M+ HD (2)
+M+ DRAMA HD | DRAMA por M+ | DRAMA por M+ FHD
+M+ Indie HD | INDIE por M+ | INDIE por M+ FHD
 MOVISTAR.EVENTOS.(Movistar.Eventos).pe | MOVISTAR EVENTOS (Movistar Eventos)
 MTV.CLUB..uy | MTV CLUB
 NETFLIX.co | NETFLIX
@@ -80,18 +89,13 @@ Portal.DIRECTV.Sports(DTVS).co | Portal DIRECTV Sports(DTVS)
 QUALITY.CHANNEL.(Quality).pe | QUALITY CHANNEL (Quality)
 RAI.TV.(RAI).pe | RAI TV (RAI)
 RCN.HDTV.2.(RCNHD2).co | RCN HDTV 2 (RCNHD2)
+REDE.RECORD.uy | REDE RECORD
 RPP.TV.(RPP.TV).pe | RPP TV (RPP TV)
 SAETA..uy | SAETA
 SPACE.REGIONAL.DTH.LIVE.(Space.HD).pe | SPACE REGIONAL DTH LIVE (Space HD)
 STAR.+.co | STAR +
-São.Paulo/SP..BBC.World.News.br | São Paulo/SP  BBC World News
-São.Paulo/SP..Canal.2.br | São Paulo/SP  Canal 2
-São.Paulo/SP..Canal.Legislativo.br | São Paulo/SP  Canal Legislativo
-São.Paulo/SP..Canal.Rural.br | São Paulo/SP  Canal Rural
 São.Paulo/SP..Comedy.Central.HD.br | São Paulo/SP  Comedy Central HD
 São.Paulo/SP..Comedy.Central.br | São Paulo/SP  Comedy Central
-São.Paulo/SP..Disney.Channel.HD.³.br | São Paulo/SP  Disney Channel HD ³
-São.Paulo/SP..Fashion.TV.HD.br | São Paulo/SP  Fashion TV HD
 São.Paulo/SP..MTV.HD.³.br | São Paulo/SP  MTV HD ³
 São.Paulo/SP..MTV.Live.HD.br | São Paulo/SP  MTV Live HD
 São.Paulo/SP..MTV.br | São Paulo/SP  MTV
@@ -99,30 +103,25 @@ São.Paulo/SP..Nick.Jr..br | São Paulo/SP  Nick Jr.
 São.Paulo/SP..Nick.Jr.HD.³.br | São Paulo/SP  Nick Jr HD ³
 São.Paulo/SP..Nickelodeon.HD.br | São Paulo/SP  Nickelodeon HD
 São.Paulo/SP..Nickelodeon.br | São Paulo/SP  Nickelodeon
-São.Paulo/SP..PREMIERE.HD.4.³.br | São Paulo/SP  PREMIERE HD 4 ³
 São.Paulo/SP..Paramount.Network.HD..br | São Paulo/SP  Paramount Network HD
 São.Paulo/SP..Paramount.Network.br | São Paulo/SP  Paramount Network
 São.Paulo/SP..Polishop.TV.br | São Paulo/SP  Polishop TV
 São.Paulo/SP..Premiere.4.br | São Paulo/SP  Premiere 4
 São.Paulo/SP..Premiere.5.br | São Paulo/SP  Premiere 5
-São.Paulo/SP..Premiere.7.br | São Paulo/SP  Premiere 7
 São.Paulo/SP..SIC.International.br | São Paulo/SP  SIC International
 São.Paulo/SP..STAR.CHANNEL.HD.br | São Paulo/SP  STAR CHANNEL HD
 São.Paulo/SP..Shoptime.TV.br | São Paulo/SP  Shoptime TV
 São.Paulo/SP..Star.Channel.br | São Paulo/SP  Star Channel
-São.Paulo/SP..TV.Climatempo.br | São Paulo/SP  TV Climatempo
-São.Paulo/SP..TV.Justiça.br | São Paulo/SP  TV Justiça
 São.Paulo/SP..Telecine.Action.br | São Paulo/SP  Telecine Action
-São.Paulo/SP..Telecine.Cult.HD.³.br | São Paulo/SP  Telecine Cult HD ³
-São.Paulo/SP..Telecine.Fun.HD.³.br | São Paulo/SP  Telecine Fun HD ³
 São.Paulo/SP..Telecine.Premium.HD.³.br | São Paulo/SP  Telecine Premium HD ³
-São.Paulo/SP..Travel.Box.Brasil.HD..br | São Paulo/SP  Travel Box Brasil HD
 TBS.VERY.FUNNY.(TBS).pe | TBS VERY FUNNY (TBS)
 TBS.VERY.FUNNY.HD.(TBS.Very.Funny.HD).pe | TBS VERY FUNNY HD (TBS Very Funny HD)
 TELEFE.INTER..uy | TELEFE INTER
 TOROS.TV.(TorosTV).pe | TOROS TV (TorosTV)
+TRECE | 13 tv HD
 TV.GLOBO.HD..uy | TV GLOBO HD
 VOA.(VOA).pe | VOA (VOA)
+WIPR.pr | WIPR
 Win.Sports.Premium(Win+).co | Win Sports Premium(Win+)
 Win.Sports.Premium.HD(Win+HD).co | Win Sports Premium HD(Win+HD)
 YOUTUBE.KIDS.co | YOUTUBE KIDS
