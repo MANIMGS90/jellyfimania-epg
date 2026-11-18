@@ -12,8 +12,8 @@ A&E.MUNDO.HD..uy | A&E MUNDO HD
 A.and.E.MUNDO.HD.uy | A and E MUNDO HD
 AMERICA.2..uy | AMERICA 2
 ARTV.(ARTV).pe | ARTV (ARTV)
-ASPEN.uy | ASPEN
 ATV.pe | ATV HD DIRECTO
+Belo.Horizonte/MG..Premiere.6.br | Belo Horizonte/MG  Premiere 6
 CANAL.4.MONTECARLO..uy | CANAL 4 MONTECARLO
 CANAL.5..uy | CANAL 5
 CANAL.EVENTOS.1001.uy | CANAL EVENTOS 1001
@@ -89,13 +89,20 @@ Portal.DIRECTV.Sports(DTVS).co | Portal DIRECTV Sports(DTVS)
 QUALITY.CHANNEL.(Quality).pe | QUALITY CHANNEL (Quality)
 RAI.TV.(RAI).pe | RAI TV (RAI)
 RCN.HDTV.2.(RCNHD2).co | RCN HDTV 2 (RCNHD2)
-REDE.RECORD.uy | REDE RECORD
 RPP.TV.(RPP.TV).pe | RPP TV (RPP TV)
 SAETA..uy | SAETA
 SPACE.REGIONAL.DTH.LIVE.(Space.HD).pe | SPACE REGIONAL DTH LIVE (Space HD)
 STAR.+.co | STAR +
+São.Paulo/SP...Universal.TV.HD.br | São Paulo/SP   Universal TV HD
+São.Paulo/SP..AXN.br | São Paulo/SP  AXN
+São.Paulo/SP..Band.HD.br | São Paulo/SP  Band HD
+São.Paulo/SP..Band.br | São Paulo/SP  Band
+São.Paulo/SP..CGTN.br | São Paulo/SP  CGTN
+São.Paulo/SP..Canal.de.Vendas.NET.br | São Paulo/SP  Canal de Vendas NET
+São.Paulo/SP..Cinecanal.br | São Paulo/SP  Cinecanal
 São.Paulo/SP..Comedy.Central.HD.br | São Paulo/SP  Comedy Central HD
 São.Paulo/SP..Comedy.Central.br | São Paulo/SP  Comedy Central
+São.Paulo/SP..Eurochannel.HD.br | São Paulo/SP  Eurochannel HD
 São.Paulo/SP..MTV.HD.³.br | São Paulo/SP  MTV HD ³
 São.Paulo/SP..MTV.Live.HD.br | São Paulo/SP  MTV Live HD
 São.Paulo/SP..MTV.br | São Paulo/SP  MTV
@@ -108,12 +115,17 @@ São.Paulo/SP..Paramount.Network.br | São Paulo/SP  Paramount Network
 São.Paulo/SP..Polishop.TV.br | São Paulo/SP  Polishop TV
 São.Paulo/SP..Premiere.4.br | São Paulo/SP  Premiere 4
 São.Paulo/SP..Premiere.5.br | São Paulo/SP  Premiere 5
+São.Paulo/SP..Premiere.6.br | São Paulo/SP  Premiere 6
 São.Paulo/SP..SIC.International.br | São Paulo/SP  SIC International
 São.Paulo/SP..STAR.CHANNEL.HD.br | São Paulo/SP  STAR CHANNEL HD
 São.Paulo/SP..Shoptime.TV.br | São Paulo/SP  Shoptime TV
 São.Paulo/SP..Star.Channel.br | São Paulo/SP  Star Channel
+São.Paulo/SP..Syfy.HD.br | São Paulo/SP  Syfy HD
+São.Paulo/SP..Syfy.br | São Paulo/SP  Syfy
+São.Paulo/SP..TV.Senado.br | São Paulo/SP  TV Senado
 São.Paulo/SP..Telecine.Action.br | São Paulo/SP  Telecine Action
 São.Paulo/SP..Telecine.Premium.HD.³.br | São Paulo/SP  Telecine Premium HD ³
+São.Paulo/SP..Universal.TV.br | São Paulo/SP  Universal TV
 TBS.VERY.FUNNY.(TBS).pe | TBS VERY FUNNY (TBS)
 TBS.VERY.FUNNY.HD.(TBS.Very.Funny.HD).pe | TBS VERY FUNNY HD (TBS Very Funny HD)
 TELEFE.INTER..uy | TELEFE INTER
