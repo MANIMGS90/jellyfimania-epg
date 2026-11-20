@@ -133,10 +133,6 @@ TOROS.TV.(TorosTV).pe | TOROS TV (TorosTV)
 TRECE | 13 tv HD
 TV.GLOBO.HD..uy | TV GLOBO HD
 VOA.(VOA).pe | VOA (VOA)
-VTV+.HD.uy | VTV+ HD
-VTV..uy | VTV
-VTV.HD..uy | VTV HD
-VTV.HD.uy | VTV HD
 WIPR.pr | WIPR
 Win.Sports.Premium(Win+).co | Win Sports Premium(Win+)
 Win.Sports.Premium.HD(Win+HD).co | Win Sports Premium HD(Win+HD)
