@@ -105,6 +105,8 @@ São.Paulo/SP..A.and.E.HD.br | São Paulo/SP  A and E HD
 São.Paulo/SP..A.and.E.br | São Paulo/SP  A and E
 São.Paulo/SP..AXN.HD.³.br | São Paulo/SP  AXN HD ³
 São.Paulo/SP..AXN.br | São Paulo/SP  AXN
+São.Paulo/SP..Agro.Mais.HD..br | São Paulo/SP  Agro Mais HD
+São.Paulo/SP..Agro.Mais.br | São Paulo/SP  Agro Mais
 São.Paulo/SP..Arte.1.HD.br | São Paulo/SP  Arte 1 HD
 São.Paulo/SP..Arte.1.br | São Paulo/SP  Arte 1
 São.Paulo/SP..BBC.World.News.br | São Paulo/SP  BBC World News
@@ -120,6 +122,8 @@ São.Paulo/SP..CNN.Brasil.br | São Paulo/SP  CNN Brasil
 São.Paulo/SP..CNN.International.br | São Paulo/SP  CNN International
 São.Paulo/SP..CONMEBOL.TV.4.HD.br | São Paulo/SP  CONMEBOL TV 4 HD
 São.Paulo/SP..Canal.2.br | São Paulo/SP  Canal 2
+São.Paulo/SP..Canal.Comunitário.br | São Paulo/SP  Canal Comunitário
+São.Paulo/SP..Canal.Legislativo.br | São Paulo/SP  Canal Legislativo
 São.Paulo/SP..Canal.Rural.br | São Paulo/SP  Canal Rural
 São.Paulo/SP..Canal.Universitário.br | São Paulo/SP  Canal Universitário
 São.Paulo/SP..Cinecanal.br | São Paulo/SP  Cinecanal
@@ -161,6 +165,8 @@ São.Paulo/SP..Lifetime.br | São Paulo/SP  Lifetime
 São.Paulo/SP..MTV.HD.³.br | São Paulo/SP  MTV HD ³
 São.Paulo/SP..MTV.Live.HD.br | São Paulo/SP  MTV Live HD
 São.Paulo/SP..MTV.br | São Paulo/SP  MTV
+São.Paulo/SP..Mega.TV.HD.br | São Paulo/SP  Mega TV HD
+São.Paulo/SP..Mega.TV.br | São Paulo/SP  Mega TV
 São.Paulo/SP..Modo.viagem.HD.br | São Paulo/SP  Modo viagem HD
 São.Paulo/SP..Modo.viagem.br | São Paulo/SP  Modo viagem
 São.Paulo/SP..Mosaico.Multijogos.br | São Paulo/SP  Mosaico Multijogos
@@ -190,6 +196,10 @@ São.Paulo/SP..Record.br | São Paulo/SP  Record
 São.Paulo/SP..Rede.21.br | São Paulo/SP  Rede 21
 São.Paulo/SP..Rede.TV.HD.br | São Paulo/SP  Rede TV HD
 São.Paulo/SP..Rede.TV.br | São Paulo/SP  Rede TV
+São.Paulo/SP..Rede.Vida.HD.br | São Paulo/SP  Rede Vida HD
+São.Paulo/SP..Rede.Vida.br | São Paulo/SP  Rede Vida
+São.Paulo/SP..SBT.HD.br | São Paulo/SP  SBT HD
+São.Paulo/SP..SBT.br | São Paulo/SP  SBT
 São.Paulo/SP..SIC.International.br | São Paulo/SP  SIC International
 São.Paulo/SP..STAR.CHANNEL.HD.br | São Paulo/SP  STAR CHANNEL HD
 São.Paulo/SP..Shoptime.TV.br | São Paulo/SP  Shoptime TV
@@ -201,6 +211,8 @@ São.Paulo/SP..Syfy.br | São Paulo/SP  Syfy
 São.Paulo/SP..TLC.HD.³.br | São Paulo/SP  TLC HD ³
 São.Paulo/SP..TLC.br | São Paulo/SP  TLC
 São.Paulo/SP..TNT.SÉRIES.HD.br | São Paulo/SP  TNT SÉRIES HD
+São.Paulo/SP..TV.Brasil.HD.br | São Paulo/SP  TV Brasil HD
+São.Paulo/SP..TV.Brasil.br | São Paulo/SP  TV Brasil
 São.Paulo/SP..TV.Climatempo.br | São Paulo/SP  TV Climatempo
 São.Paulo/SP..TV.Câmara.br | São Paulo/SP  TV Câmara
 São.Paulo/SP..TV.Escola.br | São Paulo/SP  TV Escola
@@ -218,6 +230,7 @@ São.Paulo/SP..Telecine.Cult.br | São Paulo/SP  Telecine Cult
 São.Paulo/SP..Telecine.Fun.HD.³.br | São Paulo/SP  Telecine Fun HD ³
 São.Paulo/SP..Telecine.Fun.br | São Paulo/SP  Telecine Fun
 São.Paulo/SP..Telecine.Pipoca.HD.³.br | São Paulo/SP  Telecine Pipoca HD ³
+São.Paulo/SP..Telecine.Pipoca.br | São Paulo/SP  Telecine Pipoca
 São.Paulo/SP..Telecine.Premium.HD.³.br | São Paulo/SP  Telecine Premium HD ³
 São.Paulo/SP..Telecine.Premium.br | São Paulo/SP  Telecine Premium
 São.Paulo/SP..Telecine.Touch.HD.³.br | São Paulo/SP  Telecine Touch HD ³
@@ -227,6 +240,12 @@ São.Paulo/SP..Tnt.novelas.HD.br | São Paulo/SP  Tnt novelas HD
 São.Paulo/SP..Tnt.novelas.br | São Paulo/SP  Tnt novelas
 São.Paulo/SP..Travel.Box.Brasil.HD..br | São Paulo/SP  Travel Box Brasil HD
 São.Paulo/SP..Universal.TV.br | São Paulo/SP  Universal TV
+São.Paulo/SP..Viva.HD.br | São Paulo/SP  Viva HD
+São.Paulo/SP..Viva.br | São Paulo/SP  Viva
+São.Paulo/SP..Warner.Channel.HD.br | São Paulo/SP  Warner Channel HD
+São.Paulo/SP..Warner.Channel.br | São Paulo/SP  Warner Channel
+São.Paulo/SP..Woohoo.HD.br | São Paulo/SP  Woohoo HD
+São.Paulo/SP..Woohoo.br | São Paulo/SP  Woohoo
 TBS.VERY.FUNNY.(TBS).pe | TBS VERY FUNNY (TBS)
 TBS.VERY.FUNNY.HD.(TBS.Very.Funny.HD).pe | TBS VERY FUNNY HD (TBS Very Funny HD)
 TELEFE.INTER..uy | TELEFE INTER
